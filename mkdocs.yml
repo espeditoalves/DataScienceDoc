@@ -1,0 +1,33 @@
+site_name: Data Science
+nav:
+  - Início: index.md
+  - Sobre: sobre.md
+  - 1.Estatistica:
+    - Introdução: 1_estatistica/Introducao.md
+    - 1.1 - Testes de Hipoteses: 1_estatistica/1.1_testes_de_hipoteses/1.1.1_ts.md
+  - 2.Machine Learning: guias/configuracao.md
+  - Repositório de Projetos:
+    - Modelagem
+  - Exemplos:
+    - Markdown: exemplos/markdown.md
+    - Código: exemplos/codigo.md
+    - Nome_lateral: exemplos/Teste.md
+    - Meu Notebook: exemplos/Learning_curve_1.ipynb
+
+theme:
+  name: material 
+  custom_dir: 'cinder'
+  colorscheme: dracula
+  hljs_languages:
+    - python
+  features:
+    - navigation.tabs
+    - navigation.indexes
+plugins:
+  - mkdocs-jupyter
+  - search
+markdown_extensions:
+  - admonition
+  - tables
+  - fenced_code
+  - codehilite
