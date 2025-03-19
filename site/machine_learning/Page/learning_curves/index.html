@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Learning curves - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../sobre/">Sobre</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../1_estatistica/Introducao/">Introdução</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_ts/">1.1 - Testes de Hipoteses</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../guias/configuracao/">2.Machine Learning</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repositório de Projetos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../Modelagem">None</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exemplos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../exemplos/markdown/">Markdown</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../exemplos/codigo/">Código</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../exemplos/Teste/">Nome_lateral</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../exemplos/Learning_curve_1/">Titanic data</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#tipos-de-curvas-para-avaliacao">Tipos de curvas para avaliação</a></li>
+            <li class="second-level"><a href="#curva-de-validacao">Curva de Validação</a></li>
+                
+            <li class="second-level"><a href="#curva-de-desempenhocurva-de-aprendizado">Curva de Desempenho(curva de aprendizado)</a></li>
+                
+            <li class="second-level"><a href="#scikit-learn-curvas-de-avaliacao-e-aprendizagem">Scikit-learn: Curvas de Avaliação e Aprendizagem</a></li>
+                
+            <li class="second-level"><a href="#curvas-adicionais-de-aprendizado-em-machine-learning">Curvas Adicionais de Aprendizado em Machine Learning</a></li>
+                
+                <li class="third-level"><a href="#curva-de-aprendizado-incremental">Curva de Aprendizado Incremental</a></li>
+                <li class="third-level"><a href="#curva-de-aprendizado-de-convergencia">Curva de Aprendizado de Convergência</a></li>
+                <li class="third-level"><a href="#curva-de-aprendizado-de-regularizacao">Curva de Aprendizado de Regularização</a></li>
+                <li class="third-level"><a href="#curva-de-aprendizado-de-aprendizado-ativo">Curva de Aprendizado de Aprendizado Ativo</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#tipos-de-curvas-para-avaliação">Tipos de curvas para avaliação</a></li>
+<li><a href="#curva-de-validação">Curva de Validação</a></li>
+<li><a href="#curva-de-desempenhocurva-de-aprendizado">Curva de Desempenho(curva de aprendizado)</a></li>
+<li><a href="#scikit-learn-curvas-de-avaliação-e-aprendizagem">Scikit-learn: Curvas de Avaliação e Aprendizagem</a></li>
+<li><a href="#curvas-adicionais-de-aprendizado-em-machine-learning">Curvas Adicionais de Aprendizado em Machine Learning</a><ul>
+<li><a href="#curva-de-aprendizado-incremental">Curva de Aprendizado Incremental</a></li>
+<li><a href="#curva-de-aprendizado-de-convergência">Curva de Aprendizado de Convergência</a></li>
+<li><a href="#curva-de-aprendizado-de-regularização">Curva de Aprendizado de Regularização</a></li>
+<li><a href="#curva-de-aprendizado-de-aprendizado-ativo">Curva de Aprendizado de Aprendizado Ativo</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="tipos-de-curvas-para-avaliacao">Tipos de curvas para avaliação</h1>
+<h2 id="curva-de-validacao">Curva de Validação</h2>
+<ul>
+<li>A curva de validação é uma ferramenta usada para avaliar o desempenho de um modelo de machine learning variando diferentes hiperparâmetros.</li>
+<li>Ela representa o desempenho do modelo em um conjunto de validação em relação a diferentes configurações de hiperparâmetros, permitindo a seleção da combinação ótima de hiperparâmetros para o modelo.</li>
+<li>A curva de validação geralmente mostra o desempenho do modelo em relação a um único hiperparâmetro, mantendo os outros constantes. Isso ajuda a identificar como mudanças nos hiperparâmetros afetam o desempenho do modelo.</li>
+</ul>
+<h2 id="curva-de-desempenhocurva-de-aprendizado">Curva de Desempenho(curva de aprendizado)</h2>
+<ul>
+<li>A curva de desempenho, também conhecida como <strong><code>curva de aprendizado</code></strong>, mostra como o desempenho do modelo varia com a quantidade de dados de treinamento.</li>
+<li>Ela representa a precisão ou outra métrica de desempenho do modelo em relação ao tamanho do conjunto de treinamento.</li>
+<li>A curva de desempenho é útil para entender se o modelo está sofrendo de subajuste <strong>(underfitting)</strong> ou sobreajuste <strong>(overfitting)</strong>. No subajuste, o desempenho permanece baixo mesmo com mais dados de treinamento, enquanto no sobreajuste, o desempenho no conjunto de treinamento é muito melhor do que no conjunto de validação.</li>
+<li>Analisar a curva de desempenho ajuda a decidir se é necessário coletar mais dados, ajustar a complexidade do modelo ou melhorar outras técnicas de regularização para otimizar o desempenho do modelo.</li>
+</ul>
+<p>Ambas as curvas são ferramentas poderosas para entender e otimizar modelos de machine learning, ajudando a encontrar configurações ideais de hiperparâmetros e melhorando a capacidade de generalização do modelo para novos dados.</p>
+<h2 id="scikit-learn-curvas-de-avaliacao-e-aprendizagem">Scikit-learn: Curvas de Avaliação e Aprendizagem</h2>
+<p>As funções <strong><code>validation_curve</code></strong> e <strong><code>learning_curve</code></strong> do scikit-learn são duas ferramentas importantes para avaliar o desempenho de modelos de machine learning, mas têm propósitos ligeiramente diferentes. Aqui estão as principais diferenças entre elas:</p>
+<p><strong>Objetivo:</strong></p>
+<p><strong><code>validation_curve:</code></strong> A função validation_curve é usada para avaliar como uma única hiperparâmetro afeta o desempenho do modelo. Ela plota o desempenho do modelo em relação a diferentes valores de um hiperparâmetro específico, permitindo que você identifique o valor ideal desse hiperparâmetro.</p>
+<p><strong><code>learning_curve:</code></strong> A função learning_curve, por outro lado, é usada para avaliar o desempenho do modelo em relação ao tamanho do conjunto de treinamento. Ela mostra como o desempenho do modelo varia à medida que o tamanho do conjunto de treinamento aumenta, ajudando a entender se o modelo se beneficiaria de mais dados de treinamento.</p>
+<p><strong>Parâmetros:</strong></p>
+<p><strong><code>validation_curve:</code></strong> A função validation_curve requer a especificação do modelo, o conjunto de treinamento, o conjunto de teste (ou validação cruzada) e o hiperparâmetro que se deseja avaliar.</p>
+<p><strong><code>learning_curve:</code></strong> A função learning_curve requer a especificação do modelo, o conjunto de treinamento e uma métrica de avaliação (como precisão, erro ou outra métrica de desempenho). Geralmente, ela também requer a especificação de uma estratégia de validação cruzada.</p>
+<p><strong>Saída:</strong></p>
+<p><strong><code>validation_curve:</code></strong> A saída da função validation_curve é um gráfico que mostra como o desempenho do modelo varia em relação aos valores do hiperparâmetro especificado.</p>
+<p><strong><code>learning_curve:</code></strong> A saída da função learning_curve é um gráfico que mostra como o desempenho do modelo varia em relação ao tamanho do conjunto de treinamento. Pode mostrar o erro de treinamento e/ou validação em relação ao tamanho do conjunto de treinamento.</p>
+<p>Em resumo, enquanto a <strong>validation_curve</strong> ajuda a otimizar hiperparâmetros de modelos, a <strong>learning_curve</strong> fornece insights sobre a capacidade de generalização do modelo em relação ao tamanho do conjunto de treinamento. Ambas são ferramentas valiosas para aprimorar modelos de machine learning, mas têm propósitos distintos.</p>
+<h2 id="curvas-adicionais-de-aprendizado-em-machine-learning">Curvas Adicionais de Aprendizado em Machine Learning</h2>
+<p>Além das funções <code>validation_curve</code> e <code>learning_curve</code>, o scikit-learn oferece outras curvas de aprendizado que fornecem insights adicionais sobre o desempenho e comportamento de modelos de machine learning. Abaixo estão algumas dessas curvas adicionais:</p>
+<h3 id="curva-de-aprendizado-incremental">Curva de Aprendizado Incremental</h3>
+<p>Esta curva mostra como o desempenho do modelo evolui à medida que novos exemplos de treinamento são adicionados incrementalmente. É útil para entender como o modelo se comporta com o aumento do tamanho do conjunto de dados de treinamento. </p>
+<h3 id="curva-de-aprendizado-de-convergencia">Curva de Aprendizado de Convergência</h3>
+<p>Esta curva avalia como as medidas de desempenho do modelo (como erro ou precisão) mudam ao longo do tempo ou do número de iterações do algoritmo de treinamento. Ajuda a determinar se o modelo está convergindo para uma solução estável ou se precisa de mais iterações para melhorar.</p>
+<h3 id="curva-de-aprendizado-de-regularizacao">Curva de Aprendizado de Regularização</h3>
+<p>Esta curva mostra como diferentes valores de regularização afetam o desempenho do modelo. É útil para determinar o impacto da regularização nos resultados do modelo e encontrar o melhor valor de regularização para evitar overfitting.</p>
+<h3 id="curva-de-aprendizado-de-aprendizado-ativo">Curva de Aprendizado de Aprendizado Ativo</h3>
+<p>Esta curva demonstra como o desempenho do modelo melhora à medida que o algoritmo de aprendizado ativo seleciona ativamente os exemplos mais informativos para treinamento. É útil para entender como o modelo se beneficia de uma estratégia de aprendizado ativo em comparação com uma estratégia de aprendizado passivo.</p>
+<p>Essas curvas adicionais fornecem uma visão mais abrangente do comportamento do modelo durante o treinamento e são úteis para análise detalhada e refinamento de modelos de machine learning.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
