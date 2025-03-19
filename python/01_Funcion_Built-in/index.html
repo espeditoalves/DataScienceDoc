@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>01 Funcion Built in - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../sobre/">Sobre</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../1_estatistica/Introducao/">Introdução</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_ts/">1.1 - Testes de Hipoteses</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../guias/configuracao/">2.Machine Learning</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repositório de Projetos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Modelagem">None</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exemplos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../exemplos/markdown/">Markdown</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../exemplos/codigo/">Código</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../exemplos/Teste/">Nome_lateral</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../exemplos/Learning_curve_1/">Titanic data</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#funcoes-built-in-do-python">Funções Built-in do Python</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="funcoes-built-in-do-python">Funções Built-in do Python</h2>
+<p>O Python possui várias funções built-in que estão sempre disponíveis para uso. Aqui estão algumas delas em ordem alfabética:</p>
+<ul>
+<li><code>abs(x)</code>: Retorna o valor absoluto de um número (inteiro ou ponto flutuante).</li>
+<li><code>all(iterable)</code>: Retorna True se todos os elementos do iterável forem verdadeiros (ou se o iterável estiver vazio).</li>
+<li><code>any(iterable)</code>: Retorna True se qualquer elemento do iterável for verdadeiro.</li>
+<li><code>ascii(object)</code>: Retorna uma representação imprimível de um objeto, escapando caracteres não-ASCII.</li>
+<li><code>bin(x)</code>: Converte um número inteiro para uma string de binários prefixada com “0b”.</li>
+<li><code>bool(x)</code>: Retorna um valor booleano (True ou False).</li>
+<li><code>bytearray(source[, encoding[, errors]])</code>: Retorna um novo vetor de bytes mutável.</li>
+<li><code>bytes([source[, encoding[, errors]]])</code>: Retorna um objeto de bytes imutável.</li>
+<li><code>callable(object)</code>: Verifica se o objeto é chamável (pode ser chamado como uma função).</li>
+<li><code>chr(i)</code>: Retorna uma string representando um caractere Unicode cujo código é i.</li>
+<li><code>complex(real[, imag])</code>: Retorna um número complexo.</li>
+<li><code>delattr(object, name)</code>: Remove um atributo de um objeto.</li>
+<li><code>dict([iterable])</code>: Retorna um dicionário.</li>
+<li><code>divmod(a, b)</code>: Retorna o quociente e o resto da divisão de a por b.</li>
+<li><code>enumerate(iterable, start=0)</code>: Retorna um objeto enumerado (pares índice-valor).</li>
+<li><code>filter(function, iterable)</code>: Filtra elementos do iterável com base em uma função.</li>
+<li><code>float(x)</code>: Converte um número ou string para um ponto flutuante.</li>
+<li><code>format(value[, format_spec])</code>: Formata um valor de acordo com a especificação de formato.</li>
+<li><code>frozenset([iterable])</code>: Retorna um conjunto imutável.</li>
+<li><code>getattr(object, name[, default])</code>: Retorna o valor de um atributo de um objeto.</li>
+<li><code>globals()</code>: Retorna um dicionário com as variáveis globais.</li>
+<li><code>hasattr(object, name)</code>: Verifica se um objeto tem um atributo.</li>
+<li><code>hash(object)</code>: Retorna o valor hash de um objeto.</li>
+<li><code>hex(x)</code>: Converte um número inteiro para uma string hexadecimal.</li>
+<li><code>id(object)</code>: Retorna o identificador único de um objeto.</li>
+<li><code>input([prompt])</code>: Lê uma linha da entrada padrão.</li>
+<li><code>int(x[, base])</code>: Converte um número ou string para um inteiro.</li>
+<li><code>isinstance(object, classinfo)</code>: Verifica se um objeto é uma instância de uma classe.</li>
+<li><code>issubclass(class, classinfo)</code>: Verifica se uma classe é subclasse de outra.</li>
+<li><code>iter(iterable[, sentinel])</code>: Retorna um iterador para o iterável.</li>
+<li><code>len(s)</code>: Retorna o número de elementos em uma sequência (string, lista, tupla, etc.).</li>
+<li><code>list([iterable])</code>: Retorna uma lista.</li>
+<li><code>locals()</code>: Retorna um dicionário com as variáveis locais.</li>
+<li><code>map(function, iterable, ...)</code>: Aplica uma função a cada elemento do iterável.</li>
+<li><code>max(iterable[, key])</code>: Retorna o maior elemento do iterável.</li>
+<li><code>memoryview(obj)</code>: Retorna uma visão de memória de um objeto.</li>
+<li><code>min(iterable[, key])</code>: Retorna o menor elemento do iterável.</li>
+<li><code>next(iterator[, default])</code>: Retorna o próximo elemento de um iterador.</li>
+<li><code>object()</code>: Retorna um novo objeto vazio.</li>
+<li><code>oct(x)</code>: Converte um número inteiro para uma string octal.</li>
+<li><code>open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</code>: Abre um arquivo.</li>
+<li><code>ord(c)</code>: Retorna o valor Unicode do caractere.</li>
+<li><code>pow(x, y[, z])</code>: Calcula x elevado à potência y (opcionalmente módulo z).</li>
+<li><code>print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)</code>: Imprime objetos na saída padrão.</li>
+<li><code>property([fget[, fset[, fdel[, doc]]]])</code>: Retorna uma propriedade.</li>
+<li><code>range(stop)</code>, <code>range(start, stop[, step])</code>: Retorna uma sequência de valores.</li>
+</ul></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
