@@ -1,6 +1,12 @@
 # 1. Repositório de Ciência de Dados
 
----
+<img 
+    src="./image/data_science.jpeg" 
+    alt="Data Science" 
+    title="Data Science"
+    width="300" 
+    style="border: 1px solid #ddd; border-radius: 8px; display: block; margin: 0 auto;"
+/>
 
 ## 1.1. Introdução
 Este repositório tem como objetivo centralizar e organizar todo o conhecimento em Ciência de Dados que venho acumulando ao longo da minha carreira. Aqui, você encontrará materiais estruturados sobre estatística, machine learning, engenharia de machine learning e outras áreas essenciais para o desenvolvimento de soluções baseadas em dados.
@@ -28,4 +34,4 @@ Em construção (Deploy de modelos, pipelines de dados, monitoramento e escalabi
 
 **Objetivo**
 
-Servir como um guia de referência para profissionais de dados, estudantes e entusiastas, combinando teoria e prática em um formato acessível.
+Servir como um repositório de conhecimento pessoal, podendo ser utilizado como referência para profissionais de dados, estudantes e entusiastas, combinando teoria e prática em um formato acessível.
