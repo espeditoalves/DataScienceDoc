@@ -3,23 +3,11 @@ nav:
   - Início: index.md
   - Sobre: sobre.md
   - 1.Estatistica:
-    - Introdução: 1_estatistica/Introducao.md
-    - 1.1 - Testes de Hipoteses: 
-      - 1.1.1. O que são os ts: 1_estatistica/1.1_testes_de_hipoteses/1.1.1. ts.md
-      - 1.1.2. Testes de Hipóteses com Estatística t: 1_estatistica/1.1_testes_de_hipoteses/1.1.2. teste_t.md
-      - 1.1.3. Intervalo de Confiança com t student: 1_estatistica/1.1_testes_de_hipoteses/1.1.3. t_student_intervalo_Confianca.md
-      - 1.1.4. P-Valor: 1_estatistica/1.1_testes_de_hipoteses/1.1.4. p_valor.md
-      - 1.1.5. Notebook - t_student_teste_t: 1_estatistica/1.1_testes_de_hipoteses/1.1.5. t_student_teste_t.ipynb
-      - 1.1.6. Notebook - Permutation teste: 1_estatistica/1.1_testes_de_hipoteses/1.1.6. Permutacion_test.ipynb
-  - 2.Machine Learning: guias/configuracao.md
+    - Introdução: 1_estatistica/Introducao_estatistica.md
+  - 2.Machine Learning: 2_machine_learning/configuracao.md
   - Repositório de Projetos:
-    - Modelagem
-  - Exemplos:
-    - Markdown: exemplos/markdown.md
-    - Código: exemplos/codigo.md
-    - Nome_lateral: exemplos/Teste.md
-    - Meu Notebook: exemplos/Learning_curve_1.ipynb
-
+    - Modelagem:
+      - EDA
 theme:
   name: material 
   custom_dir: 'cinder'
