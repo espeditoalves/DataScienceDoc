@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>Teste T Pareado: Cálculo Manual - Data Science</title>
+    <title>1. Cálculo de Intervalo de Confiança Usando t-Student - Data Science</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
         
     
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -81,13 +82,13 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="../../Introducao/">Introdução</a>
+    <a href="../../Introducao.md">Introdução</a>
 </li>
 
                         
@@ -98,13 +99,13 @@
         
             
 <li >
-    <a href="../1.1.1.%20ts/">1.1.1. O que são os ts</a>
+    <a href="../1.1.1. ts.md">1.1.1. O que são os ts</a>
 </li>
 
         
             
 <li >
-    <a href="../1.1.2.%20teste_t/">1.1.2. Testes de Hipóteses com Estatística t</a>
+    <a href="../1.1.2. teste_t.md">1.1.2. Testes de Hipóteses com Estatística t</a>
 </li>
 
         
@@ -116,19 +117,19 @@
         
             
 <li >
-    <a href="../1.1.4.%20p_valor/">1.1.4. P-Valor</a>
-</li>
-
-        
-            
-<li class="active">
-    <a href="./">Teste T Pareado: Cálculo Manual</a>
+    <a href="../1.1.4. p_valor.md">1.1.4. P-Valor</a>
 </li>
 
         
             
 <li >
-    <a href="../1.1.6.%20Permutacion_test/">1.1.6. Notebook - Permutation teste</a>
+    <a href="../1.1.5. t_student_teste_t.ipynb">1.1.5. Notebook - t_student_teste_t</a>
+</li>
+
+        
+            
+<li >
+    <a href="../1.1.6. Permutacion_test.ipynb">1.1.6. Notebook - Permutation teste</a>
 </li>
 
         
@@ -197,16 +198,6 @@
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                    <li >
-                        <a rel="prev" href="../1.1.4.%20p_valor/">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="next" href="../1.1.6.%20Permutacion_test/">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
             </ul>
         </div>
     </div>
@@ -217,24 +208,27 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#teste-t-pareado-calculo-manual">Teste T Pareado: Cálculo Manual</a></li>
-            <li class="second-level"><a href="#dados">Dados</a></li>
+        <li class="first-level active"><a href="#1-calculo-de-intervalo-de-confianca-usando-t-student">1. Cálculo de Intervalo de Confiança Usando t-Student</a></li>
+            <li class="second-level"><a href="#11-dados-fornecidos">1.1. Dados Fornecidos</a></li>
                 
-            <li class="second-level"><a href="#passo-a-passo-para-o-teste-t-pareado-manualmente">Passo a Passo para o Teste T Pareado Manualmente</a></li>
+            <li class="second-level"><a href="#12-passo-1-calcular-a-media-amostral-barx">1.2. Passo 1: Calcular a Média Amostral ($\bar{x}$)</a></li>
                 
-                <li class="third-level"><a href="#1-calcular-as-diferencas">1. Calcular as Diferenças</a></li>
-                <li class="third-level"><a href="#2-calcular-a-media-das-diferencas">2. Calcular a Média das Diferenças</a></li>
-                <li class="third-level"><a href="#3-calcular-o-desvio-padrao-das-diferencas">3. Calcular o Desvio Padrão das Diferenças</a></li>
-                <li class="third-level"><a href="#4-calcular-a-estatistica-t">4. Calcular a Estatística t</a></li>
-                <li class="third-level"><a href="#5-determinar-o-valor-p">5. Determinar o Valor p</a></li>
-                <li class="third-level"><a href="#51-determinar-a-regiao-critica">5.1 Determinar a Região Crítica</a></li>
-                <li class="third-level"><a href="#exemplo-pratico">Exemplo Prático</a></li>
-                <li class="third-level"><a href="#conclusao">Conclusão</a></li>
-                <li class="third-level"><a href="#resumo-do-teste-t-pareado">Resumo do Teste T Pareado:</a></li>
-            <li class="second-level"><a href="#teste-t-pareado-usando-python">Teste T Pareado usando Python</a></li>
+            <li class="second-level"><a href="#13-passo-2-calcular-o-desvio-padrao-amostral-s">1.3. Passo 2: Calcular o Desvio Padrão Amostral ($s$)</a></li>
                 
-                <li class="third-level"><a href="#passos-para-realizar-o-teste-t-pareado">Passos para realizar o Teste T Pareado:</a></li>
-            <li class="second-level"><a href="#implementacao-em-python">Implementação em Python:</a></li>
+            <li class="second-level"><a href="#14-passo-3-calcular-o-intervalo-de-confianca">1.4. Passo 3: Calcular o Intervalo de Confiança</a></li>
+                
+                <li class="third-level"><a href="#141-entendendo-o">1.4.1. Entendendo o $𝛼$</a></li>
+                <li class="third-level"><a href="#142-divisao-de-entre-as-caudas">1.4.2. Divisão de $𝛼$ entre as Caudas</a></li>
+                <li class="third-level"><a href="#143-escolha-do-valor-de-t_alpha2-n-1">1.4.3. Escolha do valor de $t_{\alpha/2, n-1}$</a></li>
+            <li class="second-level"><a href="#15-resultado-final">1.5. Resultado Final</a></li>
+                
+            <li class="second-level"><a href="#16-interpretacao-do-intervalo-de-confianca">1.6. Interpretação do Intervalo de Confiança</a></li>
+                
+                <li class="third-level"><a href="#161-significado-do-intervalo-de-confianca">1.6.1. Significado do Intervalo de Confiança</a></li>
+                <li class="third-level"><a href="#162-nivel-de-confianca-de-95">1.6.2. Nível de Confiança de 95%</a></li>
+                <li class="third-level"><a href="#163-interpretacao-do-erro-padrao-da-media-sem">1.6.3. Interpretação do Erro Padrão da Média (SEM)</a></li>
+                <li class="third-level"><a href="#164-precisao-da-estimativa">1.6.4. Precisão da Estimativa</a></li>
+            <li class="second-level"><a href="#17-interpretacao-generica-do-intervalo-de-confianca">1.7. Interpretação Generica do Intervalo de Confiança</a></li>
                 
     </ul>
 </div></div>
@@ -682,7 +676,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="teste-t-pareado-calculo-manual">Teste T Pareado: Cálculo Manual<a class="anchor-link" href="#teste-t-pareado-calculo-manual">¶</a></h1><p>Este documento explica como realizar um teste t pareado manualmente para determinar se há uma diferença significativa entre as médias de duas amostras emparelhadas. Neste exemplo, utilizamos duas colunas de dados representando métricas de KS scores.</p>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1 id="1-calculo-de-intervalo-de-confianca-usando-t-student">1. Cálculo de Intervalo de Confiança Usando t-Student<a class="anchor-link" href="#1-calculo-de-intervalo-de-confianca-usando-t-student">¶</a></h1>
 </div>
 </div>
 </div>
@@ -693,10 +695,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="dados">Dados<a class="anchor-link" href="#dados">¶</a></h2><p>Vamos utilizar os seguintes dados:</p>
+<hr/>
+<h2 id="11-dados-fornecidos">1.1. Dados Fornecidos<a class="anchor-link" href="#11-dados-fornecidos">¶</a></h2><p>Os dados fornecidos são do <em>AUC_PR</em>:</p>
 <ul>
-<li><code>ks.scores1</code>: [0.583983, 0.576596, 0.556730, 0.595138, 0.584564]</li>
-<li><code>ks.scores2</code>: [0.490242, 0.551584, 0.514383, 0.535587, 0.546064]</li>
+<li>$x_1 = 0.769682$</li>
+<li>$x_2 = 0.758596$</li>
+<li>$x_3 = 0.762273$</li>
+<li>$x_4 = 0.776236$</li>
+<li>$x_5 = 0.760402$</li>
 </ul>
 </div>
 </div>
@@ -708,21 +714,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="passo-a-passo-para-o-teste-t-pareado-manualmente">Passo a Passo para o Teste T Pareado Manualmente<a class="anchor-link" href="#passo-a-passo-para-o-teste-t-pareado-manualmente">¶</a></h2><h3 id="1-calcular-as-diferencas">1. Calcular as Diferenças<a class="anchor-link" href="#1-calcular-as-diferencas">¶</a></h3><p>Primeiro, calculamos a diferença entre as duas colunas para cada par de valores:</p>
+<hr/>
+<h2 id="12-passo-1-calcular-a-media-amostral-barx">1.2. Passo 1: Calcular a Média Amostral ($\bar{x}$)<a class="anchor-link" href="#12-passo-1-calcular-a-media-amostral-barx">¶</a></h2><p>A média amostral ## Passo 1: Calcular a Média Amostral ($\bar{x}$) é calculada somando todos os valores e dividindo pelo número total de observações ($n$):</p>
 <p>$$
-\text{Diferença} = \text{ks.scores1} - \text{ks.scores2}
+\bar{x} = \frac{x_1 + x_2 + x_3 + x_4 + x_5}{5}
 $$</p>
-<p>$$ \begin{align*} 
-0.583983 - 0.490242 &amp;= 0.093741\\\\
-0.576596 - 0.551584 &amp;= 0.025012\\\\
-0.556730 - 0.514383 &amp;= 0.042347\\\\
-0.595138 - 0.535587 &amp;= 0.059551\\\\
-0.584564 - 0.546064 &amp;= 0.038500\\\\
-\end{align*}
-$$</p>
-<p>Então, as diferenças são:</p>
 <p>$$
-\text{Diferenças} = [0.093741, 0.025012, 0.042347, 0.059551, 0.038500]
+\bar{x} = \frac{0.769682 + 0.758596 + 0.762273 + 0.776236 + 0.760402}{5}
+$$</p>
+<p>$$
+\bar{x} = \frac{3.827189}{5}
+$$</p>
+<p>$$
+\bar{x} = 0.765438
 $$</p>
 </div>
 </div>
@@ -734,42 +738,26 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="2-calcular-a-media-das-diferencas">2. Calcular a Média das Diferenças<a class="anchor-link" href="#2-calcular-a-media-das-diferencas">¶</a></h3><p>Agora, calculamos a média das diferenças ($\bar{d}$):</p>
+<hr/>
+<h2 id="13-passo-2-calcular-o-desvio-padrao-amostral-s">1.3. Passo 2: Calcular o Desvio Padrão Amostral ($s$)<a class="anchor-link" href="#13-passo-2-calcular-o-desvio-padrao-amostral-s">¶</a></h2><p>Para calcular o desvio padrão amostral, utilizamos a fórmula:</p>
 <p>$$
-\bar{d} = \frac{1}{n} \sum_{i=1}^{n} d_i = \frac{0.093741 + 0.025012 + 0.042347 + 0.059551 + 0.038500}{5}
+s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n - 1}}
 $$</p>
+<p>Primeiro, calculamos cada termo $(x_i - \bar{x})^2$:</p>
+<p>\begin{align*}
+(x_1 - \bar{x})^2 &amp;= (0.769682 - 0.765438)^2 = 0.00001806 \\
+(x_2 - \bar{x})^2 &amp;= (0.758596 - 0.765438)^2 = 0.00004683 \\
+(x_3 - \bar{x})^2 &amp;= (0.762273 - 0.765438)^2 = 0.00000998 \\
+(x_4 - \bar{x})^2 &amp;= (0.776236 - 0.765438)^2 = 0.00011589 \\
+(x_5 - \bar{x})^2 &amp;= (0.760402 - 0.765438)^2 = 0.00002534
+\end{align*}</p>
+<p>Agora, somamos os quadrados das diferenças:</p>
 <p>$$
-\bar{d} = \frac{0.259151}{5} = 0.0518302
+\sum_{i=1}^{n}(x_i - \bar{x})^2 = 0.00001806 + 0.00004683 + 0.00000998 + 0.00011589 + 0.00002534 = 0.0002161
 $$</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3-calcular-o-desvio-padrao-das-diferencas">3. Calcular o Desvio Padrão das Diferenças<a class="anchor-link" href="#3-calcular-o-desvio-padrao-das-diferencas">¶</a></h3><p>Para calcular o desvio padrão ($s_d$), usamos a fórmula do desvio padrão de uma amostra:</p>
+<p>Calculando o desvio padrão amostral ((s)):</p>
 <p>$$
-s_d = \sqrt{\frac{\sum_{i=1}^{n} (d_i - \bar{d})^2}{n-1}}
-$$</p>
-<p>$$
-\begin{align*}
-(d_1 - \bar{d})^2 &amp;= (0.093741 - 0.0518302)^2 = 0.001749 \\\\
-(d_2 - \bar{d})^2 &amp;= (0.025012 - 0.0518302)^2 = 0.000712 \\\\
-(d_3 - \bar{d})^2 &amp;= (0.042347 - 0.0518302)^2 = 0.000090 \\\\
-(d_4 - \bar{d})^2 &amp;= (0.059551 - 0.0518302)^2 = 0.000059 \\\\
-(d_5 - \bar{d})^2 &amp;= (0.038500 - 0.0518302)^2 = 0.000177 \\\\
-\end{align*}
-$$</p>
-<p>Agora, somamos essas diferenças quadradas e dividimos pelo número de pares menos um:</p>
-<p>$$
-\sum (d_i - \bar{d})^2 = 0.001749 + 0.000712 + 0.000090 + 0.000059 + 0.000177 = 0.002787
-$$</p>
-<p>$$
-s_d = \sqrt{\frac{0.002787}{5-1}} = \sqrt{\frac{0.002787}{4}} = \sqrt{0.00069675} = 0.026396
+s = \sqrt{\frac{0.0002161}{5 - 1}} = \sqrt{\frac{0.0002161}{4}} = \sqrt{0.00005403} \approx 0.00735
 $$</p>
 </div>
 </div>
@@ -781,110 +769,10 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4-calcular-a-estatistica-t">4. Calcular a Estatística t<a class="anchor-link" href="#4-calcular-a-estatistica-t">¶</a></h3><p>A estatística t é calculada usando a média das diferenças, o desvio padrão das diferenças e o número de pares:</p>
-<p>$$
-t = \frac{\bar{d}}{s_d / \sqrt{n}}
-$$</p>
-<p>Onde:</p>
-<ul>
-<li>($\bar{d}$) é a média das diferenças.</li>
-<li>($s_d$) é o desvio padrão das diferenças.</li>
-<li>($n$) é o número de pares.</li>
-</ul>
-<p>Substituindo os valores:</p>
-<p>$$
-t = \frac{0.0518302}{0.026396 / \sqrt{5}} = \frac{0.0518302}{0.011804} = 4.389
-$$</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="5-determinar-o-valor-p">5. Determinar o Valor p<a class="anchor-link" href="#5-determinar-o-valor-p">¶</a></h3><p>Para determinar o valor p, utilizamos a tabela de distribuição t de Student. Com $n - 1 = 4$ graus de liberdade e uma estatística $t$ de $4.389$, vamos buscar o valor p correspondente.</p>
-<ul>
-<li>Para $t = 4.389$ e $df = 4$, o valor p é geralmente menor que $0.05$, indicando que existe uma diferença significativa.</li>
-</ul>
-<h3 id="51-determinar-a-regiao-critica">5.1 Determinar a Região Crítica<a class="anchor-link" href="#51-determinar-a-regiao-critica">¶</a></h3><p>Para um teste t, a região crítica depende do nível de significância ($𝛼$) e do tipo de teste (unilateral ou bilateral). Para um teste t bilateral, a região crítica está nas duas extremidades da distribuição t.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="exemplo-pratico"><strong>Exemplo Prático</strong><a class="anchor-link" href="#exemplo-pratico">¶</a></h3><ul>
-<li><p><strong>Localize a estatística t calculada:</strong> 4.389</p>
-</li>
-<li><p><strong>Localize a coluna com o nível de significância desejado</strong> (por exemplo, $𝛼=0.05$ para um teste de duas caudas).</p>
-</li>
-<li><p><strong>Compare o valor da estatística t com os valores críticos da tabela:</strong></p>
-<p>Para $𝛼=0.05$ em um teste de duas caudas e 4 graus de liberdade, o valor crítico geralmente é cerca de 2.776.
-Como $t=4.389$ é maior que o valor crítico de 2.776, isso indica que a estatística t está na região crítica e o valor p é menor que 0.05.</p>
-</li>
-</ul>
-<blockquote>
-<p><strong>Se a sua estatística t calculada (t = 4.389) exceder o valor crítico da tabela t para o nível de significância escolhido, <code>você rejeita a hipótese nula</code>. Para testes de duas caudas, você precisa comparar a estatística t com o valor crítico para a região crítica em ambas as extremidades da distribuição.</strong></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="conclusao">Conclusão<a class="anchor-link" href="#conclusao">¶</a></h3><ul>
-<li><strong>Valor de t calculado:</strong> 4.389</li>
-<li><strong>Graus de liberdade (df):</strong> 4</li>
-<li><strong>Valor p:</strong> Aproximadamente $0.0053$ (menor que $0.05$)</li>
-</ul>
-<p>Com base nos cálculos, <strong><code>podemos rejeitar a hipótese nula</code></strong> e concluir que existe uma diferença significativa entre as médias das métricas <code>ks.scores1</code> e <code>ks.scores2</code>.</p>
-<h3 id="resumo-do-teste-t-pareado">Resumo do Teste T Pareado:<a class="anchor-link" href="#resumo-do-teste-t-pareado">¶</a></h3><ul>
-<li><strong>Hipótese Nula (H0):</strong> A diferença entre as médias das métricas é zero.</li>
-<li><strong>Hipótese Alternativa (H1):</strong> A diferença entre as médias das métricas não é zero.</li>
-<li><strong>Resultado:</strong> <strong><code>Rejeitamos a hipótese nula</code></strong>. Existe uma diferença significativa entre as médias das métricas.</li>
-</ul>
 <hr/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-1"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -892,44 +780,104 @@ Como $t=4.389$ é maior que o valor crítico de 2.776, isso indica que a estatí
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="teste-t-pareado-usando-python"><strong>Teste T Pareado usando Python</strong><a class="anchor-link" href="#teste-t-pareado-usando-python">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Para testar se existe uma diferença significativa entre as médias das métricas das duas colunas
-<strong><code>ks.scores1</code></strong> e <strong><code>ks.scores2</code></strong>, podemos usar um <strong><code>teste t pareado</code></strong>.
-Este teste é adequado para comparar as médias de duas amostras emparelhadas,
-assumindo que as diferenças entre as amostras seguem uma distribuição normal.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="passos-para-realizar-o-teste-t-pareado"><strong>Passos para realizar o Teste T Pareado:</strong><a class="anchor-link" href="#passos-para-realizar-o-teste-t-pareado">¶</a></h3><p><strong>1. Formulação das Hipóteses:</strong></p>
+<h2 id="14-passo-3-calcular-o-intervalo-de-confianca">1.4. Passo 3: Calcular o Intervalo de Confiança<a class="anchor-link" href="#14-passo-3-calcular-o-intervalo-de-confianca">¶</a></h2><p>O intervalo de confiança para a média de uma amostra, usando a distribuição <strong><code>t-Student</code></strong>, é dado por:</p>
+<p>$$
+IC = \bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}}
+$$</p>
+<h3 id="141-entendendo-o">1.4.1. Entendendo o $𝛼$<a class="anchor-link" href="#141-entendendo-o">¶</a></h3><p>Para um intervalo de confiança de 95%, o valor de  $𝛼$ representa a probabilidade de erro, ou seja, a área das caudas da distribuição <strong><code>t-Student</code></strong> que não é coberta pelo intervalo de confiança. Neste caso, $𝛼=1−0.95=0.05$, ou 5%. Isso significa que há uma chance de 5% de que a média verdadeira não esteja dentro do intervalo calculado.</p>
+<h3 id="142-divisao-de-entre-as-caudas">1.4.2. Divisão de $𝛼$ entre as Caudas<a class="anchor-link" href="#142-divisao-de-entre-as-caudas">¶</a></h3><p>Como o intervalo de confiança é simétrico em torno da média amostral, o valor de $𝛼$ é dividido igualmente entre as duas caudas da distribuição. Portanto, cada cauda tem uma área de $𝛼/2=0.025$.</p>
+<h3 id="143-escolha-do-valor-de-t_alpha2-n-1">1.4.3. Escolha do valor de $t_{\alpha/2, n-1}$<a class="anchor-link" href="#143-escolha-do-valor-de-t_alpha2-n-1">¶</a></h3><p>O valor de $t_{\alpha/2, n-1}$ é obtido da tabela t-Student para $n−1=4$ graus de liberdade, correspondendo a uma cauda de 2.5% em cada lado da distribuição. O valor típico para um nível de confiança de 95% e 4 graus de liberdade é aproximadamente 2.776.</p>
+<p>Substituindo os valores:</p>
 <ul>
-<li><strong><code>H0 (Hipótese Nula):</code></strong> A diferença entre as médias das métricas é zero ($𝜇_1 −𝜇_2 = 0$).</li>
-<li><strong><code>H1 (Hipótese Alternativa):</code></strong> A diferença entre as médias das métricas não é zero ($𝜇_1 −𝜇_2$ != $0$).</li>
+<li>$\bar{x} = 0.765438$</li>
+<li>$s = 0.00735$</li>
+<li>$n = 5$</li>
+<li>$t_{0.025, 4} \approx 2.776$</li>
 </ul>
-<p><strong>2. Cálculo da Diferença das Métricas:</strong></p>
+<p>O erro padrão da média (SEM) é calculado como:</p>
+<p>$$
+\frac{s}{\sqrt{n}} = \frac{0.00735}{\sqrt{5}} = \frac{0.00735}{2.236} \approx 0.003285
+$$</p>
 <ul>
-<li>Para cada par de valores das duas colunas, calcule a diferença.</li>
+<li>$s$: Desvio padrão da amostra, que mede a dispersão dos dados em relação à média amostral.</li>
+<li>$𝑛$: Tamanho da amostra, ou seja, o número total de observações na amostra.</li>
 </ul>
-<p><strong>3. Aplicação do Teste T Pareado:</strong></p>
-<ul>
-<li>Utilize a diferença calculada para aplicar o <strong><code>teste t pareado</code></strong>.</li>
-<li>Calcule o <strong><code>valor p</code></strong> para determinar se as diferenças são estatisticamente significativas.</li>
+<p>Agora, calculamos o intervalo de confiança:</p>
+<p>$$
+IC = 0.765438 \pm 2.776 \times 0.003285
+$$</p>
+<p>$$
+IC = 0.765438 \pm 0.009113
+$$</p>
+<p>$$
+IC = [0.756325, 0.774551]
+$$</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="15-resultado-final">1.5. Resultado Final<a class="anchor-link" href="#15-resultado-final">¶</a></h2><p>O intervalo de confiança de 95% para os dados fornecidos é aproximadamente:</p>
+<p>$$
+IC = [0.756325, 0.774551]
+$$</p>
+<p>Ou seja, com 95% de confiança, podemos afirmar que a média verdadeira dos dados está entre 0.756325 e 0.774551.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="16-interpretacao-do-intervalo-de-confianca">1.6. Interpretação do Intervalo de Confiança<a class="anchor-link" href="#16-interpretacao-do-intervalo-de-confianca">¶</a></h2><h3 id="161-significado-do-intervalo-de-confianca">1.6.1. Significado do Intervalo de Confiança<a class="anchor-link" href="#161-significado-do-intervalo-de-confianca">¶</a></h3><ul>
+<li><p>Intervalo Calculado: $[0.756325,0.774551]$.</p>
+<p>Isso significa que, com 95% de confiança, a média verdadeira da população da qual a amostra foi retirada está entre 0.756325 e 0.774551.</p>
+</li>
+<li><p>Média Amostral ($\bar{x}$): 0.765438.</p>
+<p>A média amostral é a melhor estimativa pontual da média verdadeira da população. O intervalo de confiança fornece uma faixa ao redor dessa média, refletindo a incerteza da estimativa.</p>
+</li>
+</ul>
+<h3 id="162-nivel-de-confianca-de-95">1.6.2. Nível de Confiança de 95%<a class="anchor-link" href="#162-nivel-de-confianca-de-95">¶</a></h3><p>O nível de confiança de 95% implica que, se repetíssemos o processo de amostragem muitas vezes (com diferentes amostras do mesmo tamanho), em 95% das vezes, o intervalo calculado conteria a verdadeira média da população.</p>
+<h3 id="163-interpretacao-do-erro-padrao-da-media-sem">1.6.3. Interpretação do Erro Padrão da Média (SEM)<a class="anchor-link" href="#163-interpretacao-do-erro-padrao-da-media-sem">¶</a></h3><ul>
+<li><p>Erro Padrão da Média (SEM): $0.003285$</p>
+<p>O SEM nos diz o quanto a média amostral ($\bar{x}$) pode variar de uma amostra para outra. Nesse caso, o SEM de $0.003285$ indica que a média das amostras tende a variar em torno de $0.003285$ unidades em relação à média verdadeira da população.</p>
+</li>
+</ul>
+<h3 id="164-precisao-da-estimativa">1.6.4. Precisão da Estimativa<a class="anchor-link" href="#164-precisao-da-estimativa">¶</a></h3><ul>
+<li><p><strong>Intervalo Estreito:</strong> O intervalo relativamente estreito ($[0.756325,0.774551]$) indica que a estimativa da média amostral é bastante precisa. Isso ocorre porque o desvio padrão é pequeno e o tamanho da amostra é adequado para garantir uma boa estimativa.</p>
+</li>
+<li><p><strong>Implicações Práticas:</strong> Em contextos práticos, como análise financeira ou pesquisa científica, essa precisão significa que podemos confiar que a média da população real está dentro do intervalo calculado com um alto nível de confiança.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -941,96 +889,18 @@ assumindo que as diferenças entre as amostras seguem uma distribuição normal.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="implementacao-em-python"><strong>Implementação em Python:</strong><a class="anchor-link" href="#implementacao-em-python">¶</a></h2><p>Vou demonstrar como você pode implementar isso usando a biblioteca <strong><code>scipy.stats</code></strong> para calcular o <strong>teste t pareado</strong>.</p>
+<hr/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
-
-<span class="c1"># Dados fornecidos: ks.scores</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"ks.scores1"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.583983</span><span class="p">,</span> <span class="mf">0.576596</span><span class="p">,</span> <span class="mf">0.556730</span><span class="p">,</span> <span class="mf">0.595138</span><span class="p">,</span> <span class="mf">0.584564</span><span class="p">],</span>
-    <span class="s2">"ks.scores2"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.490242</span><span class="p">,</span> <span class="mf">0.551584</span><span class="p">,</span> <span class="mf">0.514383</span><span class="p">,</span> <span class="mf">0.535587</span><span class="p">,</span> <span class="mf">0.546064</span><span class="p">]</span>
-<span class="p">}</span>
-
-<span class="c1"># Criar o DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="c1"># Calcular o teste T pareado</span>
-<span class="n">t_statistic</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_rel</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores1'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores2'</span><span class="p">])</span>
-
-<span class="c1"># Exibir resultados</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Estatística t:"</span><span class="p">,</span> <span class="n">t_statistic</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Valor p:"</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
-
-<span class="c1"># Avaliação do resultado</span>
-<span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Rejeitamos a hipótese nula: Há diferença significativa entre as médias."</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Não rejeitamos a hipótese nula: Não há diferença significativa entre as médias."</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2">import pandas as pd
-from scipy import stats
-
-# Dados fornecidos: ks.scores
-data = {
-    "ks.scores1": [0.583983, 0.576596, 0.556730, 0.595138, 0.584564],
-    "ks.scores2": [0.490242, 0.551584, 0.514383, 0.535587, 0.546064]
-}
-
-# Criar o DataFrame
-df = pd.DataFrame(data)
-
-# Calcular o teste T pareado
-t_statistic, p_value = stats.ttest_rel(df['ks.scores1'], df['ks.scores2'])
-
-# Exibir resultados
-print("Estatística t:", t_statistic)
-print("Valor p:", p_value)
-
-# Avaliação do resultado
-if p_value &lt; 0.05:
-    print("Rejeitamos a hipótese nula: Há diferença significativa entre as médias.")
-else:
-    print("Não rejeitamos a hipótese nula: Não há diferença significativa entre as médias.")
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Estatística t: 4.378132332736648
-Valor p: 0.011892242763488443
-Rejeitamos a hipótese nula: Há diferença significativa entre as médias.
-</pre>
-</div>
-</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="17-interpretacao-generica-do-intervalo-de-confianca">1.7. Interpretação Generica do Intervalo de Confiança<a class="anchor-link" href="#17-interpretacao-generica-do-intervalo-de-confianca">¶</a></h2><p>Um intervalo de confiança de 95% para uma média amostral significa que, se coletarmos 100 amostras diferentes e calcularmos um intervalo de confiança para cada uma, esperamos que 95 desses intervalos contenham a verdadeira média da população.</p>
 </div>
 </div>
 </div>
@@ -1074,6 +944,8 @@ Rejeitamos a hipótese nula: Há diferença significativa entre as médias.
     <script>var base_url = "../../.."</script>
     
     <script src="../../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
