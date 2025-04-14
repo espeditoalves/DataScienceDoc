@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>t student Intervalo Confianca - Data Science</title>
+    <title>Cálculo de Intervalo de Confiança Usando t-Student - Data Science</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -92,9 +92,48 @@
 
                         
                             
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1 - Testes de Hipoteses</a>
+    <ul class="dropdown-menu">
+        
+            
 <li >
-    <a href="../1.1.1_ts/">1.1 - Testes de Hipoteses</a>
+    <a href="../1.1.1.%20ts/">1.1.1. O que são os ts</a>
 </li>
+
+        
+            
+<li >
+    <a href="../1.1.2.%20teste_t/">1.1.2. Testes de Hipóteses com Estatística t</a>
+</li>
+
+        
+            
+<li >
+    <a href="../1.1.3. t_student_intervalo_Confianca.md">1.1.3. Intervalo de Confiança com t student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../1.1.4.%20p_valor/">1.1.4. P-Valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../1.1.5.%20t_student_teste_t/">Teste T Pareado: Cálculo Manual</a>
+</li>
+
+        
+            
+<li >
+    <a href="../1.1.6.%20Permutacion_test/">1.1.6. Notebook - Permutation teste</a>
+</li>
+
+        
+    </ul>
+  </li>
 
                         
                         </ul>
@@ -194,27 +233,6 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<ul>
-<li><a href="#cálculo-de-intervalo-de-confiança-usando-t-student">Cálculo de Intervalo de Confiança Usando t-Student</a></li>
-<li><a href="#dados-fornecidos">Dados Fornecidos</a></li>
-<li><a href="#passo-1-calcular-a-média-amostral-barx">Passo 1: Calcular a Média Amostral ($\bar{x}$)</a></li>
-<li><a href="#passo-2-calcular-o-desvio-padrão-amostral-s">Passo 2: Calcular o Desvio Padrão Amostral ($s$)</a></li>
-<li><a href="#passo-3-calcular-o-intervalo-de-confiança">Passo 3: Calcular o Intervalo de Confiança</a><ul>
-<li><a href="#entendendo-o-𝛼">Entendendo o $𝛼$</a></li>
-<li><a href="#divisão-de-𝛼-entre-as-caudas">Divisão de $𝛼$ entre as Caudas</a></li>
-<li><a href="#escolha-do-valor-de-t_alpha2-n-1">Escolha do valor de $t_{\alpha/2, n-1}$</a></li>
-</ul>
-</li>
-<li><a href="#resultado-final">Resultado Final</a></li>
-<li><a href="#interpretação-do-intervalo-de-confiança">Interpretação do Intervalo de Confiança</a><ul>
-<li><a href="#1-significado-do-intervalo-de-confiança">1. Significado do Intervalo de Confiança</a></li>
-<li><a href="#2-nível-de-confiança-de-95">2. Nível de Confiança de 95%</a></li>
-<li><a href="#3-interpretação-do-erro-padrão-da-média-sem">3. Interpretação do Erro Padrão da Média (SEM)</a></li>
-<li><a href="#4-precisão-da-estimativa">4. Precisão da Estimativa</a></li>
-</ul>
-</li>
-<li><a href="#interpretação-generica-do-intervalo-de-confiança">Interpretação Generica do Intervalo de Confiança</a></li>
-</ul>
 <h1 id="calculo-de-intervalo-de-confianca-usando-t-student">Cálculo de Intervalo de Confiança Usando t-Student</h1>
 <h2 id="dados-fornecidos">Dados Fornecidos</h2>
 <p>Os dados fornecidos são do <em>AUC_PR</em>:</p>
