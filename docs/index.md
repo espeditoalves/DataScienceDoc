@@ -22,7 +22,7 @@ O repositório está organizado nos seguintes capítulos:
 
 Introdução à Estatística (Conceitos básicos, distribuições, testes de hipóteses e análise exploratória de dados)
 
-- 🤖 [**2. Machine Learning**]()
+- 🤖 [**2. Machine Learning**](./2_machine_learning/Introducao_machine_learning.md)
 
 Em construção (Abordagem supervisionada/não supervisionada, modelos de classificação e regressão, avaliação de desempenho)
 
