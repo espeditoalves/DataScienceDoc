@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>1.1.6. Aplicacao Permutacion test - Data Science</title>
+    <title>1. Cálculo de Intervalo de Confiança Usando t-Student - Data Science</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -82,7 +82,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -99,37 +99,37 @@
         
             
 <li >
-    <a href="../../../1.1.1. Teste_Hipotese.md">1.1.1. Teste_Hipotese</a>
+    <a href="../1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
 </li>
 
         
             
 <li >
-    <a href="../../../1.1.2. O_que_sao_testes_de_hipotese.md">1.1.2. O_que_sao_testes_de_hipotese</a>
+    <a href="../1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
 </li>
 
         
             
 <li >
-    <a href="../../../1.1.3. Aplicacoes_testes_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+    <a href="../1.1.3_Aplicacoes_testes_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
 </li>
 
         
             
 <li >
-    <a href="../../../1.1.4. Aplicacoes_intervalos_de_confianca.ipynb">1.1.4. Aplicacoes_intervalos_de_confianca</a>
+    <a href="../1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
 </li>
 
         
             
 <li >
-    <a href="../../../1.1.5. O_que_e_p_valor.md">1.1.5. O_que_e_p_valor</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../../1.1.6. Aplicacao_Permutacional_Test.ipynb">1.1.6. Aplicacao_Permutacional_Test</a>
+    <a href="../1.1.6_Aplicacao_Permutacional_test.ipynb">1.1.6. Aplicacao_Permutacional_Test</a>
 </li>
 
         
@@ -159,25 +159,25 @@
         
             
 <li >
-    <a href="../../../2.1.1_Crisp-DM.md">2.1.1 Crisp-DM</a>
+    <a href="../../../2_machine_learning/2.1.1_Crisp-DM.md">2.1.1 Crisp-DM</a>
 </li>
 
         
             
 <li >
-    <a href="../../../2.1.2 Pre_treinamento.md">2.1.2 Pre_treinamento</a>
+    <a href="../../../2_machine_learning/2.1.2_Pre_treinamento.md">2.1.2 Pre_treinamento</a>
 </li>
 
         
             
 <li >
-    <a href="../../../2.1.3_Treinamento.md">2.1.3_Treinamento</a>
+    <a href="../../../2_machine_learning/2.1.3_Treinamento.md">2.1.3_Treinamento</a>
 </li>
 
         
             
 <li >
-    <a href="../../../2.1.4_Pos_treinamento.md">2.1.4_Pos_treinamento</a>
+    <a href="../../../2_machine_learning/2.1.4_Pos_treinamento.md">2.1.4_Pos_treinamento</a>
 </li>
 
         
@@ -192,6 +192,16 @@
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../1.1.2_O_que_sao_os_ts/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../1.1.5_O_que_e_p_valor/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
@@ -202,25 +212,28 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#teste-de-permutacao">Teste de permutação</a></li>
-        <li class="first-level "><a href="#implementacao-do-teste-t-pareado">Implementação do Teste T Pareado</a></li>
-        <li class="first-level "><a href="#implementacao-do-teste-de-permutacao">Implementação do Teste de Permutação</a></li>
-            <li class="second-level"><a href="#passo-a-passo-para-o-teste-de-permutacao">Passo a Passo para o Teste de Permutação</a></li>
+        <li class="first-level active"><a href="#1-calculo-de-intervalo-de-confianca-usando-t-student">1. Cálculo de Intervalo de Confiança Usando t-Student</a></li>
+            <li class="second-level"><a href="#11-dados-fornecidos">1.1. Dados Fornecidos</a></li>
                 
-        <li class="first-level "><a href="#teste-de-permutacao-codigo-1">Teste de Permutação: Código 1:</a></li>
-            <li class="second-level"><a href="#explicacao-do-codigo-do-teste-de-permutacao">Explicação do Código do Teste de Permutação</a></li>
+            <li class="second-level"><a href="#12-passo-1-calcular-a-media-amostral-barx">1.2. Passo 1: Calcular a Média Amostral ($\bar{x}$)</a></li>
                 
-            <li class="second-level"><a href="#resultado-esperado">Resultado Esperado</a></li>
+            <li class="second-level"><a href="#13-passo-2-calcular-o-desvio-padrao-amostral-s">1.3. Passo 2: Calcular o Desvio Padrão Amostral ($s$)</a></li>
                 
-            <li class="second-level"><a href="#consideracoes">Considerações</a></li>
+            <li class="second-level"><a href="#14-passo-3-calcular-o-intervalo-de-confianca">1.4. Passo 3: Calcular o Intervalo de Confiança</a></li>
                 
-        <li class="first-level "><a href="#teste-de-permutacao-codigo-2">Teste de Permutação: Código 2 ()</a></li>
-        <li class="first-level "><a href="#comparando-os-codigos-de-permutacao">Comparando os códigos de Permutação</a></li>
-            <li class="second-level"><a href="#codigo-fornecido">Código Fornecido</a></li>
+                <li class="third-level"><a href="#141-entendendo-o">1.4.1. Entendendo o $𝛼$</a></li>
+                <li class="third-level"><a href="#142-divisao-de-entre-as-caudas">1.4.2. Divisão de $𝛼$ entre as Caudas</a></li>
+                <li class="third-level"><a href="#143-escolha-do-valor-de-t_alpha2-n-1">1.4.3. Escolha do valor de $t_{\alpha/2, n-1}$</a></li>
+            <li class="second-level"><a href="#15-resultado-final">1.5. Resultado Final</a></li>
                 
-            <li class="second-level"><a href="#funcao-permutation_test">Função permutation_test</a></li>
+            <li class="second-level"><a href="#16-interpretacao-do-intervalo-de-confianca">1.6. Interpretação do Intervalo de Confiança</a></li>
                 
-        <li class="first-level "><a href="#principais-diferencas">Principais Diferenças</a></li>
+                <li class="third-level"><a href="#161-significado-do-intervalo-de-confianca">1.6.1. Significado do Intervalo de Confiança</a></li>
+                <li class="third-level"><a href="#162-nivel-de-confianca-de-95">1.6.2. Nível de Confiança de 95%</a></li>
+                <li class="third-level"><a href="#163-interpretacao-do-erro-padrao-da-media-sem">1.6.3. Interpretação do Erro Padrão da Média (SEM)</a></li>
+                <li class="third-level"><a href="#164-precisao-da-estimativa">1.6.4. Precisão da Estimativa</a></li>
+            <li class="second-level"><a href="#17-interpretacao-generica-do-intervalo-de-confianca">1.7. Interpretação Generica do Intervalo de Confiança</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
@@ -667,7 +680,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="teste-de-permutacao"><strong>Teste de permutação</strong><a class="anchor-link" href="#teste-de-permutacao">¶</a></h2>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h1 id="1-calculo-de-intervalo-de-confianca-usando-t-student">1. Cálculo de Intervalo de Confiança Usando t-Student<a class="anchor-link" href="#1-calculo-de-intervalo-de-confianca-usando-t-student">¶</a></h1>
 </div>
 </div>
 </div>
@@ -678,488 +699,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Para realizar um teste de permutação junto e um teste t no cenário em que você possui duas colunas de métricas ks.scores1 e ks.scores2, podemos seguir os seguintes passos:</p>
-<p><strong>1. <code>Teste T Pareado:</code></strong> É um teste paramétrico que assume que os dados seguem uma distribuição normal (para grandes amostras, isso é menos crítico devido ao Teorema Central do Limite). Ele é mais eficiente com amostras grandes e pode ser mais fácil de interpretar em muitos casos. Como já discutido, o teste t pareado é apropriado para amostras emparelhadas e verifica se a diferença média é significativamente diferente de zero.</p>
-<p><strong>2. <code>Teste de Permutação:</code></strong> É um teste não-paramétrico que não faz suposições sobre a distribuição dos dados. Ele avalia a diferença entre as médias das amostras ao permutar os dados entre as duas amostras para gerar uma distribuição nula.É especialmente útil quando você tem uma amostra pequena ou quando não pode assumir a normalidade dos dados.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="implementacao-do-teste-t-pareado"><strong>Implementação do Teste T Pareado</strong><a class="anchor-link" href="#implementacao-do-teste-t-pareado">¶</a></h2><p>Antes de implementarmos o teste de permutação, vamos relembrar como implementar o teste t pareado:</p>
-<ul>
-<li><a href="../t_student_teste_t/t_student_teste_t.html">Notebook -Teste T Calculo</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="implementacao-do-teste-de-permutacao"><strong>Implementação do Teste de Permutação</strong><a class="anchor-link" href="#implementacao-do-teste-de-permutacao">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>O <strong><code>teste de permutação</code></strong> é um método de <strong><code>resampling</code></strong> que permite testar a hipótese nula de que duas amostras não apresentam diferenças estatísticas significativas. Isso é feito através da permutação repetida dos dados, calculando a diferença nas médias a cada permutação, para criar uma distribuição nula.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="passo-a-passo-para-o-teste-de-permutacao"><strong>Passo a Passo para o Teste de Permutação</strong><a class="anchor-link" href="#passo-a-passo-para-o-teste-de-permutacao">¶</a></h3><p><strong>1. Formulação das Hipóteses:</strong></p>
-<ul>
-<li><strong><code>H0 (Hipótese Nula):</code></strong>  As duas amostras vêm da mesma distribuição (Não há diferença significativa entre as médias).</li>
-<li><strong><code>H1 (Hipótese Alternativa):</code></strong> As duas amostras vêm de distribuições diferentes (Há diferença significativa entre as médias).</li>
-</ul>
-<p><strong>2. Passos do Teste de Permutação:</strong></p>
-<ul>
-<li>Calcule a diferença observada entre as médias das duas amostras.</li>
-<li>Combine as amostras em um único conjunto de dados.</li>
-<li>Embaralhe (permute) aleatoriamente os dados e separe-os novamente em dois grupos.</li>
-<li>Calcule a diferença entre as médias dos grupos permutados.</li>
-<li>Repita o processo de permutação várias vezes (por exemplo, 10.000 vezes) para construir a distribuição nula.</li>
-<li>Compare a diferença observada com a distribuição nula para determinar o valor p.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="teste-de-permutacao-codigo-1"><strong>Teste de Permutação: Código 1:</strong><a class="anchor-link" href="#teste-de-permutacao-codigo-1">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="c1"># Dados fornecidos: ks.scores</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"ks.scores1"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.583983</span><span class="p">,</span> <span class="mf">0.576596</span><span class="p">,</span> <span class="mf">0.556730</span><span class="p">,</span> <span class="mf">0.595138</span><span class="p">,</span> <span class="mf">0.584564</span><span class="p">],</span>
-    <span class="s2">"ks.scores2"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.490242</span><span class="p">,</span> <span class="mf">0.551584</span><span class="p">,</span> <span class="mf">0.514383</span><span class="p">,</span> <span class="mf">0.535587</span><span class="p">,</span> <span class="mf">0.546064</span><span class="p">]</span>
-<span class="p">}</span>
-
-<span class="c1"># Criar o DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="c1"># Número de permutações</span>
-<span class="n">num_permutations</span> <span class="o">=</span> <span class="mi">10000</span>
-
-<span class="c1"># Calcular a diferença observada entre as médias</span>
-<span class="n">observed_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores1'</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores2'</span><span class="p">])</span>
-
-<span class="c1"># Combinar as duas amostras</span>
-<span class="n">combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores1'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores2'</span><span class="p">]))</span>
-
-<span class="c1"># Inicializar contador para permutações onde a diferença é maior ou igual à diferença observada</span>
-<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># Permutação</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_permutations</span><span class="p">):</span>
-    <span class="c1"># Embaralhar os dados</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span>
-    <span class="c1"># Separar novamente em dois grupos</span>
-    <span class="n">permuted1</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores1'</span><span class="p">])]</span>
-    <span class="n">permuted2</span> <span class="o">=</span> <span class="n">combined</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'ks.scores1'</span><span class="p">]):]</span>
-    <span class="c1"># Calcular a diferença de médias nas amostras permutadas</span>
-    <span class="n">permuted_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">permuted1</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">permuted2</span><span class="p">)</span>
-    <span class="c1"># Verificar se a diferença permutada é maior ou igual à diferença observada</span>
-    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">permuted_diff</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">observed_diff</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Calcular o valor p</span>
-<span class="n">p_value_permutation</span> <span class="o">=</span> <span class="n">count</span> <span class="o">/</span> <span class="n">num_permutations</span>
-
-<span class="c1"># Exibir resultados</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Diferença observada:"</span><span class="p">,</span> <span class="n">observed_diff</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Valor p do teste de permutação:"</span><span class="p">,</span> <span class="n">p_value_permutation</span><span class="p">)</span>
-
-<span class="c1"># Avaliação do resultado</span>
-<span class="k">if</span> <span class="n">p_value_permutation</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Rejeitamos a hipótese nula: Há diferença significativa entre as médias."</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Não rejeitamos a hipótese nula: Não há diferença significativa entre as médias."</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-1">import numpy as np
-import pandas as pd
-
-# Dados fornecidos: ks.scores
-data = {
-    "ks.scores1": [0.583983, 0.576596, 0.556730, 0.595138, 0.584564],
-    "ks.scores2": [0.490242, 0.551584, 0.514383, 0.535587, 0.546064]
-}
-
-# Criar o DataFrame
-df = pd.DataFrame(data)
-
-# Número de permutações
-num_permutations = 10000
-
-# Calcular a diferença observada entre as médias
-observed_diff = np.mean(df['ks.scores1']) - np.mean(df['ks.scores2'])
-
-# Combinar as duas amostras
-combined = np.hstack((df['ks.scores1'], df['ks.scores2']))
-
-# Inicializar contador para permutações onde a diferença é maior ou igual à diferença observada
-count = 0
-
-# Permutação
-for _ in range(num_permutations):
-    # Embaralhar os dados
-    np.random.shuffle(combined)
-    # Separar novamente em dois grupos
-    permuted1 = combined[:len(df['ks.scores1'])]
-    permuted2 = combined[len(df['ks.scores1']):]
-    # Calcular a diferença de médias nas amostras permutadas
-    permuted_diff = np.mean(permuted1) - np.mean(permuted2)
-    # Verificar se a diferença permutada é maior ou igual à diferença observada
-    if abs(permuted_diff) &gt;= abs(observed_diff):
-        count += 1
-
-# Calcular o valor p
-p_value_permutation = count / num_permutations
-
-# Exibir resultados
-print("Diferença observada:", observed_diff)
-print("Valor p do teste de permutação:", p_value_permutation)
-
-# Avaliação do resultado
-if p_value_permutation &lt; 0.05:
-    print("Rejeitamos a hipótese nula: Há diferença significativa entre as médias.")
-else:
-    print("Não rejeitamos a hipótese nula: Não há diferença significativa entre as médias.")
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Diferença observada: 0.05183019999999994
-Valor p do teste de permutação: 0.0053
-Rejeitamos a hipótese nula: Há diferença significativa entre as médias.
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="explicacao-do-codigo-do-teste-de-permutacao"><strong>Explicação do Código do Teste de Permutação</strong><a class="anchor-link" href="#explicacao-do-codigo-do-teste-de-permutacao">¶</a></h3><ul>
-<li><strong><code>Combinação e Permutação:</code></strong> Combina as duas amostras em um array e embaralha repetidamente para criar distribuições permutadas.</li>
-<li><strong><code>Contagem:</code></strong> Conta o número de permutações onde a diferença permutada é maior ou igual à diferença observada.</li>
-<li><strong><code>Cálculo do Valor p:</code></strong> O valor p é calculado dividindo o número de permutações em que a diferença permutada foi maior ou igual à diferença observada pelo total de permutações.</li>
-</ul>
-<h3 id="resultado-esperado"><strong>Resultado Esperado</strong><a class="anchor-link" href="#resultado-esperado">¶</a></h3><p>Ao executar ambos os testes, você terá duas análises complementares sobre a diferença entre as médias das métricas:</p>
-<ul>
-<li><strong>1. <code>Teste T Pareado:</code></strong> Verifica se a diferença média é significativa sob a suposição de normalidade.</li>
-<li><strong>2. <code>Teste de Permutação:</code></strong> Oferece uma abordagem não-paramétrica para testar a mesma hipótese.</li>
-</ul>
-<h3 id="consideracoes"><strong>Considerações</strong><a class="anchor-link" href="#consideracoes">¶</a></h3><p>O teste t assume que as diferenças entre as amostras seguem uma distribuição normal. Se essa suposição não for válida, o teste de permutação é uma boa alternativa.
-O teste de permutação é computacionalmente intensivo, mas não depende de suposições sobre a distribuição dos dados, tornando-o útil para casos em que a normalidade é questionável.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="teste-de-permutacao-codigo-2"><strong>Teste de Permutação: Código 2 ()</strong><a class="anchor-link" href="#teste-de-permutacao-codigo-2">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">permutation_test</span><span class="p">(</span>
-    <span class="n">array1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
-    <span class="n">array2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
-    <span class="n">anscreen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Realiza um teste de permutação para comparar as médias de dois arrays.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        array1 (List[float]): O primeiro array de dados.</span>
-<span class="sd">        array2 (List[float]): O segundo array de dados.</span>
-<span class="sd">        anscreen (bool): Se True, imprime os resultados na tela. Default é False.</span>
-<span class="sd">        alpha (float): Nível de significância para o teste (p-valor). Default é 0.05.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        Tuple[float, List[float], float, List[str]]:</span>
-<span class="sd">            - p_val (float): Valor p do teste de permutação.</span>
-<span class="sd">            - mean_lst (List[float]): Lista das diferenças médias permutadas.</span>
-<span class="sd">            - mean_diff (float): Diferença média observada entre os dois arrays.</span>
-<span class="sd">            - text_lst (List[str]): Lista de mensagens interpretativas sobre o teste.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Garantindo a entrada com numpy array</span>
-    <span class="n">array1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array1</span><span class="p">)</span>
-    <span class="n">array2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array2</span><span class="p">)</span>
-    
-    <span class="c1"># Cálculo das médias de cada vetor</span>
-    <span class="n">avg_array1</span> <span class="o">=</span> <span class="n">array1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="n">avg_array2</span> <span class="o">=</span> <span class="n">array2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    
-    <span class="c1"># Diferença entre as médias</span>
-    <span class="n">mean_diff</span> <span class="o">=</span> <span class="n">avg_array1</span> <span class="o">-</span> <span class="n">avg_array2</span>
-    <span class="n">full_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">])</span>
-    <span class="n">mean_lst</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1"># Defina a semente aleatória para reprodutibilidade</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="c1"># Com reposição: bootstrapping</span>
-        <span class="n">avg1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">full_array</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">array1</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-        <span class="n">avg2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">full_array</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">array2</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-        <span class="c1"># reprece = True, Assume que qualquer valor pode vir de uma das duas listas, convergÊncia para Normal.</span>
-        <span class="n">mean_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">avg1</span> <span class="o">-</span> <span class="n">avg2</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">mean_diff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean_lst</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">mean_diff</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_lst</span><span class="p">)</span> 
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mean_lst</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">mean_diff</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mean_lst</span><span class="p">)</span> 
-    
-    <span class="n">text_lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Teste de Significancia "</span><span class="p">,</span> 
-                <span class="s2">"**$H_0$:** Diferença entre as médias das métricas é zero. </span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
-                <span class="sa">f</span><span class="s2">" Arrays sizes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">array1</span><span class="p">)</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">array2</span><span class="p">)</span><span class="si">}</span><span class="s2"> "</span><span class="p">,</span>
-                <span class="s2">"* Difference between averages: </span><span class="si">%.4f</span><span class="s2"> - </span><span class="si">%.4f</span><span class="s2"> = </span><span class="si">%.4f</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">avg_array1</span><span class="p">,</span> <span class="n">avg_array2</span><span class="p">,</span> <span class="n">mean_diff</span><span class="p">),</span>
-                <span class="s2">"* p_val = </span><span class="si">%.4f</span><span class="s2"> "</span> <span class="o">%</span><span class="n">p_val</span><span class="p">]</span>
-    
-    <span class="k">if</span> <span class="n">p_val</span> <span class="o">&gt;</span> <span class="n">alpha</span><span class="p">:</span>
-        <span class="n">text_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The model seems to produce similar results with CI-</span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="si">}</span><span class="s1"> (fail to reject H0).</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">text_lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The model seems to produce different results with CI-</span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="si">}</span><span class="s1"> (reject H0).</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">anscreen</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text_lst</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>   
-    <span class="k">return</span> <span class="n">p_val</span><span class="p">,</span> <span class="n">mean_lst</span><span class="p">,</span> <span class="n">mean_diff</span><span class="p">,</span> <span class="n">text_lst</span>
-
-<span class="c1"># Dados fornecidos: ks.scores</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"ks.scores1"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.583983</span><span class="p">,</span> <span class="mf">0.576596</span><span class="p">,</span> <span class="mf">0.556730</span><span class="p">,</span> <span class="mf">0.595138</span><span class="p">,</span> <span class="mf">0.584564</span><span class="p">],</span>
-    <span class="s2">"ks.scores2"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.490242</span><span class="p">,</span> <span class="mf">0.551584</span><span class="p">,</span> <span class="mf">0.514383</span><span class="p">,</span> <span class="mf">0.535587</span><span class="p">,</span> <span class="mf">0.546064</span><span class="p">]</span>
-<span class="p">}</span>
-<span class="n">p_val</span><span class="p">,</span> <span class="n">mean_lst</span><span class="p">,</span> <span class="n">mean_diff</span><span class="p">,</span> <span class="n">text_lst</span> <span class="o">=</span> <span class="n">permutation_test</span><span class="p">(</span><span class="n">array1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"ks.scores1"</span><span class="p">],</span> <span class="n">array2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"ks.scores2"</span><span class="p">],</span> <span class="n">alpha</span>  <span class="o">=</span> <span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-2">from typing import Dict, List, Tuple
-def permutation_test(
-    array1: List[float],
-    array2: List[float],
-    anscreen: bool = True,
-    alpha: float = 0.05
-) -&gt; Tuple[float, List[float], float, List[str]]:
-    """
-    Realiza um teste de permutação para comparar as médias de dois arrays.
-
-    Args:
-        array1 (List[float]): O primeiro array de dados.
-        array2 (List[float]): O segundo array de dados.
-        anscreen (bool): Se True, imprime os resultados na tela. Default é False.
-        alpha (float): Nível de significância para o teste (p-valor). Default é 0.05.
-
-    Returns:
-        Tuple[float, List[float], float, List[str]]:
-            - p_val (float): Valor p do teste de permutação.
-            - mean_lst (List[float]): Lista das diferenças médias permutadas.
-            - mean_diff (float): Diferença média observada entre os dois arrays.
-            - text_lst (List[str]): Lista de mensagens interpretativas sobre o teste.
-    """
-    # Garantindo a entrada com numpy array
-    array1 = np.array(array1)
-    array2 = np.array(array2)
-    
-    # Cálculo das médias de cada vetor
-    avg_array1 = array1.mean()
-    avg_array2 = array2.mean()
-    
-    # Diferença entre as médias
-    mean_diff = avg_array1 - avg_array2
-    full_array = np.concatenate([array1, array2])
-    mean_lst = []
-    # Defina a semente aleatória para reprodutibilidade
-    np.random.seed(42)
-    for i in range(10000):
-        # Com reposição: bootstrapping
-        avg1 = np.random.choice(full_array, size=len(array1), replace=True).mean()
-        avg2 = np.random.choice(full_array, size=len(array2), replace=True).mean()
-        # reprece = True, Assume que qualquer valor pode vir de uma das duas listas, convergÊncia para Normal.
-        mean_lst.append(avg1 - avg2)
-    
-    if mean_diff &gt; 0:
-        p_val = np.sum(np.array(mean_lst) &gt; mean_diff) / len(mean_lst) 
-    else:
-        p_val = np.sum(np.array(mean_lst) &lt; mean_diff) / len(mean_lst) 
-    
-    text_lst = ["\n Teste de Significancia ", 
-                "**$H_0$:** Diferença entre as médias das métricas é zero. \n",
-                f" Arrays sizes: {len(array1)}, {len(array2)} ",
-                "* Difference between averages: %.4f - %.4f = %.4f" % (avg_array1, avg_array2, mean_diff),
-                "* p_val = %.4f " %p_val]
-    
-    if p_val &gt; alpha:
-        text_lst.append(f'The model seems to produce similar results with CI-{1 - alpha} (fail to reject H0).\n')
-    else:
-        text_lst.append(f'The model seems to produce different results with CI-{1 - alpha} (reject H0).\n')
-    
-    if anscreen:
-        for line in text_lst:
-            print(line)   
-    return p_val, mean_lst, mean_diff, text_lst
-
-# Dados fornecidos: ks.scores
-data = {
-    "ks.scores1": [0.583983, 0.576596, 0.556730, 0.595138, 0.584564],
-    "ks.scores2": [0.490242, 0.551584, 0.514383, 0.535587, 0.546064]
-}
-p_val, mean_lst, mean_diff, text_lst = permutation_test(array1 = data["ks.scores1"], array2 = data["ks.scores2"], alpha  = 0.05)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>
- Teste de Significancia 
-**$H_0$:** Diferença entre as médias das métricas é zero. 
-
- Arrays sizes: 5, 5 
-* Difference between averages: 0.5794 - 0.5276 = 0.0518
-* p_val = 0.0049 
-The model seems to produce different results with CI-0.95 (reject H0).
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="comparando-os-codigos-de-permutacao"><strong>Comparando os códigos de Permutação</strong><a class="anchor-link" href="#comparando-os-codigos-de-permutacao">¶</a></h2><p>O <strong><code>código 1</code></strong>  e a função <strong><code>permutation_test</code></strong> compartilham a mesma lógica básica para realizar um teste de permutação, mas existem algumas diferenças sutis na implementação e no tipo de análise.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="codigo-fornecido"><strong>Código Fornecido</strong><a class="anchor-link" href="#codigo-fornecido">¶</a></h3><p><strong>1. Processo de Permutação:</strong></p>
-<ul>
-<li>Combina as duas amostras.</li>
-<li>Embaralha aleatoriamente os dados combinados.</li>
-<li>Separa os dados embaralhados novamente em duas amostras.</li>
-<li>Calcula a diferença entre as médias das amostras permutadas e compara com a diferença observada.</li>
-</ul>
-<p><strong>2. Valor p:</strong></p>
-<ul>
-<li>O <strong><code>valor p</code></strong> é calculado como a proporção das diferenças permutadas que são maiores ou iguais à diferença observada.</li>
-</ul>
-<p><strong>3. Teste de Hipóteses:</strong></p>
-<p>Se o <strong><code>valor p for menor que 0.05</code></strong>, <strong><code>rejeita a hipótese nula</code></strong>, indicando que há uma diferença significativa entre as médias.</p>
 <hr/>
-<h3 id="funcao-permutation_test"><strong>Função permutation_test</strong><a class="anchor-link" href="#funcao-permutation_test">¶</a></h3><p><strong>1. Processo de Permutação:</strong></p>
+<h2 id="11-dados-fornecidos">1.1. Dados Fornecidos<a class="anchor-link" href="#11-dados-fornecidos">¶</a></h2><p>Os dados fornecidos são do <em>AUC_PR</em>:</p>
 <ul>
-<li>Em vez de combinar e embaralhar os dados, utiliza a técnica de <strong><code>bootstrapping</code></strong> (amostragem com reposição) para gerar as diferenças de médias.
-Calcula a diferença entre as médias de amostras <strong>bootstrapped</strong> e compara com a diferença observada.</li>
-</ul>
-<p><strong>2. Valor p:</strong></p>
-<ul>
-<li>O valor p é calculado comparando a diferença média observada com as diferenças médias obtidas nas amostras bootstrapped.</li>
-</ul>
-<p><strong>3. Teste de Hipóteses:</strong></p>
-<ul>
-<li>A função oferece uma descrição mais detalhada do teste, incluindo mensagens interpretativas.</li>
-<li>Permite definir um nível de significância (alpha) e imprime resultados na tela se o argumento anscreen for True.</li>
+<li>$x_1 = 0.769682$</li>
+<li>$x_2 = 0.758596$</li>
+<li>$x_3 = 0.762273$</li>
+<li>$x_4 = 0.776236$</li>
+<li>$x_5 = 0.760402$</li>
 </ul>
 </div>
 </div>
@@ -1171,14 +718,193 @@ Calcula a diferença entre as médias de amostras <strong>bootstrapped</strong> 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="principais-diferencas"><strong>Principais Diferenças</strong><a class="anchor-link" href="#principais-diferencas">¶</a></h2><ul>
-<li><strong><code>Combinação de Dados:</code></strong> O <strong>código 1</strong> combina as amostras e embaralha, enquanto a função <strong>permutation_test</strong> utiliza <strong><code>bootstrapping</code></strong>.</li>
-<li><strong><code>Tipo de Permutação:</code></strong> O <strong>código 1</strong> usa permutação direta, enquanto a função <strong>permutation_test</strong> usa amostragem com reposição.</li>
-<li><strong><code>Saída:</code></strong> A função <strong>permutation_test</strong> retorna um conjunto mais detalhado de informações e permite a impressão dos resultados.</li>
+<hr/>
+<h2 id="12-passo-1-calcular-a-media-amostral-barx">1.2. Passo 1: Calcular a Média Amostral ($\bar{x}$)<a class="anchor-link" href="#12-passo-1-calcular-a-media-amostral-barx">¶</a></h2><p>A média amostral ## Passo 1: Calcular a Média Amostral ($\bar{x}$) é calculada somando todos os valores e dividindo pelo número total de observações ($n$):</p>
+<p>$$
+\bar{x} = \frac{x_1 + x_2 + x_3 + x_4 + x_5}{5}
+$$</p>
+<p>$$
+\bar{x} = \frac{0.769682 + 0.758596 + 0.762273 + 0.776236 + 0.760402}{5}
+$$</p>
+<p>$$
+\bar{x} = \frac{3.827189}{5}
+$$</p>
+<p>$$
+\bar{x} = 0.765438
+$$</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+<h2 id="13-passo-2-calcular-o-desvio-padrao-amostral-s">1.3. Passo 2: Calcular o Desvio Padrão Amostral ($s$)<a class="anchor-link" href="#13-passo-2-calcular-o-desvio-padrao-amostral-s">¶</a></h2><p>Para calcular o desvio padrão amostral, utilizamos a fórmula:</p>
+<p>$$
+s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n - 1}}
+$$</p>
+<p>Primeiro, calculamos cada termo $(x_i - \bar{x})^2$:</p>
+<p>\begin{align*}
+(x_1 - \bar{x})^2 &amp;= (0.769682 - 0.765438)^2 = 0.00001806 \\
+(x_2 - \bar{x})^2 &amp;= (0.758596 - 0.765438)^2 = 0.00004683 \\
+(x_3 - \bar{x})^2 &amp;= (0.762273 - 0.765438)^2 = 0.00000998 \\
+(x_4 - \bar{x})^2 &amp;= (0.776236 - 0.765438)^2 = 0.00011589 \\
+(x_5 - \bar{x})^2 &amp;= (0.760402 - 0.765438)^2 = 0.00002534
+\end{align*}</p>
+<p>Agora, somamos os quadrados das diferenças:</p>
+<p>$$
+\sum_{i=1}^{n}(x_i - \bar{x})^2 = 0.00001806 + 0.00004683 + 0.00000998 + 0.00011589 + 0.00002534 = 0.0002161
+$$</p>
+<p>Calculando o desvio padrão amostral ((s)):</p>
+<p>$$
+s = \sqrt{\frac{0.0002161}{5 - 1}} = \sqrt{\frac{0.0002161}{4}} = \sqrt{0.00005403} \approx 0.00735
+$$</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="14-passo-3-calcular-o-intervalo-de-confianca">1.4. Passo 3: Calcular o Intervalo de Confiança<a class="anchor-link" href="#14-passo-3-calcular-o-intervalo-de-confianca">¶</a></h2><p>O intervalo de confiança para a média de uma amostra, usando a distribuição <strong><code>t-Student</code></strong>, é dado por:</p>
+<p>$$
+IC = \bar{x} \pm t_{\alpha/2, n-1} \cdot \frac{s}{\sqrt{n}}
+$$</p>
+<h3 id="141-entendendo-o">1.4.1. Entendendo o $𝛼$<a class="anchor-link" href="#141-entendendo-o">¶</a></h3><p>Para um intervalo de confiança de 95%, o valor de  $𝛼$ representa a probabilidade de erro, ou seja, a área das caudas da distribuição <strong><code>t-Student</code></strong> que não é coberta pelo intervalo de confiança. Neste caso, $𝛼=1−0.95=0.05$, ou 5%. Isso significa que há uma chance de 5% de que a média verdadeira não esteja dentro do intervalo calculado.</p>
+<h3 id="142-divisao-de-entre-as-caudas">1.4.2. Divisão de $𝛼$ entre as Caudas<a class="anchor-link" href="#142-divisao-de-entre-as-caudas">¶</a></h3><p>Como o intervalo de confiança é simétrico em torno da média amostral, o valor de $𝛼$ é dividido igualmente entre as duas caudas da distribuição. Portanto, cada cauda tem uma área de $𝛼/2=0.025$.</p>
+<h3 id="143-escolha-do-valor-de-t_alpha2-n-1">1.4.3. Escolha do valor de $t_{\alpha/2, n-1}$<a class="anchor-link" href="#143-escolha-do-valor-de-t_alpha2-n-1">¶</a></h3><p>O valor de $t_{\alpha/2, n-1}$ é obtido da tabela t-Student para $n−1=4$ graus de liberdade, correspondendo a uma cauda de 2.5% em cada lado da distribuição. O valor típico para um nível de confiança de 95% e 4 graus de liberdade é aproximadamente 2.776.</p>
+<p>Substituindo os valores:</p>
+<ul>
+<li>$\bar{x} = 0.765438$</li>
+<li>$s = 0.00735$</li>
+<li>$n = 5$</li>
+<li>$t_{0.025, 4} \approx 2.776$</li>
 </ul>
-<blockquote>
-<p>Ambos os métodos têm o mesmo objetivo: comparar as médias de duas amostras para determinar se há uma diferença significativa. A escolha entre eles pode depender da preferência ou do contexto específico do problema.</p>
-</blockquote>
+<p>O erro padrão da média (SEM) é calculado como:</p>
+<p>$$
+\frac{s}{\sqrt{n}} = \frac{0.00735}{\sqrt{5}} = \frac{0.00735}{2.236} \approx 0.003285
+$$</p>
+<ul>
+<li>$s$: Desvio padrão da amostra, que mede a dispersão dos dados em relação à média amostral.</li>
+<li>$𝑛$: Tamanho da amostra, ou seja, o número total de observações na amostra.</li>
+</ul>
+<p>Agora, calculamos o intervalo de confiança:</p>
+<p>$$
+IC = 0.765438 \pm 2.776 \times 0.003285
+$$</p>
+<p>$$
+IC = 0.765438 \pm 0.009113
+$$</p>
+<p>$$
+IC = [0.756325, 0.774551]
+$$</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="15-resultado-final">1.5. Resultado Final<a class="anchor-link" href="#15-resultado-final">¶</a></h2><p>O intervalo de confiança de 95% para os dados fornecidos é aproximadamente:</p>
+<p>$$
+IC = [0.756325, 0.774551]
+$$</p>
+<p>Ou seja, com 95% de confiança, podemos afirmar que a média verdadeira dos dados está entre 0.756325 e 0.774551.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="16-interpretacao-do-intervalo-de-confianca">1.6. Interpretação do Intervalo de Confiança<a class="anchor-link" href="#16-interpretacao-do-intervalo-de-confianca">¶</a></h2><h3 id="161-significado-do-intervalo-de-confianca">1.6.1. Significado do Intervalo de Confiança<a class="anchor-link" href="#161-significado-do-intervalo-de-confianca">¶</a></h3><ul>
+<li><p>Intervalo Calculado: $[0.756325,0.774551]$.</p>
+<p>Isso significa que, com 95% de confiança, a média verdadeira da população da qual a amostra foi retirada está entre 0.756325 e 0.774551.</p>
+</li>
+<li><p>Média Amostral ($\bar{x}$): 0.765438.</p>
+<p>A média amostral é a melhor estimativa pontual da média verdadeira da população. O intervalo de confiança fornece uma faixa ao redor dessa média, refletindo a incerteza da estimativa.</p>
+</li>
+</ul>
+<h3 id="162-nivel-de-confianca-de-95">1.6.2. Nível de Confiança de 95%<a class="anchor-link" href="#162-nivel-de-confianca-de-95">¶</a></h3><p>O nível de confiança de 95% implica que, se repetíssemos o processo de amostragem muitas vezes (com diferentes amostras do mesmo tamanho), em 95% das vezes, o intervalo calculado conteria a verdadeira média da população.</p>
+<h3 id="163-interpretacao-do-erro-padrao-da-media-sem">1.6.3. Interpretação do Erro Padrão da Média (SEM)<a class="anchor-link" href="#163-interpretacao-do-erro-padrao-da-media-sem">¶</a></h3><ul>
+<li><p>Erro Padrão da Média (SEM): $0.003285$</p>
+<p>O SEM nos diz o quanto a média amostral ($\bar{x}$) pode variar de uma amostra para outra. Nesse caso, o SEM de $0.003285$ indica que a média das amostras tende a variar em torno de $0.003285$ unidades em relação à média verdadeira da população.</p>
+</li>
+</ul>
+<h3 id="164-precisao-da-estimativa">1.6.4. Precisão da Estimativa<a class="anchor-link" href="#164-precisao-da-estimativa">¶</a></h3><ul>
+<li><p><strong>Intervalo Estreito:</strong> O intervalo relativamente estreito ($[0.756325,0.774551]$) indica que a estimativa da média amostral é bastante precisa. Isso ocorre porque o desvio padrão é pequeno e o tamanho da amostra é adequado para garantir uma boa estimativa.</p>
+</li>
+<li><p><strong>Implicações Práticas:</strong> Em contextos práticos, como análise financeira ou pesquisa científica, essa precisão significa que podemos confiar que a média da população real está dentro do intervalo calculado com um alto nível de confiança.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="17-interpretacao-generica-do-intervalo-de-confianca">1.7. Interpretação Generica do Intervalo de Confiança<a class="anchor-link" href="#17-interpretacao-generica-do-intervalo-de-confianca">¶</a></h2><p>Um intervalo de confiança de 95% para uma média amostral significa que, se coletarmos 100 amostras diferentes e calcularmos um intervalo de confiança para cada uma, esperamos que 95 desses intervalos contenham a verdadeira média da população.</p>
 </div>
 </div>
 </div>
