@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>1.1.5. O que e p valor - Data Science</title>
+    <title>Transformacoes - Data Science</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -88,7 +88,7 @@
                         
                             
 <li >
-    <a href="../../Introducao_estatistica/">Introdução</a>
+    <a href="../../../1_estatistica/Introducao_estatistica/">Introdução</a>
 </li>
 
                         
@@ -148,7 +148,7 @@
                         
                             
 <li >
-    <a href="../../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+    <a href="../../Introducao_machine_learning/">Introdução</a>
 </li>
 
                         
@@ -202,79 +202,79 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-o-que-e-p-valor">1. O que é P VALOR?</a></li>
-        <li class="first-level "><a href="#2-hipoteses-estatisticas">2. Hipóteses Estatísticas</a></li>
-        <li class="first-level "><a href="#3-nivel-de-significancia-e-valor-de-p">3. Nível de Significância e Valor de P</a></li>
-        <li class="first-level "><a href="#4-estatisticamente-significativo">4. Estatisticamente Significativo?</a></li>
-        <li class="first-level "><a href="#5-o-que-significa-o-valor-de-p">5. O que Significa o Valor de P?</a></li>
+        <li class="first-level active"><a href="#principais-tecnicas-de-transformacao-de-dados-para-machine-learning">Principais Técnicas de Transformação de Dados para Machine Learning</a></li>
+            <li class="second-level"><a href="#transformacoes-logaritmicas">Transformações Logarítmicas</a></li>
+                
+            <li class="second-level"><a href="#outras-transformacoes">Outras Transformações</a></li>
+                
+            <li class="second-level"><a href="#binning-discretizacao">Binning (Discretização)</a></li>
+                
+            <li class="second-level"><a href="#encoding-de-variaveis-categoricas">Encoding de Variáveis Categóricas</a></li>
+                
+            <li class="second-level"><a href="#feature-engineering">Feature Engineering</a></li>
+                
+            <li class="second-level"><a href="#importancia-das-transformacoes-de-dados-na-regressao-logistica">Importância das Transformações de Dados na Regressão Logística</a></li>
+                
+            <li class="second-level"><a href="#referencias">Referências</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="1-o-que-e-p-valor">1. O que é P VALOR?</h2>
-<p>O valor de p representa a <strong>probabilidade de a diferença detectada entre os grupos analisados ter ocorrido ao acaso.</strong> </p>
-<p>Então,</p>
-<p>– Um <strong>pequeno valor de p</strong> (p ≤ 0,05, ou seja, probabilidade menor ou igual a 5%): 
-indica que há uma pequena probabilidade de que a diferença observada entre os grupos seja ao acaso, então, você considera que <strong><code>há diferença significativa</code></strong> entre os grupos.</p>
-<p>– Um <strong>grande valor de p</strong> (p &gt; 0,05, ou seja, probabilidade maior que 5%): 
-indica que há uma grande probabilidade de que a diferença observada entre os grupos seja ao acaso, então, você considera que <strong><code>não há diferença significativa</code></strong> entre os grupos.</p>
-<p>Na explicação acima, usamos <strong>“diferença entre os grupos”</strong> como exemplo, que se aplica a análises como <strong>teste t</strong> e <strong>Anova</strong>.</p>
-<p>Para testes como correlação de Pearson e regressão linear, passaríamos a dizer <strong>“relação entre as variáveis”</strong>.</p>
-<p><strong>Referência:</strong> https://estatisticafacil.org/2020/10/06/valor_de_p/</p>
-<hr />
-<blockquote>
-<p><strong>Atente-se para a informação a seguir:</strong></p>
-<p>As definições, entendimentos e explicações que utilizamos aqui, são os mais gerais e amplamente utilizadas em disciplinas básicas de estatística ou bioestatística e livros texto.</p>
-<p>Sendo assim, nestes moldes, de forma geral, o entendimento dos significados se torna mais fácil e lógico para quem não é ligado diretamente com a área de exatas.</p>
-<p>Este entendimento, no entanto, vem sendo criticado por alguns estatísticos e, por conta disto, a <em>Associação Americana de Estatística</em> publicou um editorial sobre a <strong><code>“significância estatística e o valor de p”</code></strong>, com aspectos um pouco diferentes dos retratados aqui.</p>
-<p>Abaixo, uma definição mais precisa, mas ao mesmo tempo menos intuitiva.</p>
-<blockquote>
-<p><strong>O valor de p representa a probabilidade de obtermos um resultado igual (ou mais extremo) ao obtido a partir dos nossos dados, assumindo que a hipótese nula é verdadeira.</strong></p>
-</blockquote>
-</blockquote>
-<p>Essa definição será discutida nos tópicos abaixo</p>
-<hr />
-<h2 id="2-hipoteses-estatisticas">2. Hipóteses Estatísticas</h2>
-<p>Quando fazemos um <strong>teste inferencial</strong> de hipóteses — como qui-quadrado, teste t, anova, correlação, regressão, etc — temos basicamente duas hipóteses:</p>
 <ul>
-<li>
-<p><strong>HIPÓTESE nula (H0):</strong> A padrão, mais simples, de que não há ‘diferença entre os grupos’ ou não há ‘relação entre as variáveis’.</p>
-</li>
-<li>
-<p><strong>HIPÓTESE alternativa (H1):</strong> Estado alternativo, complementar a H0, de que há ‘diferenças entre grupos’ ou há ‘relação entre as variáveis’.</p>
-</li>
+<li><a href="#principais-técnicas-de-transformação-de-dados-para-machine-learning">Principais Técnicas de Transformação de Dados para Machine Learning</a></li>
+<li><a href="#transformações-logarítmicas">Transformações Logarítmicas</a></li>
+<li><a href="#outras-transformações">Outras Transformações</a></li>
+<li><a href="#binning-discretização">Binning (Discretização)</a></li>
+<li><a href="#encoding-de-variáveis-categóricas">Encoding de Variáveis Categóricas</a></li>
+<li><a href="#feature-engineering">Feature Engineering</a></li>
+<li><a href="#importância-das-transformações-de-dados-na-regressão-logística">Importância das Transformações de Dados na Regressão Logística</a></li>
+<li><a href="#referências">Referências</a></li>
 </ul>
-<hr />
-<h2 id="3-nivel-de-significancia-e-valor-de-p">3. Nível de Significância e Valor de P</h2>
-<p>O <strong>objetivo</strong> básico de todo e qualquer teste de hipóteses é definir se rejeitaremos ou não a hipótese nula (H0) — e essa definição dependerá de dois fatores fundamentais:</p>
-<ul>
-<li>
-<p><strong>1. NÍVEL DE SIGNIFICÂNCIA (<em>α</em>):</strong> Representa um valor de corte, um critério que definimos para rejeitar H0 ou não. A definição de seu valor — normalmente 1% ou 5% — deve ser feita anteriormente ao teste.</p>
-</li>
-<li>
-<p><strong>2. VALOR DE P (p):</strong> O valor de p representa uma probabilidade, e esse valor será obtido sempre que executarmos um teste inferencial de hipóteses.</p>
-</li>
-</ul>
-<h2 id="4-estatisticamente-significativo">4. Estatisticamente Significativo?</h2>
-<p>Ao executar nossa análise e obtermos o valor de p, o próximo passo será compará-lo com o nível de significância (<strong>α</strong>) que definimos anteriormente.</p>
-<p>Como exemplo, considere que definimos um nível de significância <strong>(α) de 0,05 (ou 5%)</strong>, teríamos então duas possibilidades ao compararmos esse α com nosso valor de p obtido no teste:</p>
+<h1 id="principais-tecnicas-de-transformacao-de-dados-para-machine-learning">Principais Técnicas de Transformação de Dados para Machine Learning</h1>
+<h2 id="transformacoes-logaritmicas">Transformações Logarítmicas</h2>
+<p>As transformações logarítmicas são úteis para:</p>
 <ol>
-<li>
-<p>Quando o valor de p é menor ou igual ao nível de significância α <strong><code>(p ≤ 0,05)</code></strong>, devemos então <strong><code>rejeitar</code></strong> a <strong><code>hipótese nula (H0)</code></strong>. Aqui dizemos que nosso teste foi <strong><code>estatisticamente significativo</code></strong>.</p>
-</li>
-<li>
-<p>Quando o valor de p é maior que o nível de significância α <strong><code>(p &gt; 0,05)</code></strong>, devemos então <strong><code>não rejeitar</code></strong> a <strong><code>hipótese nula (H0)</code></strong>. Aqui dizemos que nosso teste <strong><code>não foi estatisticamente significativo</code></strong>.</p>
-</li>
+<li><strong>Redução de Variação</strong>: Reduz a dispersão em dados com ampla gama de valores.</li>
+<li><strong>Linearização de Relações Não Lineares</strong>: Torna relações não lineares mais lineares, útil em dados de crescimento exponencial.</li>
+<li><strong>Estabilização de Variância</strong>: Especialmente em séries temporais e dados financeiros.</li>
+<li><strong>Modelos Multiplicativos</strong>: Converte modelos multiplicativos em aditivos.</li>
 </ol>
-<h2 id="5-o-que-significa-o-valor-de-p">5. O que Significa o Valor de P?</h2>
-<p>Em termos técnicos o valor de p pode ser definido como:</p>
-<blockquote>
-<p>A probabilidade de obtermos um resultado igual (ou mais  extremo)
-ao obtido a partir dos nossos dados, assumindo que a hipótese nula é verdadeira.</p>
-</blockquote>
-<p>Se meu teste retornou, por exemplo, p = 2%, o que isso significa?</p>
-<p>Se considerarmos H0 verdadeira, a probabilidade de obtermos resultados iguais (ou mais extremos) que o nosso, será de apenas 2%. Como foi menor que o α = 5%, rejeitamos H0.</p>
-<p><strong>Referência:</strong> https://estatisticafacil.org/2022/02/18/valor_de_p_retorno/</p></div>
+<h2 id="outras-transformacoes">Outras Transformações</h2>
+<ul>
+<li><strong>Box-Cox</strong>: Estabiliza a variância e aproxima os dados a uma distribuição normal.</li>
+<li><strong>Raiz Quadrada</strong>: Reduz a assimetria dos dados com cauda longa à direita.</li>
+<li><strong>Potência</strong>: Inclui transformações como raiz cúbica ou quadrada, melhora a linearidade em modelos de regressão.</li>
+</ul>
+<h2 id="binning-discretizacao">Binning (Discretização)</h2>
+<p>Agrupa valores contínuos em intervalos discretos, transformando variáveis contínuas em categóricas.</p>
+<h2 id="encoding-de-variaveis-categoricas">Encoding de Variáveis Categóricas</h2>
+<p>Essencial para algoritmos de machine learning. Técnicas incluem:</p>
+<ul>
+<li><strong>One-hot encoding</strong></li>
+<li><strong>Label encoding</strong></li>
+<li><strong>Target encoding</strong></li>
+</ul>
+<h2 id="feature-engineering">Feature Engineering</h2>
+<p>Criação de novas variáveis a partir das existentes, incluindo combinações, derivadas e interações.</p>
+<h2 id="importancia-das-transformacoes-de-dados-na-regressao-logistica">Importância das Transformações de Dados na Regressão Logística</h2>
+<p>Transformações são cruciais para melhorar a performance da regressão logística por várias razões:</p>
+<ol>
+<li><strong>Linearidade</strong>: Torna a relação entre variáveis mais linear.</li>
+<li><strong>Normalização de Escala</strong>: Garante que todas as variáveis tenham a mesma ordem de grandeza.</li>
+<li><strong>Redução de Assimetria</strong>: Reduz a distorção dos dados.</li>
+<li><strong>Estabilização da Variância</strong>: Garante variância constante.</li>
+<li><strong>Melhoria da Separabilidade</strong>: Aumenta a separação entre classes.</li>
+<li><strong>Tratamento de Outliers</strong>: Mitiga o impacto de valores extremos.</li>
+<li><strong>Melhoria na Convergência do Algoritmo</strong>: Acelera a convergência de algoritmos de otimização.</li>
+<li><strong>Interpretação dos Coeficientes</strong>: Facilita a interpretação dos coeficientes do modelo.</li>
+</ol>
+<p>Aplicar transformações antes da regressão logística melhora a performance, a estabilidade e a interpretabilidade dos resultados.</p>
+<h2 id="referencias">Referências</h2>
+<ul>
+<li><a href="https://medium.com/data-hackers/normalizar-ou-padronizar-as-vari%C3%A1veis-3b619876ccc9">Normalizar ou Padronizar as Variáveis?</a></li>
+<li><a href="https://medium.com/@ingoreichertjr/normaliza%C3%A7%C3%A3o-x-padroniza%C3%A7%C3%A3o-qual-a-diferen%C3%A7a-fa14352df501">Normalização x Padronização: Qual a Diferença?</a></li>
+</ul></div>
         
         
     </div>
