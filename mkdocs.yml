@@ -4,10 +4,22 @@ nav:
   - Sobre: sobre.md
   - 1.Estatistica:
     - Introdução: 1_estatistica/Introducao_estatistica.md
-  - 2.Machine Learning: 2_machine_learning/configuracao.md
-  - Repositório de Projetos:
-    - Modelagem:
-      - EDA
+    - 1.1_testes_de_hipotese:
+      - 1.1.1. Teste_Hipotese: 1.1.1. Teste_Hipotese.md
+      - 1.1.2. O_que_sao_testes_de_hipotese: 1.1.2. O_que_sao_testes_de_hipotese.md
+      - 1.1.3. Aplicacoes_testes_de_hipotese: 1.1.3. Aplicacoes_testes_de_hipotese.ipynb
+      - 1.1.4. Aplicacoes_intervalos_de_confianca: 1.1.4. Aplicacoes_intervalos_de_confianca.ipynb
+      - 1.1.5. O_que_e_p_valor: 1.1.5. O_que_e_p_valor.md
+      - 1.1.6. Aplicacao_Permutacional_Test: 1.1.6. Aplicacao_Permutacional_Test.ipynb
+      
+  - 2.Machine Learning:
+      - Introdução: 2_machine_learning/Introducao_machine_learning.md
+      - 2.1_Crisp-DM:
+        - 2.1.1 Crisp-DM: 2.1.1_Crisp-DM.md
+        - 2.1.2 Pre_treinamento: 2.1.2 Pre_treinamento.md
+        - 2.1.3_Treinamento: 2.1.3_Treinamento.md
+        - 2.1.4_Pos_treinamento: 2.1.4_Pos_treinamento.md
+
 theme:
   name: material 
   custom_dir: 'cinder'
