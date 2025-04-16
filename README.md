@@ -1,7 +1,6 @@
 - [1. DataScienceDoc 📊](#1-datasciencedoc-)
   - [1.1. ✨ Recursos](#11--recursos)
   - [1.2. 🛠️ Tecnologias Utilizadas](#12-️-tecnologias-utilizadas)
-  - [1.3. 🚀 Como Usar](#13--como-usar)
 - [2. Problemas comuns relacionados com Jupyter Notebooks](#2-problemas-comuns-relacionados-com-jupyter-notebooks)
   - [2.1. Comandos e Explicações](#21-comandos-e-explicações)
     - [2.1.1. **Atualizar o `jupyter_core`**](#211-atualizar-o-jupyter_core)
@@ -13,7 +12,17 @@
 
 # 1. DataScienceDoc 📊
 
-**DataScienceDoc** é um repositório de conhecimento em Ciência de Dados, criado para documentar estudos, projetos e tutoriais em um formato organizado e acessível.
+**DataScienceDoc** é um repositório de conhecimento em **`Ciência de Dados`**, criado para documentar estudos, projetos e tutoriais em um formato organizado e acessível.
+
+- ✨ Destaques:
+
+- 📂 Organizado – Estrutura clara e fácil de navegar.
+
+- 📚 Tutoriais & Projetos – Conteúdo prático e didático.
+
+- 🚀 Gerado com MkDocs – Site estático rápido e responsivo.
+
+🔗 Acesse agora: https://espeditoalves.github.io/DataScienceDoc/
 
 ## 1.1. ✨ Recursos
 
@@ -28,14 +37,6 @@
 - **Material for MkDocs** - Tema moderno e responsivo
 - **Git/GitHub** - Versionamento e hospedagem
 - **Python** - Linguagem principal para exemplos
-
-## 1.3. 🚀 Como Usar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/DataScienceDoc.git
-   ```
-
 
 
 # 2. Problemas comuns relacionados com Jupyter Notebooks
