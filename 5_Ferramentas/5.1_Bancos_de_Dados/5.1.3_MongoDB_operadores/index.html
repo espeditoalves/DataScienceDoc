@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>5.1.3 MongoDB Operadores - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../1_estatistica/Introducao_estatistica/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1_testes_de_hipotese</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/">1.1.6. Aplicacao_Permutacional_Test</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2.Machine Learning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">2.1_Crisp-DM</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/">2.1.1 Crisp-DM</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/">2.1.2 Pre_treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/">2.1.3_Treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/">2.1.4_Pos_treinamento</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">3.Machine Learning Engineer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">4.Analise de dados <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../4_analise_dados/Introducao_analise_dados.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5.Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Introducao_Ferramentas/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">5.1 Banco de dados</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../5.1.1_MongoDB/">5.1.1 MongoDB</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1.2_MongoDB_crud/">5.1.2 MongoDB Crud</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">5.1.3 MongoDB Operadores</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../5.2_Git.md">5.2 git</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.3_Docker.md">5.4 Docker</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.5_Cookiecutter/">5.5 Cookiecutter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.6_Streamlit_Dashboard.md">5.6 Streamlit</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.7_Minha_Estrutura/">5.7 Minha_Estrutura</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.8_Terminal/">5.8 Terminal</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.9_mkdocs/">5.9 mkdocs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../5.1.2_MongoDB_crud/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../5.5_Cookiecutter/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-operadores-do-mongodb">1. Operadores do MongoDB</a></li>
+            <li class="second-level"><a href="#11-operadores-de-comparacao">1.1. Operadores de Comparação</a></li>
+                
+                <li class="third-level"><a href="#111-eq-igual-a">1.1.1. $eq : Igual a.</a></li>
+                <li class="third-level"><a href="#112-ne-diferente-de">1.1.2. $ne: Diferente de.</a></li>
+                <li class="third-level"><a href="#113-gt-maior-que">1.1.3. $gt: Maior que.</a></li>
+                <li class="third-level"><a href="#114-gte-maior-ou-igual-a">1.1.4. $gte: Maior ou igual a.</a></li>
+                <li class="third-level"><a href="#115-lt-menor-que">1.1.5. $lt: Menor que.</a></li>
+                <li class="third-level"><a href="#116-lte-menor-ou-igual-a">1.1.6. $lte: Menor ou igual a.</a></li>
+                <li class="third-level"><a href="#117-in-corresponde-a-qualquer-valor-em-um-array">1.1.7. $in: Corresponde a qualquer valor em um array.</a></li>
+                <li class="third-level"><a href="#118-nin-nao-corresponde-a-nenhum-valor-em-um-array">1.1.8. $nin: Não corresponde a nenhum valor em um array.</a></li>
+            <li class="second-level"><a href="#12-operadores-logicos">1.2. Operadores Lógicos</a></li>
+                
+                <li class="third-level"><a href="#121-and-todas-as-condicoes-devem-ser-verdadeiras">1.2.1. $and: Todas as condições devem ser verdadeiras.</a></li>
+                <li class="third-level"><a href="#122-or-pelo-menos-uma-das-condicoes-deve-ser-verdadeira">1.2.2. $or: Pelo menos uma das condições deve ser verdadeira.</a></li>
+                <li class="third-level"><a href="#123-not-inverte-a-condicao">1.2.3. $not: Inverte a condição.</a></li>
+                <li class="third-level"><a href="#124-nor-nenhuma-das-condicoes-deve-ser-verdadeira">1.2.4. $nor: Nenhuma das condições deve ser verdadeira.</a></li>
+            <li class="second-level"><a href="#13-operadores-de-elementos">1.3. Operadores de Elementos</a></li>
+                
+                <li class="third-level"><a href="#131-exists-verifica-se-o-campo-existe">1.3.1. $exists: Verifica se o campo existe.</a></li>
+                <li class="third-level"><a href="#132-type-verifica-o-tipo-do-campo">1.3.2. $type: Verifica o tipo do campo.</a></li>
+            <li class="second-level"><a href="#14-operadores-de-avaliacao">1.4. Operadores de Avaliação</a></li>
+                
+                <li class="third-level"><a href="#141-expr-permite-usar-expressoes-agregadas-em-consultas">1.4.1. $expr: Permite usar expressões agregadas em consultas.</a></li>
+                <li class="third-level"><a href="#142-jsonschema-valida-documentos-com-base-em-um-esquema-json">1.4.2. $jsonSchema: Valida documentos com base em um esquema JSON.</a></li>
+                <li class="third-level"><a href="#143-mod-realiza-a-operacao-de-modulo">1.4.3. $mod: Realiza a operação de módulo.</a></li>
+                <li class="third-level"><a href="#144-regex-permite-usar-expressoes-regulares">1.4.4. $regex: Permite usar expressões regulares.</a></li>
+                <li class="third-level"><a href="#145-text-realiza-uma-pesquisa-de-texto">1.4.5. $text: Realiza uma pesquisa de texto.</a></li>
+                <li class="third-level"><a href="#146-where-usa-javascript-para-avaliar-uma-condicao">1.4.6. $where: Usa JavaScript para avaliar uma condição.</a></li>
+            <li class="second-level"><a href="#15-operadores-de-matriz">1.5. Operadores de Matriz</a></li>
+                
+                <li class="third-level"><a href="#151-all-corresponde-a-todos-os-elementos-de-um-array">1.5.1. $all: Corresponde a todos os elementos de um array.</a></li>
+                <li class="third-level"><a href="#elemmatch-corresponde-a-elementos-de-um-array-que-satisfazem-uma-condicao">$elemMatch: Corresponde a elementos de um array que satisfazem uma condição.</a></li>
+                <li class="third-level"><a href="#152-size">1.5.2. $size</a></li>
+            <li class="second-level"><a href="#16-operadores-de-atualizacao">1.6. Operadores de Atualização</a></li>
+                
+                <li class="third-level"><a href="#161-set-define-o-valor-de-um-campo">1.6.1. $set: Define o valor de um campo.</a></li>
+                <li class="third-level"><a href="#unset-remove-um-campo">$unset: Remove um campo.</a></li>
+                <li class="third-level"><a href="#162-inc-incrementa-o-valor-de-um-campo">1.6.2. $inc: Incrementa o valor de um campo.</a></li>
+                <li class="third-level"><a href="#163-mul-multiplica-o-valor-de-um-campo">1.6.3. $mul: Multiplica o valor de um campo.</a></li>
+                <li class="third-level"><a href="#164-rename-renomeia-um-campo">1.6.4. $rename: Renomeia um campo.</a></li>
+                <li class="third-level"><a href="#165-push-adiciona-um-valor-a-um-array">1.6.5. $push: Adiciona um valor a um array.</a></li>
+                <li class="third-level"><a href="#166-addtoset-adiciona-um-valor-a-um-array-se-ele-nao-existir">1.6.6. $addToSet: Adiciona um valor a um array se ele não existir.</a></li>
+                <li class="third-level"><a href="#167-pop-remove-o-primeiro-ou-ultimo-valor-de-um-array">1.6.7. $pop: Remove o primeiro ou último valor de um array.</a></li>
+                <li class="third-level"><a href="#168-pull-remove-valores-que-correspondem-a-uma-condicao">1.6.8. $pull: Remove valores que correspondem a uma condição.</a></li>
+                <li class="third-level"><a href="#169-pullall-remove-todos-os-valores-especificados-de-um-array">1.6.9. $pullAll: Remove todos os valores especificados de um array.</a></li>
+                <li class="third-level"><a href="#1610-each-usado-com-push-e-addtoset-para-adicionar-multiplos-valores">1.6.10. $each: Usado com $push e $addToSet para adicionar múltiplos valores.</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="1-operadores-do-mongodb">1. Operadores do MongoDB</h1>
+<h2 id="11-operadores-de-comparacao">1.1. Operadores de Comparação</h2>
+<p>Esses operadores são usados para comparar valores em consultas.</p>
+<h3 id="111-eq-igual-a">1.1.1. <code>$eq</code> : Igual a.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$eq</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="112-ne-diferente-de">1.1.2. <code>$ne</code>: Diferente de.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$ne</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="113-gt-maior-que">1.1.3. <code>$gt</code>: Maior que.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="114-gte-maior-ou-igual-a">1.1.4. <code>$gte</code>: Maior ou igual a.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gte</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="115-lt-menor-que">1.1.5. <code>$lt</code>: Menor que.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$lt</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="116-lte-menor-ou-igual-a">1.1.6. <code>$lte</code>: Menor ou igual a.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$lte</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="117-in-corresponde-a-qualquer-valor-em-um-array">1.1.7. <code>$in</code>: Corresponde a qualquer valor em um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$in</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">valor1</span><span class="p">,</span><span class="w"> </span><span class="nx">valor2</span><span class="p">,</span><span class="w"> </span><span class="p">...]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="118-nin-nao-corresponde-a-nenhum-valor-em-um-array">1.1.8. <code>$nin</code>: Não corresponde a nenhum valor em um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$nin</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">valor1</span><span class="p">,</span><span class="w"> </span><span class="nx">valor2</span><span class="p">,</span><span class="w"> </span><span class="p">...]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="12-operadores-logicos">1.2. Operadores Lógicos</h2>
+<p>Esses operadores são usados para combinar condições de consulta.</p>
+<h3 id="121-and-todas-as-condicoes-devem-ser-verdadeiras">1.2.1. <code>$and</code>: Todas as condições devem ser verdadeiras.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$and</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave1</span><span class="o">:</span><span class="w"> </span><span class="nx">valor1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave2</span><span class="o">:</span><span class="w"> </span><span class="nx">valor2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="122-or-pelo-menos-uma-das-condicoes-deve-ser-verdadeira">1.2.2. <code>$or</code>: Pelo menos uma das condições deve ser verdadeira.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$or</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave1</span><span class="o">:</span><span class="w"> </span><span class="nx">valor1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave2</span><span class="o">:</span><span class="w"> </span><span class="nx">valor2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="123-not-inverte-a-condicao">1.2.3. <code>$not</code>: Inverte a condição.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$not</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="124-nor-nenhuma-das-condicoes-deve-ser-verdadeira">1.2.4. <code>$nor</code>: Nenhuma das condições deve ser verdadeira.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$nor</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave1</span><span class="o">:</span><span class="w"> </span><span class="nx">valor1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave2</span><span class="o">:</span><span class="w"> </span><span class="nx">valor2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="13-operadores-de-elementos">1.3. Operadores de Elementos</h2>
+<p>Esses operadores são usados para combinar com base na presença de campos ou tipo de dados.</p>
+<h3 id="131-exists-verifica-se-o-campo-existe">1.3.1. <code>$exists</code>: Verifica se o campo existe.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$exists</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="132-type-verifica-o-tipo-do-campo">1.3.2. <code>$type</code>: Verifica o tipo do campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tipo&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="14-operadores-de-avaliacao">1.4. Operadores de Avaliação</h2>
+<p>Esses operadores são usados para expressões e operações condicionais.</p>
+<h3 id="141-expr-permite-usar-expressoes-agregadas-em-consultas">1.4.1. <code>$expr</code>: Permite usar expressões agregadas em consultas.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$expr</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$gt</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;$chave1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$chave2&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="142-jsonschema-valida-documentos-com-base-em-um-esquema-json">1.4.2. <code>$jsonSchema</code>: Valida documentos com base em um esquema JSON.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$jsonSchema</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">propriedades</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="143-mod-realiza-a-operacao-de-modulo">1.4.3. <code>$mod</code>: Realiza a operação de módulo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$mod</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">divisor</span><span class="p">,</span><span class="w"> </span><span class="nx">resto</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="144-regex-permite-usar-expressoes-regulares">1.4.4. <code>$regex</code>: Permite usar expressões regulares.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$regex</span><span class="o">:</span><span class="w"> </span><span class="sr">/padrão/</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="145-text-realiza-uma-pesquisa-de-texto">1.4.5. <code>$text</code>: Realiza uma pesquisa de texto.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$text</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$search</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;texto&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="146-where-usa-javascript-para-avaliar-uma-condicao">1.4.6. <code>$where</code>: Usa JavaScript para avaliar uma condição.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$where</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;this.chave == valor&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="15-operadores-de-matriz">1.5. Operadores de Matriz</h2>
+<p>Esses operadores são usados para consultar e atualizar arrays.</p>
+<h3 id="151-all-corresponde-a-todos-os-elementos-de-um-array">1.5.1. <code>$all</code>: Corresponde a todos os elementos de um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$all</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">valor1</span><span class="p">,</span><span class="w"> </span><span class="nx">valor2</span><span class="p">,</span><span class="w"> </span><span class="p">...]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="elemmatch-corresponde-a-elementos-de-um-array-que-satisfazem-uma-condicao"><code>$elemMatch</code>: Corresponde a elementos de um array que satisfazem uma condição.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$elemMatch</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">subChave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="152-size">1.5.2. <code>$size</code></h3>
+<p>Corresponde ao tamanho do array.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$size</span><span class="o">:</span><span class="w"> </span><span class="nx">tamanho</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="16-operadores-de-atualizacao">1.6. Operadores de Atualização</h2>
+<p>Esses operadores são usados para atualizar documentos.</p>
+<h3 id="161-set-define-o-valor-de-um-campo">1.6.1. <code>$set</code>: Define o valor de um campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$set</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="unset-remove-um-campo"><code>$unset</code>: Remove um campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$unset</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="162-inc-incrementa-o-valor-de-um-campo">1.6.2. <code>$inc</code>: Incrementa o valor de um campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$inc</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="163-mul-multiplica-o-valor-de-um-campo">1.6.3. <code>$mul</code>: Multiplica o valor de um campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$mul</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="164-rename-renomeia-um-campo">1.6.4. <code>$rename</code>: Renomeia um campo.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$rename</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chaveAntiga</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chaveNova&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="165-push-adiciona-um-valor-a-um-array">1.6.5. <code>$push</code>: Adiciona um valor a um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$push</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="166-addtoset-adiciona-um-valor-a-um-array-se-ele-nao-existir">1.6.6. <code>$addToSet</code>: Adiciona um valor a um array se ele não existir.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$addToSet</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="167-pop-remove-o-primeiro-ou-ultimo-valor-de-um-array">1.6.7. <code>$pop</code>: Remove o primeiro ou último valor de um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$pop</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Remove o último valor</span>
+<span class="p">{</span><span class="w"> </span><span class="nx">$pop</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Remove o primeiro valor</span>
+</code></pre></div>
+
+<h3 id="168-pull-remove-valores-que-correspondem-a-uma-condicao">1.6.8. <code>$pull</code>: Remove valores que correspondem a uma condição.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$pull</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="169-pullall-remove-todos-os-valores-especificados-de-um-array">1.6.9. <code>$pullAll</code>: Remove todos os valores especificados de um array.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$pullAll</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">valor1</span><span class="p">,</span><span class="w"> </span><span class="nx">valor2</span><span class="p">,</span><span class="w"> </span><span class="p">...]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+
+<h3 id="1610-each-usado-com-push-e-addtoset-para-adicionar-multiplos-valores">1.6.10. <code>$each</code>: Usado com <code>$push</code> e <code>$addToSet</code> para adicionar múltiplos valores.</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nx">$push</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">chave</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$each</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">valor1</span><span class="p">,</span><span class="w"> </span><span class="nx">valor2</span><span class="p">,</span><span class="w"> </span><span class="p">...]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

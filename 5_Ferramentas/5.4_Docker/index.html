@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>5.4 Docker - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../1_estatistica/Introducao_estatistica/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1_testes_de_hipotese</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/">1.1.6. Aplicacao_Permutacional_Test</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2.Machine Learning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">2.1_Crisp-DM</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/">2.1.1 Crisp-DM</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/">2.1.2 Pre_treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/">2.1.3_Treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/">2.1.4_Pos_treinamento</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">3.Machine Learning Engineer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">4.Analise de dados <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../4_analise_dados/Introducao_analise_dados.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5.Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Introducao_Ferramentas/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">5.1 Banco de dados</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.1_MongoDB/">5.1.1 MongoDB</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.2_MongoDB_crud/">5.1.2 MongoDB Crud</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores/">5.1.3 MongoDB Operadores</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../5.2_Git.md">5.2 git</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.3_Docker.md">5.4 Docker</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.5_Cookiecutter/">5.5 Cookiecutter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.6_Streamlit_Dashboard.md">5.6 Streamlit</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.7_Minha_Estrutura/">5.7 Minha_Estrutura</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.8_Terminal/">5.8 Terminal</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.9_mkdocs/">5.9 mkdocs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-guia-basico-sobre-docker">1. Guia Básico sobre Docker</a></li>
+            <li class="second-level"><a href="#11-o-que-e-docker">1.1. O que é Docker?</a></li>
+                
+            <li class="second-level"><a href="#12-principais-conceitos">1.2. Principais Conceitos</a></li>
+                
+                <li class="third-level"><a href="#121-imagem-docker">1.2.1. Imagem Docker</a></li>
+                <li class="third-level"><a href="#122-conteiner-docker">1.2.2. Contêiner Docker</a></li>
+                <li class="third-level"><a href="#123-dockerfile">1.2.3. Dockerfile</a></li>
+                <li class="third-level"><a href="#124-docker-compose">1.2.4. Docker Compose</a></li>
+                <li class="third-level"><a href="#125-volumes-bind-mounts">1.2.5. Volumes (bind mounts)</a></li>
+            <li class="second-level"><a href="#13-comandos-essenciais">1.3. Comandos Essenciais</a></li>
+                
+                <li class="third-level"><a href="#131-executar-um-conteiner">1.3.1. Executar um Contêiner</a></li>
+        <li class="first-level "><a href="#2-exemplos">2. EXEMPLOS</a></li>
+            <li class="second-level"><a href="#21-montando-um-volume">2.1. Montando um VOLUME</a></li>
+                
+            <li class="second-level"><a href="#22-resumo">2.2. Resumo</a></li>
+                
+        <li class="first-level "><a href="#3-poetry-no-docker">3. Poetry no Docker</a></li>
+            <li class="second-level"><a href="#301-verificar-os-kernels-disponiveis">3.0.1. Verificar os Kernels Disponíveis:</a></li>
+                
+            <li class="second-level"><a href="#302-instalar-o-kernel-do-poetry">3.0.2. Instalar o Kernel do Poetry:</a></li>
+                
+            <li class="second-level"><a href="#303-adicionar-o-kernel-do-poetry-ao-jupyter">3.0.3. Adicionar o Kernel do Poetry ao Jupyter:</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#1-guia-básico-sobre-docker">1. Guia Básico sobre Docker</a></li>
+<li><a href="#11-o-que-é-docker">1.1. O que é Docker?</a></li>
+<li><a href="#12-principais-conceitos">1.2. Principais Conceitos</a><ul>
+<li><a href="#121-imagem-docker">1.2.1. Imagem Docker</a></li>
+<li><a href="#122-contêiner-docker">1.2.2. Contêiner Docker</a></li>
+<li><a href="#123-dockerfile">1.2.3. Dockerfile</a></li>
+<li><a href="#124-docker-compose">1.2.4. Docker Compose</a></li>
+<li><a href="#125-volumes-bind-mounts">1.2.5. Volumes (bind mounts)</a></li>
+</ul>
+</li>
+<li><a href="#13-comandos-essenciais">1.3. Comandos Essenciais</a><ul>
+<li><a href="#131-executar-um-contêiner">1.3.1. Executar um Contêiner</a></li>
+</ul>
+</li>
+<li><a href="#2-exemplos">2. EXEMPLOS</a></li>
+<li><a href="#21-montando-um-volume">2.1. Montando um VOLUME</a></li>
+<li><a href="#22-resumo">2.2. Resumo</a></li>
+<li><a href="#3-poetry-no-docker">3. Poetry no Docker</a><ul>
+<li><a href="#301-verificar-os-kernels-disponíveis">3.0.1. Verificar os Kernels Disponíveis:</a></li>
+<li><a href="#302-instalar-o-kernel-do-poetry">3.0.2. Instalar o Kernel do Poetry:</a></li>
+<li><a href="#303-adicionar-o-kernel-do-poetry-ao-jupyter">3.0.3. Adicionar o Kernel do Poetry ao Jupyter:</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-guia-basico-sobre-docker">1. Guia Básico sobre Docker</h1>
+<h2 id="11-o-que-e-docker">1.1. O que é Docker?</h2>
+<p>Docker é uma plataforma que permite criar, implantar e executar aplicações em contêineres. Contêineres são leves, portáteis e consistentes, proporcionando uma forma eficiente de empacotar e distribuir aplicativos junto com todas as suas dependências.</p>
+<h2 id="12-principais-conceitos">1.2. Principais Conceitos</h2>
+<h3 id="121-imagem-docker">1.2.1. Imagem Docker</h3>
+<p>Uma imagem Docker é um pacote leve, independente e executável que inclui tudo o necessário para rodar um pedaço de software: código, runtime, bibliotecas, variáveis de ambiente e arquivos de configuração.</p>
+<h3 id="122-conteiner-docker">1.2.2. Contêiner Docker</h3>
+<p>Um contêiner é uma instância de uma imagem Docker em execução. Ele é isolado do sistema host e de outros contêineres, mas pode compartilhar recursos do sistema, como arquivos e rede.</p>
+<h3 id="123-dockerfile">1.2.3. Dockerfile</h3>
+<p>Um Dockerfile é um script de texto contendo instruções para construir uma imagem Docker. Cada linha no Dockerfile representa um comando que será executado para montar a imagem final.</p>
+<h3 id="124-docker-compose">1.2.4. Docker Compose</h3>
+<p>Docker Compose é uma ferramenta para definir e gerenciar aplicações Docker multi-contêiner. Usando um arquivo YAML, você pode especificar os serviços, redes e volumes necessários para a aplicação.</p>
+<h3 id="125-volumes-bind-mounts">1.2.5. Volumes (bind mounts)</h3>
+<p>Volumes (bind mounts) são usados para persistir dados e compartilhar informações entre o host e os contêineres ou entre múltiplos contêineres. Eles permitem que os dados sobrevivam ao ciclo de vida dos contêineres.</p>
+<h2 id="13-comandos-essenciais">1.3. Comandos Essenciais</h2>
+<h3 id="131-executar-um-conteiner">1.3.1. Executar um Contêiner</h3>
+<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>&lt;image&gt;<span class="w"> </span>/bin/bash
+</code></pre></div>
+
+<p>Este comando cria e executa um contêiner a partir de uma imagem especificada, abrindo um terminal interativo.</p>
+<h1 id="2-exemplos">2. EXEMPLOS</h1>
+<h2 id="21-montando-um-volume">2.1. Montando um VOLUME</h2>
+<div class="codehilite"><pre><span></span><code>comando<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\e</span>sped<span class="se">\D</span>ocuments<span class="se">\R</span>espositorio_git<span class="se">\R</span>epositorio_projetos<span class="se">\i</span>mage_spark_project:/home/jovyan/work<span class="w"> </span>jupyter/pyspark-notebook:spark-3.3.2
+</code></pre></div>
+
+<p>Este comando criou e executou um <strong>contêiner Docker</strong> utilizando uma imagem específica para Jupyter notebooks com suporte para <strong>PySpark</strong>. Além disso, <strong>montou um volume</strong> que mapeia um diretório no seu sistema host para um diretório dentro do contêiner, permitindo que você acesse e trabalhe com os arquivos do host diretamente no contêiner. </p>
+<blockquote>
+<p>Vamos analisar seu comando em detalhes:</p>
+</blockquote>
+<p>Análise do Comando
+* <strong>docker run:</strong> Este é o comando base para criar e executar um contêiner a partir de uma imagem Docker.</p>
+<ul>
+<li>
+<p><strong>-p 8888:8888:</strong> Este parâmetro mapeia a porta 8888 do seu host para a porta 8888 do contêiner. Isso é necessário porque o Jupyter Notebook, por padrão, roda na porta 8888. Com isso, você pode acessar o Jupyter Notebook no seu navegador através do endereço http://localhost:8888.</p>
+</li>
+<li>
+<p>-v C:\Users\esped\Documents\Respositorio_git\Repositorio_projetos\image_spark_project:/home/jovyan/work: Este parâmetro monta um volume:</p>
+<ul>
+<li>C:\Users\esped\Documents\Respositorio_git\Repositorio_projetos\image_spark_project: É o caminho do diretório no seu host.</li>
+<li>/home/jovyan/work: É o caminho do diretório dentro do contêiner onde o volume será montado. <strong>jovyan é o nome do usuário padrão</strong> usado nas imagens de Jupyter Notebook baseadas no Docker Stacks.</li>
+<li>Montar este volume significa que <strong>qualquer alteração</strong> feita no diretório do host <code>C:\Users\esped\Documents\Respositorio_git\Repositorio_projetos\image_spark_project</code> <strong>será refletida no diretório</strong> <code>/home/jovyan/work</code> <strong>dentro do contêiner e vice-versa</strong>. Isso permite que você trabalhe com seus arquivos diretamente no contêiner enquanto mantém os arquivos no host.</li>
+</ul>
+</li>
+<li>
+<p>jupyter/pyspark-notebook:spark-3.3.2: Esta é a imagem Docker que você está usando. A imagem jupyter/pyspark-notebook é uma imagem pré-configurada para Jupyter Notebooks com PySpark. A tag spark-3.3.2 especifica a versão do PySpark incluída na imagem.</p>
+</li>
+</ul>
+<h2 id="22-resumo">2.2. Resumo</h2>
+<p>Com este comando, você:</p>
+<p>Iniciou um contêiner com Jupyter Notebook e PySpark.
+Montou um volume que permite acesso direto aos arquivos do host no contêiner.
+Configurou o contêiner para que o Jupyter Notebook esteja acessível através do seu navegador.</p>
+<h1 id="3-poetry-no-docker">3. Poetry no Docker</h1>
+<p>Para usar o <code>**kernel do Poetry**</code> no <strong>Jupyter Notebook</strong>, você precisa configurar um kernel específico que aponte para o ambiente virtual do Poetry onde estão instaladas as dependências do seu projeto. </p>
+<p>Aqui estão os passos para configurar e usar o kernel do Poetry no Jupyter Notebook:</p>
+<h3 id="301-verificar-os-kernels-disponiveis">3.0.1. Verificar os Kernels Disponíveis:</h3>
+<p>Primeiro, verifique quais kernels estão disponíveis atualmente no seu ambiente do Jupyter Notebook. Você pode fazer isso com o comando:</p>
+<div class="codehilite"><pre><span></span><code>jupyter<span class="w"> </span>kernelspec<span class="w"> </span>list
+</code></pre></div>
+
+<p>Isso listará todos os kernels instalados e seus locais no seu sistema.</p>
+<h3 id="302-instalar-o-kernel-do-poetry">3.0.2. Instalar o Kernel do Poetry:</h3>
+<p>Se o kernel do Poetry não estiver listado, você precisará instalá-lo manualmente. Certifique-se de estar no ambiente virtual do Poetry e execute o seguinte comando para instalar o kernel do Poetry:</p>
+<div class="codehilite"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>ipykernel
+</code></pre></div>
+
+<h3 id="303-adicionar-o-kernel-do-poetry-ao-jupyter">3.0.3. Adicionar o Kernel do Poetry ao Jupyter:</h3>
+<p>Após instalar o ipykernel no ambiente virtual do Poetry, você pode adicionar o kernel do Poetry ao Jupyter Notebook com o seguinte comando:</p>
+<div class="codehilite"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="o">=</span>image-spark-project-py3.10<span class="w"> </span>--display-name<span class="w"> </span><span class="s2">&quot;Python (Poetry)&quot;</span>
+</code></pre></div>
+
+<ul>
+<li><code>--name=image-spark-project-py3.10</code>: Especifique o nome do ambiente virtual do Poetry que você deseja usar como base para o kernel.</li>
+<li><code>--display-name "Python (Poetry)"</code>: Especifique o nome que deseja que apareça na lista de kernels do Jupyter Notebook.
+Selecionar o Kernel do Poetry no Jupyter Notebook:
+Depois de adicionar o kernel, você pode selecioná-lo ao criar um novo notebook ou alterar o kernel de um notebook existente:</li>
+</ul>
+<p>Crie um novo notebook ou abra um notebook existente.
+Vá para o menu <strong>"Kernel"</strong> e selecione <strong>"Change Kernel"</strong>.
+Selecione <strong>"Python (Poetry)"</strong> ou o nome que você especificou ao adicionar o kernel do Poetry.</p>
+<p>Agora, o notebook estará utilizando o kernel associado ao ambiente virtual do Poetry, garantindo que todas as dependências do seu projeto sejam utilizadas corretamente.</p>
+<p>Esses passos devem ajudar a configurar e usar o kernel do Poetry no Jupyter Notebook dentro do seu ambiente Docker, garantindo que você esteja trabalhando com as dependências corretas do seu projeto.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

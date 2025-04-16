@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>5.8 Terminal - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../1_estatistica/Introducao_estatistica/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1_testes_de_hipotese</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/">1.1.6. Aplicacao_Permutacional_Test</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2.Machine Learning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">2.1_Crisp-DM</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/">2.1.1 Crisp-DM</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/">2.1.2 Pre_treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/">2.1.3_Treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/">2.1.4_Pos_treinamento</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">3.Machine Learning Engineer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">4.Analise de dados <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../4_analise_dados/Introducao_analise_dados.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5.Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Introducao_Ferramentas/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">5.1 Banco de dados</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.1_MongoDB/">5.1.1 MongoDB</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.2_MongoDB_crud/">5.1.2 MongoDB Crud</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores/">5.1.3 MongoDB Operadores</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../5.2_Git.md">5.2 git</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.3_Docker.md">5.4 Docker</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.5_Cookiecutter/">5.5 Cookiecutter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.6_Streamlit_Dashboard.md">5.6 Streamlit</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.7_Minha_Estrutura/">5.7 Minha_Estrutura</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">5.8 Terminal</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.9_mkdocs/">5.9 mkdocs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../5.7_Minha_Estrutura/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../5.9_mkdocs/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-entendendo-e-configuracoes-terminais">1. Entendendo e Configurações Terminais</a></li>
+            <li class="second-level"><a href="#11-terminal-power-shell">1.1. Terminal Power Shell</a></li>
+                
+                <li class="third-level"><a href="#111-configuracoes-powershell_profileps1">1.1.1. Configurações: PowerShell_profile.ps1</a></li>
+                <li class="third-level"><a href="#112-aliases">1.1.2. Aliases</a></li>
+                <li class="third-level"><a href="#113-funcoes">1.1.3. Funções</a></li>
+                <li class="third-level"><a href="#114-importar-modulos">1.1.4. Importar Módulos</a></li>
+                <li class="third-level"><a href="#115-variaveis-personalizadas">1.1.5. Variáveis Personalizadas</a></li>
+                <li class="third-level"><a href="#116-configuracoes-de-prompt">1.1.6. Configurações de Prompt</a></li>
+                <li class="third-level"><a href="#117-customizacao-de-aparencia">1.1.7. Customização de Aparência</a></li>
+                <li class="third-level"><a href="#118-cmdlets-de-inicializacao">1.1.8. Cmdlets de Inicialização</a></li>
+                <li class="third-level"><a href="#119-funcoes-e-cmdlets-de-terceiros">1.1.9. Funções e Cmdlets de Terceiros</a></li>
+                <li class="third-level"><a href="#1110-trabalhando-com-credenciais-e-senhas">1.1.10. Trabalhando com Credenciais e Senhas</a></li>
+                <li class="third-level"><a href="#1111-conda-no-power-shell">1.1.11. Conda no Power Shell</a></li>
+            <li class="second-level"><a href="#12-terminal-bash">1.2. Terminal bash</a></li>
+                
+            <li class="second-level"><a href="#13-minha-configuracao-padrao">1.3. Minha configuração padrao</a></li>
+                
+                <li class="third-level"><a href="#131-configurar-o-path-do-conda-para-o-power-shell">1.3.1. Configurar o PATH do Conda para o Power shell</a></li>
+                <li class="third-level"><a href="#132-abrir-o-powershell">1.3.2. Abrir o PowerShell:</a></li>
+                <li class="third-level"><a href="#133-editar-o-arquivo-de-perfil">1.3.3. Editar o Arquivo de Perfil:</a></li>
+                <li class="third-level"><a href="#134-digite-o-seguinte-comando-e-salve-e-reinicie-o-terminal">1.3.4. Digite o seguinte comando e salve e reinicie o terminal</a></li>
+            <li class="second-level"><a href="#14-seetingjson-padrao-vscode">1.4. Seeting.json padrão vscode</a></li>
+                
+        <li class="first-level "><a href="#2-lista-de-principais-comandos">2. Lista de Principais comandos</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="1-entendendo-e-configuracoes-terminais">1. Entendendo e Configurações Terminais</h1>
+<h2 id="11-terminal-power-shell">1.1. Terminal Power Shell</h2>
+<p>O arquivo <code>PowerShell_profile.ps1</code> é um script de inicialização que é executado automaticamente sempre que você inicia uma nova sessão do PowerShell. Nele, você pode configurar diversas coisas para personalizar e otimizar seu ambiente de trabalho. </p>
+<h3 id="111-configuracoes-powershell_profileps1">1.1.1. Configurações: <code>PowerShell_profile.ps1</code></h3>
+<p>Aqui estão algumas das principais coisas que você pode configurar no seu perfil PowerShell:</p>
+<h3 id="112-aliases">1.1.2. Aliases</h3>
+<p>Você pode criar aliases para comandos que você usa frequentemente para torná-los mais curtos e fáceis de digitar.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Alias para navegar até um diretório específico</span>
+Set-Alias<span class="w"> </span>gotoRepos<span class="w"> </span><span class="s1">&#39;cd C:\Users\SeuUsuario\Repositórios&#39;</span>
+
+<span class="c1"># Alias para um comando longo</span>
+Set-Alias<span class="w"> </span>gs<span class="w"> </span><span class="s1">&#39;git status&#39;</span>
+</code></pre></div>
+
+<h3 id="113-funcoes">1.1.3. Funções</h3>
+<h3 id="114-importar-modulos">1.1.4. Importar Módulos</h3>
+<h3 id="115-variaveis-personalizadas">1.1.5. Variáveis Personalizadas</h3>
+<h3 id="116-configuracoes-de-prompt">1.1.6. Configurações de Prompt</h3>
+<p>Personalize o prompt do PowerShell para exibir informações úteis.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span>Prompt<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">$user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>System.Security.Principal.WindowsIdentity<span class="o">]</span>::GetCurrent<span class="o">()</span>.Name
+<span class="w">    </span><span class="nv">$hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>System.Net.Dns<span class="o">]</span>::GetHostName<span class="o">()</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="nv">$user</span><span class="s2">@</span><span class="nv">$hostname</span><span class="s2"> </span><span class="k">$(</span>Get-Location<span class="k">)</span><span class="s2"> &gt; &quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h3 id="117-customizacao-de-aparencia">1.1.7. Customização de Aparência</h3>
+<p>Você pode usar módulos como PSReadline para personalizar a aparência e o comportamento do seu prompt.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Customizando cores do PSReadline</span>
+Set-PSReadlineOption<span class="w"> </span>-EditMode<span class="w"> </span>Emacs
+Set-PSReadlineOption<span class="w"> </span>-HistorySearchCursorMovesToEnd
+
+<span class="c1"># Customizando as cores do prompt</span>
+<span class="nv">$host</span>.UI.RawUI.ForegroundColor<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Yellow&#39;</span>
+<span class="nv">$host</span>.UI.RawUI.BackgroundColor<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Black&#39;</span>
+</code></pre></div>
+
+<h3 id="118-cmdlets-de-inicializacao">1.1.8. Cmdlets de Inicialização</h3>
+<p>Execute comandos ou scripts específicos sempre que uma nova sessão do PowerShell for iniciada.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Verificar atualizações para um script ou ferramenta</span>
+.<span class="se">\C</span>heck-For-Updates.ps1
+
+<span class="c1"># Mostrar uma mensagem de boas-vindas</span>
+Write-Host<span class="w"> </span><span class="s2">&quot;Welcome to your custom PowerShell environment!&quot;</span><span class="w"> </span>-ForegroundColor<span class="w"> </span>Green
+</code></pre></div>
+
+<h3 id="119-funcoes-e-cmdlets-de-terceiros">1.1.9. Funções e Cmdlets de Terceiros</h3>
+<p>Você pode adicionar funções ou cmdlets úteis de outros scripts ou bibliotecas.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Adicionando suporte a posh-git para integração com Git</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span>Test-Path<span class="w"> </span><span class="o">(</span>Join-Path<span class="w"> </span><span class="nv">$PROFILE</span><span class="w"> </span><span class="s2">&quot;..\..\Modules\posh-git\posh-git.psd1&quot;</span><span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>Import-Module<span class="w"> </span>posh-git
+<span class="o">}</span>
+
+<span class="c1"># Adicionando suporte a oh-my-posh para customização avançada do prompt</span>
+<span class="k">if</span><span class="w"> </span><span class="o">(</span>Test-Path<span class="w"> </span><span class="o">(</span>Join-Path<span class="w"> </span><span class="nv">$PROFILE</span><span class="w"> </span><span class="s2">&quot;..\..\Modules\oh-my-posh\oh-my-posh.psd1&quot;</span><span class="o">))</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>Import-Module<span class="w"> </span>oh-my-posh
+<span class="w">    </span>Set-Theme<span class="w"> </span>Paradox
+<span class="o">}</span>
+</code></pre></div>
+
+<h3 id="1110-trabalhando-com-credenciais-e-senhas">1.1.10. Trabalhando com Credenciais e Senhas</h3>
+<p>Você pode armazenar e gerenciar credenciais de maneira segura.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Salvar uma credencial em um arquivo seguro</span>
+<span class="nv">$cred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Get-Credential
+<span class="nv">$cred</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Export-Clixml<span class="w"> </span>-Path<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$env</span><span class="s2">:USERPROFILE\mycredential.xml&quot;</span>
+
+<span class="c1"># Importar uma credencial de um arquivo seguro</span>
+<span class="nv">$cred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Import-Clixml<span class="w"> </span>-Path<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$env</span><span class="s2">:USERPROFILE\mycredential.xml&quot;</span>
+</code></pre></div>
+
+<p><strong>Exibir Pasta Atual : <code>PowerShell_profile.ps1</code></strong></p>
+<p>No terminal shell use o comando <code>notepad $profile</code>.
+Quando abrir o arquivo <code>notepad</code>, cole e salve o código abaixo no caminho e nome <code>C:\Users\esped\Documents\WindowsPowerShell\PowerShell_profile.ps1</code>.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span>prompt<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">$path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>Get-Location<span class="o">)</span>.Path
+<span class="w">    </span><span class="nv">$folderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$path</span>.Split<span class="o">(</span><span class="s1">&#39;\&#39;</span><span class="o">)[</span>-1<span class="o">]</span>
+<span class="w">    </span><span class="nv">$prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$folderName</span><span class="s2">&gt; &quot;</span>
+<span class="w">    </span>Write-Host<span class="w"> </span>-NoNewLine<span class="w"> </span>-ForegroundColor<span class="w"> </span>Cyan<span class="w"> </span><span class="nv">$prompt</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot; &quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<p><strong>Descrição das funções acima</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">function</span><span class="w"> </span>prompt<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Obtém o caminho completo do diretório atual</span>
+<span class="w">    </span><span class="nv">$path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>Get-Location<span class="o">)</span>.Path
+
+<span class="w">    </span><span class="c1"># Divide o caminho usando &#39;\&#39; como delimitador e obtém o último segmento</span>
+<span class="w">    </span><span class="nv">$folderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$path</span>.Split<span class="o">(</span><span class="s1">&#39;\&#39;</span><span class="o">)[</span>-1<span class="o">]</span>
+
+<span class="w">    </span><span class="c1"># Define o prompt para exibir apenas o nome da pasta atual seguido por &#39;&gt;&#39;</span>
+<span class="w">    </span><span class="nv">$prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$folderName</span><span class="s2">&gt; &quot;</span>
+
+<span class="w">    </span><span class="c1"># Escreve o prompt no terminal sem quebrar a linha, e com a cor ciano</span>
+<span class="w">    </span>Write-Host<span class="w"> </span>-NoNewLine<span class="w"> </span>-ForegroundColor<span class="w"> </span>Cyan<span class="w"> </span><span class="nv">$prompt</span>
+
+<span class="w">    </span><span class="c1"># Retorna um espaço em branco para que o cursor fique após o prompt personalizado</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot; &quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h3 id="1111-conda-no-power-shell">1.1.11. Conda no Power Shell</h3>
+<p><strong>Adicionar o Anaconda ao <code>PATH</code>:</strong></p>
+<p>Durante a instalação do Anaconda, você geralmente tem a opção de adicionar o Anaconda ao PATH do sistema. Isso permite que o PowerShell (ou qualquer outro terminal) reconheça os comandos do conda sem a necessidade de especificar o caminho completo para o executável.</p>
+<p>Se o Anaconda não foi adicionado ao PATH durante a instalação, você pode fazer isso manualmente seguindo estas etapas:</p>
+<blockquote>
+<p>Abra o PowerShell como <code>administrador</code>.</p>
+</blockquote>
+<p>Execute o seguinte comando para adicionar o diretório Scripts do Anaconda ao PATH do usuário atual:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>Environment<span class="o">]</span>::SetEnvironmentVariable<span class="o">(</span><span class="s2">&quot;PATH&quot;</span>,<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$env</span><span class="s2">:PATH;C:\Users\SeuUsuario\anaconda3\Scripts&quot;</span>,<span class="w"> </span><span class="s2">&quot;User&quot;</span><span class="o">)</span>
+</code></pre></div>
+
+<blockquote>
+<p>Substitua C:\Users\SeuUsuario\anaconda3\Scripts pelo caminho onde o Anaconda está instalado no seu sistema.</p>
+<p>Substitua <code>SeuUsuario</code> por seu <code>usuario</code></p>
+</blockquote>
+<h2 id="12-terminal-bash">1.2. Terminal bash</h2>
+<h2 id="13-minha-configuracao-padrao">1.3. Minha configuração padrao</h2>
+<p><strong>Passo a Passo</strong></p>
+<h3 id="131-configurar-o-path-do-conda-para-o-power-shell">1.3.1. Configurar o <code>PATH</code> do Conda para o Power shell</h3>
+<p>Seguir os passos do item <a href="#10-conda-no-power-shell">10. Conda no Power Shell</a></p>
+<h3 id="132-abrir-o-powershell">1.3.2. Abrir o PowerShell:</h3>
+<p>Inicie o PowerShell ou PowerShell ISE ou Power shell do vscode.
+Verificar o Caminho do Arquivo de Perfil:</p>
+<p>Use o seguinte comando para verificar o caminho do seu arquivo de perfil:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$PROFILE</span>
+</code></pre></div>
+
+<h3 id="133-editar-o-arquivo-de-perfil">1.3.3. Editar o Arquivo de Perfil:</h3>
+<p>Abra o arquivo de perfil no editor de sua preferência (por exemplo, Notepad):</p>
+<div class="codehilite"><pre><span></span><code>notepad<span class="w"> </span><span class="nv">$PROFILE</span>
+</code></pre></div>
+
+<h3 id="134-digite-o-seguinte-comando-e-salve-e-reinicie-o-terminal">1.3.4. Digite o seguinte comando e salve e reinicie o terminal</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Função personalizada para exibir o prompt do PowerShell</span>
+<span class="k">function</span><span class="w"> </span>prompt<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Obtém o caminho completo do diretório atual</span>
+<span class="w">    </span><span class="nv">$path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>Get-Location<span class="o">)</span>.Path
+
+<span class="w">    </span><span class="c1"># Divide o caminho usando &#39;\&#39; como delimitador e obtém o último segmento</span>
+<span class="w">    </span><span class="nv">$folderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$path</span>.Split<span class="o">(</span><span class="s1">&#39;\&#39;</span><span class="o">)[</span>-1<span class="o">]</span>
+
+<span class="w">    </span><span class="c1"># Define o prompt padrão para exibir apenas o nome da pasta atual seguido por &#39;&gt;&#39;</span>
+<span class="w">    </span><span class="nv">$prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$folderName</span><span class="s2">&gt; &quot;</span>
+
+<span class="w">    </span><span class="c1"># Verifica se um ambiente Conda está ativo</span>
+<span class="w">    </span><span class="nv">$condaEnv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$env</span>:CONDA_DEFAULT_ENV
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$condaEnv</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1"># Se um ambiente Conda estiver ativo, modifica o prompt para indicar isso</span>
+<span class="w">        </span><span class="nv">$prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;(</span><span class="nv">$condaEnv</span><span class="s2">) </span><span class="nv">$prompt</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Escreve o prompt no terminal sem quebrar a linha, e com a cor ciano</span>
+<span class="w">    </span>Write-Host<span class="w"> </span>-NoNewLine<span class="w"> </span>-ForegroundColor<span class="w"> </span>Cyan<span class="w"> </span><span class="nv">$prompt</span>
+
+<span class="w">    </span><span class="c1"># Retorna um espaço em branco para que o cursor fique após o prompt personalizado</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot; &quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Mostrar uma mensagem de boas-vindas</span>
+Write-Host<span class="w"> </span><span class="s2">&quot;Welcome to your custom PowerShell environment!&quot;</span><span class="w"> </span>-ForegroundColor<span class="w"> </span>Green
+
+<span class="c1"># Customização das cores do terminal</span>
+<span class="c1"># $host.UI.RawUI.ForegroundColor = &#39;Yellow&#39;  # Define a cor do texto do terminal como amarelo</span>
+<span class="c1"># $host.UI.RawUI.BackgroundColor = &#39;Black&#39;   # Define a cor de fundo do terminal como preto</span>
+
+<span class="c1"># Outras configurações e comandos podem ser adicionados abaixo</span>
+</code></pre></div>
+
+<h2 id="14-seetingjson-padrao-vscode">1.4. Seeting.json padrão vscode</h2>
+<div class="codehilite"><pre><span></span><code><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;workbench.colorTheme&quot;</span>:<span class="w"> </span><span class="s2">&quot;Dracula&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;workbench.iconTheme&quot;</span>:<span class="w"> </span><span class="s2">&quot;vscode-icons&quot;</span>,
+
+<span class="w">    </span><span class="s2">&quot;terminal.integrated.defaultProfile.windows&quot;</span>:<span class="w"> </span><span class="s2">&quot;PowerShell&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;terminal.integrated.profiles.windows&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;PowerShell&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;source&quot;</span>:<span class="w"> </span><span class="s2">&quot;PowerShell&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;icon&quot;</span>:<span class="w"> </span><span class="s2">&quot;terminal-powershell&quot;</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="s2">&quot;Anaconda PowerShell Prompt&quot;</span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;C:\\Users\\esped\\anaconda3\\Scripts\\conda.exe&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;args&quot;</span>:<span class="w"> </span><span class="o">[]</span>,
+<span class="w">            </span><span class="s2">&quot;icon&quot;</span>:<span class="w"> </span><span class="s2">&quot;terminal-powershell&quot;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span>,
+<span class="w">    </span><span class="s2">&quot;editor.fontFamily&quot;</span>:<span class="w"> </span><span class="s2">&quot;&#39;Cascadia Code&#39;, Consolas, &#39;Courier New&#39;, monospace&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;editor.fontLigatures&quot;</span>:<span class="w"> </span>true,
+<span class="w">    </span><span class="s2">&quot;editor.fontSize&quot;</span>:<span class="w"> </span><span class="m">14</span>,
+<span class="w">    </span><span class="s2">&quot;powershell.integratedConsole.focusConsoleOnExecute&quot;</span>:<span class="w"> </span>false,
+<span class="w">    </span><span class="s2">&quot;powershell.integratedConsole.showOnStartup&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<h1 id="2-lista-de-principais-comandos">2. Lista de Principais comandos</h1>
+<p><strong>tree</strong></p>
+<div class="codehilite"><pre><span></span><code>tree<span class="w"> </span>/F
+</code></pre></div>
+
+<p>O parâmetro <code>/F</code> faz com que o <code>tree</code> liste todos os arquivos além dos diretórios.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

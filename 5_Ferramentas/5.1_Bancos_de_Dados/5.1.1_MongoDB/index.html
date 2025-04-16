@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>5.1.1 MongoDB - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../1_estatistica/Introducao_estatistica/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1_testes_de_hipotese</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/">1.1.6. Aplicacao_Permutacional_Test</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2.Machine Learning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">2.1_Crisp-DM</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/">2.1.1 Crisp-DM</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/">2.1.2 Pre_treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/">2.1.3_Treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/">2.1.4_Pos_treinamento</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">3.Machine Learning Engineer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">4.Analise de dados <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../4_analise_dados/Introducao_analise_dados.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5.Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Introducao_Ferramentas/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">5.1 Banco de dados</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">5.1.1 MongoDB</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1.2_MongoDB_crud/">5.1.2 MongoDB Crud</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1.3_MongoDB_operadores/">5.1.3 MongoDB Operadores</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../../5.2_Git.md">5.2 git</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.3_Docker.md">5.4 Docker</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.5_Cookiecutter/">5.5 Cookiecutter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.6_Streamlit_Dashboard.md">5.6 Streamlit</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.7_Minha_Estrutura/">5.7 Minha_Estrutura</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.8_Terminal/">5.8 Terminal</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../5.9_mkdocs/">5.9 mkdocs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../../Introducao_Ferramentas/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../5.1.2_MongoDB_crud/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-mongodb">1. MongoDB</a></li>
+            <li class="second-level"><a href="#11-o-que-e-mongodb">1.1. O que é MongoDB?</a></li>
+                
+            <li class="second-level"><a href="#12-principais-caracteristicas">1.2. Principais Características</a></li>
+                
+            <li class="second-level"><a href="#13-usando-a-plataforma-atlas">1.3. Usando a Plataforma Atlas</a></li>
+                
+                <li class="third-level"><a href="#131-passos-para-comecar-com-mongodb-atlas">1.3.1. Passos para Começar com MongoDB Atlas</a></li>
+                <li class="third-level"><a href="#132-conexao-com-o-vscode">1.3.2. Conexão com o VsCode</a></li>
+                <li class="third-level"><a href="#133-mongodb-compass">1.3.3. MongoDB Compass</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="#1-mongodb">1. MongoDB</a></li>
+<li><a href="#11-o-que-é-mongodb">1.1. O que é MongoDB?</a></li>
+<li><a href="#12-principais-características">1.2. Principais Características</a></li>
+<li><a href="#13-usando-a-plataforma-atlas">1.3. Usando a Plataforma Atlas</a><ul>
+<li><a href="#131-passos-para-começar-com-mongodb-atlas">1.3.1. Passos para Começar com MongoDB Atlas</a></li>
+<li><a href="#132-conexão-com-o-vscode">1.3.2. Conexão com o VsCode</a></li>
+<li><a href="#1321-exemplo-de-conexão-com-python-usando-pymongo">1.3.2.1. Exemplo de Conexão com Python (usando <code>pymongo</code>):</a></li>
+<li><a href="#1322-mongodb-no-terminal-do-vs-code">1.3.2.2. MongoDB no Terminal do VS Code</a></li>
+<li><a href="#133-mongodb-compass">1.3.3. MongoDB Compass</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="1-mongodb">1. MongoDB</h1>
+<h2 id="11-o-que-e-mongodb">1.1. O que é MongoDB?</h2>
+<p>MongoDB é um banco de dados NoSQL de código aberto, amplamente utilizado para armazenar dados em formato de documentos JSON (JavaScript Object Notation) flexíveis e escaláveis. Desenvolvido pela MongoDB Inc., o MongoDB é conhecido por sua capacidade de lidar com grandes volumes de dados e por sua alta performance em ambientes distribuídos.</p>
+<h2 id="12-principais-caracteristicas">1.2. Principais Características</h2>
+<ol>
+<li>
+<p><strong>Modelo de Dados Flexível</strong>
+MongoDB utiliza documentos BSON (uma versão binária do JSON), permitindo um modelo de dados flexível que pode evoluir conforme necessário sem a necessidade de uma estrutura rígida de tabelas e esquemas.</p>
+</li>
+<li>
+<p><strong>Escalabilidade Horizontal</strong>
+Projetado para ser escalável horizontalmente, o MongoDB permite a adição de novos nós ao cluster para aumentar a capacidade de armazenamento e processamento, suportando grandes volumes de dados e altas taxas de transferência.</p>
+</li>
+<li>
+<p><strong>Consultas e Indexação Poderosas</strong>
+MongoDB oferece uma linguagem de consulta rica, permitindo filtros complexos, projeções, junções e agregações. Além disso, suporta diversos tipos de índices, incluindo índices compostos, geoespaciais e de texto.</p>
+</li>
+<li>
+<p><strong>Alta Disponibilidade</strong>
+Com suporte a replicação automática através do mecanismo de replica sets, o MongoDB garante alta disponibilidade e redundância de dados, permitindo recuperação rápida em caso de falhas.</p>
+</li>
+<li>
+<p><strong>Desempenho e Armazenamento Otimizados</strong>
+O MongoDB oferece recursos como armazenamento baseado em memória (in-memory storage engine), compressão de dados e alocação eficiente de espaço, proporcionando alta performance em diversas cargas de trabalho.</p>
+</li>
+</ol>
+<h2 id="13-usando-a-plataforma-atlas">1.3. Usando a Plataforma Atlas</h2>
+<p>A plataforma MongoDB Atlas oferece uma maneira fácil e gratuita de hospedar seu banco de dados MongoDB online, ideal para estudos e pequenos desenvolvimentos. Com a Atlas, você pode configurar e gerenciar clusters MongoDB em questão de minutos, sem a necessidade de manutenção e administração de servidores.</p>
+<h3 id="131-passos-para-comecar-com-mongodb-atlas">1.3.1. Passos para Começar com MongoDB Atlas</h3>
+<ol>
+<li><strong>Criar uma Conta:</strong></li>
+<li>
+<p>Visite o site <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> e crie uma conta gratuita.</p>
+</li>
+<li>
+<p><strong>Configurar um Cluster:</strong></p>
+</li>
+<li>Após fazer login, clique em "Build a Cluster".</li>
+<li>Escolha a configuração gratuita (M0 Sandbox) para começar sem custos.</li>
+<li>
+<p>Selecione a região do datacenter mais próxima de você para melhor desempenho.</p>
+</li>
+<li>
+<p><strong>Configurar Usuários e Redes:</strong></p>
+</li>
+<li>Adicione um usuário de banco de dados com as permissões necessárias.</li>
+<li>
+<p>Configure as regras de rede para permitir conexões seguras ao seu cluster.</p>
+</li>
+<li>
+<p><strong>Conectar ao Seu Cluster:</strong></p>
+</li>
+<li>Obtenha a string de conexão fornecida pelo Atlas.</li>
+<li>Use essa string para conectar-se ao seu banco de dados usando drivers ou ferramentas como MongoDB Compass.</li>
+</ol>
+<h3 id="132-conexao-com-o-vscode">1.3.2. Conexão com o VsCode</h3>
+<p>Para conectar a sua conta do atlas no Visual Studio Code (VS Code), você pode usar a extensão MongoDB for VS Code. </p>
+<ol>
+<li>
+<p>Primeiro, instale a extensão a partir da Visual Studio Code Marketplace.</p>
+</li>
+<li>
+<p>Após a instalação, clique no ícone da extensão MongoDB na barra lateral esquerda.</p>
+</li>
+<li>
+<p>Em seguida, clique em "Connect" e selecione "New Connection".</p>
+</li>
+<li>
+<p>Insira a string de conexão do seu cluster MongoDB Atlas ou do seu servidor MongoDB local. Você pode encontrar a string de conexão no MongoDB Atlas na seção de clusters.</p>
+</li>
+<li>
+<p>Cole a string no campo apropriado na extensão e clique em "Connect".</p>
+</li>
+<li>
+<p>Após a conexão, você poderá explorar seus bancos de dados e coleções diretamente no VS Code.</p>
+</li>
+</ol>
+<h4 id="1321-exemplo-de-conexao-com-python-usando-pymongo">1.3.2.1. Exemplo de Conexão com Python (usando <code>pymongo</code>):</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymongo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MongoClient</span>
+
+<span class="c1"># Substitua &lt;username&gt;, &lt;password&gt; e &lt;cluster-url&gt; pelas informações do seu cluster Atlas</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="s2">&quot;mongodb+srv://&lt;username&gt;:&lt;password&gt;@&lt;cluster-url&gt;/test?retryWrites=true&amp;w=majority&quot;</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">nome_do_banco_de_dados</span>
+
+<span class="c1"># Inserir um documento de exemplo</span>
+<span class="n">db</span><span class="o">.</span><span class="n">nome_da_colecao</span><span class="o">.</span><span class="n">insert_one</span><span class="p">({</span><span class="s2">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Empresa X&quot;</span><span class="p">,</span> <span class="s2">&quot;cnpj&quot;</span><span class="p">:</span> <span class="s2">&quot;12.345.678/0001-99&quot;</span><span class="p">})</span>
+</code></pre></div>
+
+<h4 id="1322-mongodb-no-terminal-do-vs-code">1.3.2.2. MongoDB no Terminal do VS Code</h4>
+<p>Para usar o MongoDB no terminal do vscode:</p>
+<ol>
+<li>Baixar o software <a href="https://www.mongodb.com/try/download/shell">MongoDB Shell</a></li>
+<li>Ao fazer a instalação certifique-se de anotar o caminho de onde está instalando o software.</li>
+<li>Copie o caminho de onde instalou o software</li>
+<li>crie uma nova variavel de ambiente com o caminho do MongoDB Shell.</li>
+<li>Reinicie o Vs Code, aperte F1 e digite MongoDB clica na opção:
+MongoDB shell.</li>
+</ol>
+<p>Esse procedimento deve permitir usar os comandos do MongoDB no terminal do vscode.</p>
+<p><a href="https://www.youtube.com/watch?v=I89t29NkDtE">video de referencia</a></p>
+<h3 id="133-mongodb-compass">1.3.3. MongoDB Compass</h3>
+<p>O MongoDB Compass é uma interface gráfica que facilita a interação com bancos de dados MongoDB.
+Também é possivel utilizar o terminal shell do MongoDB Compass para executar comandos.
+Seguem os passos para baixar e usar o MongoDB Compass:</p>
+<ol>
+<li><strong>Baixar o MongoDB Compass:</strong></li>
+<li>
+<p>Acesse o site oficial do <a href="https://www.mongodb.com/try/download/compass">MongoDB Compass</a> e baixe a versão compatível com o seu sistema operacional.</p>
+</li>
+<li>
+<p><strong>Instalar o MongoDB Compass:</strong></p>
+</li>
+<li>
+<p>Após o download, siga as instruções do instalador para instalar o MongoDB Compass em seu computador.</p>
+</li>
+<li>
+<p><strong>Abrir o MongoDB Compass:</strong></p>
+</li>
+<li>
+<p>Após a instalação, abra o MongoDB Compass em seu sistema operacional.</p>
+</li>
+<li>
+<p><strong>Conectar ao Banco de Dados:</strong></p>
+</li>
+<li>Na tela inicial do MongoDB Compass, clique em "Connect to MongoDB".</li>
+<li>Insira a string de conexão do seu banco de dados MongoDB ou clique em "Fill in connection fields individually" para inserir manualmente as informações de conexão, como endereço do servidor, porta, nome do banco de dados, nome de usuário e senha, se aplicável.</li>
+<li>
+<p>Clique em "Connect" para estabelecer a conexão com o banco de dados.</p>
+</li>
+<li>
+<p><strong>Explorar e Interagir com o Banco de Dados:</strong></p>
+</li>
+<li>Após a conexão bem-sucedida, você verá uma lista de bancos de dados e coleções no painel à esquerda.</li>
+<li>Clique em um banco de dados para ver suas coleções e documentos.</li>
+<li>
+<p>Use as opções de consulta, inserção, atualização e remoção disponíveis na interface gráfica para interagir com o banco de dados.</p>
+</li>
+<li>
+<p><strong>Explorar Recursos Adicionais (Opcional):</strong></p>
+</li>
+<li>
+<p>Explore os recursos adicionais do MongoDB Compass, como visualização de esquema, criação de consultas e agregações, e configuração de índices.</p>
+</li>
+<li>
+<p><strong>Desconectar-se do Banco de Dados:</strong></p>
+</li>
+<li>Quando terminar, clique no ícone de desconexão ou feche o MongoDB Compass para encerrar a conexão com o banco de dados.</li>
+</ol>
+<p>Agora você está pronto para baixar, instalar e usar o MongoDB Compass para interagir com seus bancos de dados MongoDB de forma visual e intuitiva.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../../.."</script>
+    
+    <script src="../../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

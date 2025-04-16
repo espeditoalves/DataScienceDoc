@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>1. Streamlit e suas Principais Funções - Data Science</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/dracula.min.css">
+        
+    
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Data Science</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Início</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">1.Estatistica <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../1_estatistica/Introducao_estatistica/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">1.1_testes_de_hipotese</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/">1.1.1. Teste_Hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/">1.1.2. O_que_sao_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb">1.1.3. Aplicacoes_testes_de_hipotese</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/">1. Cálculo de Intervalo de Confiança Usando t-Student</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/">1.1.5. O_que_e_p_valor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/">1.1.6. Aplicacao_Permutacional_Test</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2.Machine Learning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../2_machine_learning/Introducao_machine_learning/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">2.1_Crisp-DM</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/">2.1.1 Crisp-DM</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/">2.1.2 Pre_treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/">2.1.3_Treinamento</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/">2.1.4_Pos_treinamento</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">3.Machine Learning Engineer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">4.Analise de dados <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../4_analise_dados/Introducao_analise_dados.md">Introdução</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5.Ferramentas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Introducao_Ferramentas/">Introdução</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">5.1 Banco de dados</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.1_MongoDB/">5.1.1 MongoDB</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.2_MongoDB_crud/">5.1.2 MongoDB Crud</a>
+</li>
+
+        
+            
+<li >
+    <a href="../5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores/">5.1.3 MongoDB Operadores</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../5.2_Git.md">5.2 git</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.3_Docker.md">5.4 Docker</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.5_Cookiecutter/">5.5 Cookiecutter</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.6_Streamlit_Dashboard.md">5.6 Streamlit</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.7_Minha_Estrutura/">5.7 Minha_Estrutura</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.8_Terminal/">5.8 Terminal</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../5.9_mkdocs/">5.9 mkdocs</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#1-streamlit-e-suas-principais-funcoes">1. Streamlit e suas Principais Funções</a></li>
+            <li class="second-level"><a href="#11-instalacao">1.1. Instalação</a></li>
+                
+            <li class="second-level"><a href="#12-execucao-de-um-aplicativo-streamlit">1.2. Execução de um Aplicativo Streamlit</a></li>
+                
+            <li class="second-level"><a href="#13-principais-funcoes-do-streamlit">1.3. Principais Funções do Streamlit</a></li>
+                
+                <li class="third-level"><a href="#131-titulos-e-textos">1.3.1. Títulos e Textos</a></li>
+                <li class="third-level"><a href="#132-exibicao-de-dados">1.3.2. Exibição de Dados</a></li>
+                <li class="third-level"><a href="#133-graficos">1.3.3. Gráficos</a></li>
+                <li class="third-level"><a href="#134-widgets-de-entrada">1.3.4. Widgets de Entrada</a></li>
+                <li class="third-level"><a href="#135-controle-de-layout">1.3.5. Controle de Layout</a></li>
+                <li class="third-level"><a href="#136-carregamento-de-arquivos">1.3.6. Carregamento de Arquivos</a></li>
+                <li class="third-level"><a href="#137-controle-de-execucao">1.3.7. Controle de Execução</a></li>
+            <li class="second-level"><a href="#14-conclusao">1.4. Conclusão</a></li>
+                
+        <li class="first-level "><a href="#2-dashboard-com-python">2. Dashboard com python</a></li>
+            <li class="second-level"><a href="#21-plotly">2.1. Plotly</a></li>
+                
+            <li class="second-level"><a href="#22-plotlyfigure_factory">2.2. Plotly.figure_factory</a></li>
+                
+            <li class="second-level"><a href="#23-plotlyexpress">2.3. Plotly.express</a></li>
+                
+            <li class="second-level"><a href="#24-dash">2.4. Dash</a></li>
+                
+            <li class="second-level"><a href="#25-resumo-das-diferencas">2.5. Resumo das Diferenças</a></li>
+                
+        <li class="first-level "><a href="#3-plotly-no-ambiente-do-streamlit">3. Plotly no ambiente do Streamlit</a></li>
+            <li class="second-level"><a href="#31-plotly">3.1. Plotly</a></li>
+                
+            <li class="second-level"><a href="#32-plotlyfigure_factory">3.2. Plotly.figure_factory</a></li>
+                
+            <li class="second-level"><a href="#33-plotlyexpress">3.3. Plotly.express</a></li>
+                
+            <li class="second-level"><a href="#34-dash">3.4. Dash</a></li>
+                
+            <li class="second-level"><a href="#35-resumo">3.5. Resumo</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="1-streamlit-e-suas-principais-funcoes">1. Streamlit e suas Principais Funções</h1>
+<p>Streamlit é uma biblioteca de código aberto em Python que permite a criação de aplicações web interativas para visualização de dados e machine learning. É projetada para ser fácil de usar, permitindo que você transforme scripts de dados em aplicações web compartilháveis com poucas linhas de código.</p>
+<h2 id="11-instalacao">1.1. Instalação</h2>
+<p>Para instalar Streamlit, você pode usar o pip:</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>streamlit
+</code></pre></div>
+
+<h2 id="12-execucao-de-um-aplicativo-streamlit">1.2. Execução de um Aplicativo Streamlit</h2>
+<p>Para executar um aplicativo Streamlit, salve seu script Python e execute o comando:</p>
+<div class="codehilite"><pre><span></span><code>streamlit<span class="w"> </span>run<span class="w"> </span>nome_do_seu_script.py
+</code></pre></div>
+
+<h2 id="13-principais-funcoes-do-streamlit">1.3. Principais Funções do Streamlit</h2>
+<h3 id="131-titulos-e-textos">1.3.1. Títulos e Textos</h3>
+<p>Você pode adicionar títulos e textos ao seu aplicativo com funções simples.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Meu Aplicativo Streamlit&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;Seção de Cabeçalho&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">subheader</span><span class="p">(</span><span class="s2">&quot;Subcabeçalho&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Este é um texto simples.&quot;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="s2">&quot;Este é um texto em **Markdown**.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="132-exibicao-de-dados">1.3.2. Exibição de Dados</h3>
+<p>Streamlit permite a exibição fácil de dados usando tabelas e dataframes.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">st</span><span class="o">.</span><span class="n">dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="133-graficos">1.3.3. Gráficos</h3>
+<p>Você pode usar bibliotecas populares como Matplotlib, Plotly e Altair para criar gráficos interativos.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+<span class="n">st</span><span class="o">.</span><span class="n">pyplot</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="134-widgets-de-entrada">1.3.4. Widgets de Entrada</h3>
+<p>Streamlit fornece diversos widgets de entrada para interação com o usuário.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">&quot;Digite seu nome&quot;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">number_input</span><span class="p">(</span><span class="s2">&quot;Digite sua idade&quot;</span><span class="p">,</span> <span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">agree</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">checkbox</span><span class="p">(</span><span class="s2">&quot;Eu concordo&quot;</span><span class="p">)</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">selectbox</span><span class="p">(</span><span class="s2">&quot;Escolha uma cor&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Azul&quot;</span><span class="p">,</span> <span class="s2">&quot;Vermelho&quot;</span><span class="p">,</span> <span class="s2">&quot;Verde&quot;</span><span class="p">])</span>
+</code></pre></div>
+
+<h3 id="135-controle-de-layout">1.3.5. Controle de Layout</h3>
+<p>Você pode controlar o layout da sua aplicação usando colunas, containers e expandidos.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">col1</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">columns</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">col1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Esta é a coluna 1&quot;</span><span class="p">)</span>
+<span class="n">col2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Esta é a coluna 2&quot;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">expander</span><span class="p">(</span><span class="s2">&quot;Mais informações&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Aqui estão mais detalhes.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="136-carregamento-de-arquivos">1.3.6. Carregamento de Arquivos</h3>
+<p>Streamlit facilita o carregamento de arquivos, permitindo que os usuários façam upload de dados para a aplicação.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">uploaded_file</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">file_uploader</span><span class="p">(</span><span class="s2">&quot;Escolha um arquivo&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">uploaded_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">uploaded_file</span><span class="p">)</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="137-controle-de-execucao">1.3.7. Controle de Execução</h3>
+<p>Você pode usar botões para controlar a execução de partes do código.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;Clique aqui&quot;</span><span class="p">):</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Botão clicado!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="14-conclusao">1.4. Conclusão</h2>
+<p>Streamlit é uma ferramenta poderosa para criar aplicações web interativas com Python, facilitando a visualização de dados e a construção de dashboards. Com suas funções intuitivas e de fácil uso, você pode rapidamente transformar análises de dados em aplicativos web compartilháveis.</p>
+<h1 id="2-dashboard-com-python">2. Dashboard com python</h1>
+<p>As bibliotecas <code>plotly</code>, <code>plotly.figure_factory</code>, <code>plotly.express</code> e <code>dash</code> são todas partes do ecossistema Plotly para criação de gráficos e dashboards interativos em Python, mas cada uma tem um propósito específico. Vamos ver as diferenças entre elas:</p>
+<h2 id="21-plotly">2.1. Plotly</h2>
+<p><code>plotly</code> é a biblioteca principal, que fornece a base para a criação de gráficos interativos em Python. Dentro do <code>plotly</code>, você tem vários submódulos, como <code>plotly.graph_objects</code> (também conhecido como <code>go</code>), que oferece uma API de baixo nível para a construção de gráficos complexos e altamente personalizáveis.</p>
+<p><strong>Características:</strong>
+- Flexível e altamente configurável.
+- Permite a construção detalhada e personalizada de gráficos.
+- Inclui suporte para uma ampla gama de tipos de gráficos, como gráficos de linha, barra, dispersão, mapas, 3D, etc.</p>
+<h2 id="22-plotlyfigure_factory">2.2. Plotly.figure_factory</h2>
+<p><code>plotly.figure_factory</code> é um submódulo do <code>plotly</code> que fornece funções de alto nível para a criação de gráficos complexos que podem ser difíceis de criar manualmente com <code>plotly.graph_objects</code>.</p>
+<p><strong>Características:</strong>
+- Contém funções de conveniência para a criação de gráficos especializados, como dendrogramas, mapas de calor com anotações, gráficos de violino, etc.
+- Facilita a criação de gráficos complexos sem necessidade de detalhamento excessivo.</p>
+<h2 id="23-plotlyexpress">2.3. Plotly.express</h2>
+<p><code>plotly.express</code> é um módulo de alto nível para a criação rápida e fácil de gráficos em Plotly. Ele é projetado para ser intuitivo e eficiente, oferecendo uma interface simplificada em comparação com <code>plotly.graph_objects</code>.</p>
+<p><strong>Características:</strong>
+- Simplicidade e rapidez na criação de gráficos.
+- Recomendado para a criação de gráficos padronizados e menos complexos.
+- As funções de <code>plotly.express</code> geralmente requerem menos código e são mais fáceis de usar, especialmente para exploração e análise de dados.</p>
+<h2 id="24-dash">2.4. Dash</h2>
+<p><code>dash</code> é um framework de aplicação web que permite a construção de dashboards interativos utilizando componentes de Plotly para visualizações. Ele é ideal para criar aplicações analíticas com interatividade complexa, integrando gráficos, tabelas, controles de entrada e muito mais.</p>
+<p><strong>Características:</strong>
+- Permite a construção de aplicações web interativas com visualizações de dados.
+- Utiliza Plotly para gráficos, mas também integra componentes HTML e controles de interface de usuário (UI) como dropdowns, sliders, etc.
+- Baseado em Flask, React e Plotly.js, proporcionando flexibilidade e desempenho.</p>
+<h2 id="25-resumo-das-diferencas">2.5. Resumo das Diferenças</h2>
+<ul>
+<li><strong>plotly</strong>: Biblioteca principal com submódulos para gráficos interativos detalhados e configuráveis.</li>
+<li><strong>plotly.figure_factory</strong>: Submódulo de <code>plotly</code> com funções convenientes para gráficos especializados.</li>
+<li><strong>plotly.express</strong>: Interface de alto nível para criação rápida e fácil de gráficos comuns.</li>
+<li><strong>dash</strong>: Framework completo para construção de dashboards interativos baseados na web.</li>
+</ul>
+<p>Cada uma dessas bibliotecas e módulos serve a diferentes propósitos dentro do ecossistema de visualização de dados em Python, permitindo desde a criação rápida de gráficos simples até a construção de complexos dashboards interativos.</p>
+<h1 id="3-plotly-no-ambiente-do-streamlit">3. Plotly no ambiente do Streamlit</h1>
+<p>No ambiente do Streamlit, você pode utilizar várias bibliotecas para criar gráficos e dashboards interativos. Aqui estão as que são mais relevantes:</p>
+<h2 id="31-plotly">3.1. Plotly</h2>
+<p>Você pode usar <code>plotly</code> no Streamlit para criar gráficos interativos. Streamlit tem suporte nativo para Plotly, permitindo que você integre gráficos facilmente em suas aplicações.</p>
+<p><strong>Como usar:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]))</span>
+<span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="32-plotlyfigure_factory">3.2. Plotly.figure_factory</h2>
+<p>Como <code>plotly.figure_factory</code> é um submódulo do <code>plotly</code>, você também pode usar suas funções para criar gráficos complexos e integrá-los no Streamlit.</p>
+<p><strong>Como usar:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.figure_factory</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ff</span>
+
+<span class="n">data_matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">create_annotated_heatmap</span><span class="p">(</span><span class="n">data_matrix</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="33-plotlyexpress">3.3. Plotly.express</h2>
+<p><code>plotly.express</code> é altamente recomendada para uso com Streamlit devido à sua simplicidade e facilidade de uso. Você pode criar rapidamente gráficos comuns e integrá-los em suas aplicações Streamlit.</p>
+<p><strong>Como usar:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">)</span>
+<span class="n">st</span><span class="o">.</span><span class="n">plotly_chart</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="34-dash">3.4. Dash</h2>
+<p><code>dash</code> não pode ser diretamente usado dentro de uma aplicação Streamlit, pois é um framework web independente para construção de dashboards interativos. No entanto, você pode desenvolver uma aplicação Dash separadamente e depois integrá-la com um serviço web que pode ser acessado a partir de uma aplicação Streamlit, se necessário.</p>
+<h2 id="35-resumo">3.5. Resumo</h2>
+<ul>
+<li><strong>plotly</strong>: Pode ser usado diretamente no Streamlit para criar gráficos interativos.</li>
+<li><strong>plotly.figure_factory</strong>: Pode ser usado no Streamlit como parte do <code>plotly</code> para gráficos especializados.</li>
+<li><strong>plotly.express</strong>: Altamente recomendado para uso no Streamlit devido à sua simplicidade e eficiência.</li>
+<li><strong>dash</strong>: Não pode ser usado diretamente no Streamlit, mas pode ser usado para construir dashboards interativos de forma independente.</li>
+</ul>
+<p>Essas bibliotecas oferecem uma ampla gama de funcionalidades para visualização de dados e interatividade no ambiente do Streamlit, permitindo a criação de aplicações ricas e interativas.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
