@@ -12,7 +12,7 @@
         <meta name="author" content="Espedito Alves">
       
       
-        <link rel="canonical" href="https://seu-site.netlify.app/futuro/docker_comandos/">
+        <link rel="canonical" href="https://seu-site.netlify.app/futuro/docker_env_guide/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Principais do Docker - Data Science Doc</title>
+        <title>🐳 Como usar .env com Docker Compose corretamente - Data Science Doc</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-principais-do-docker" class="md-skip">
+        <a href="#como-usar-env-com-docker-compose-corretamente" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Principais do Docker
+              🐳 Como usar .env com Docker Compose corretamente
             
           </span>
         </div>
@@ -1325,40 +1325,111 @@
 
 
 
-<h1 id="comandos-principais-do-docker">Comandos Principais do Docker<a class="headerlink" href="#comandos-principais-do-docker" title="Permanent link">&para;</a></h1>
-<h2 id="1-gerenciamento-de-containers">1. Gerenciamento de Containers<a class="headerlink" href="#1-gerenciamento-de-containers" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu<span class="w"> </span>bash<span class="w">          </span><span class="c1"># Inicia um container interativo com a imagem Ubuntu</span>
-docker<span class="w"> </span>ps<span class="w">                           </span><span class="c1"># Lista containers em execução</span>
-docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">                        </span><span class="c1"># Lista todos os containers (ativos e inativos)</span>
-docker<span class="w"> </span>start<span class="w"> </span>&lt;container_id&gt;<span class="w">        </span><span class="c1"># Inicia um container parado</span>
-docker<span class="w"> </span>stop<span class="w"> </span>&lt;container_id&gt;<span class="w">         </span><span class="c1"># Para um container</span>
-docker<span class="w"> </span>rm<span class="w"> </span>&lt;container_id&gt;<span class="w">           </span><span class="c1"># Remove um container</span>
+<h1 id="como-usar-env-com-docker-compose-corretamente">🐳 Como usar <code>.env</code> com Docker Compose corretamente<a class="headerlink" href="#como-usar-env-com-docker-compose-corretamente" title="Permanent link">&para;</a></h1>
+<p>Este guia explica como usar arquivos <code>.env</code> com o Docker Compose, especialmente quando o <code>.env</code> está fora da raiz do projeto, como na pasta <code>config/</code>.</p>
+<hr />
+<h2 id="objetivo">✅ Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Permitir que o Docker Compose e seus containers usem variáveis de ambiente definidas em um arquivo <code>.env</code> localizado em <code>config/.env</code>.</p>
+<hr />
+<h2 id="o-problema-com-variavel-e-env_file">🚫 O Problema com <code>${VARIAVEL}</code> e <code>env_file:</code><a class="headerlink" href="#o-problema-com-variavel-e-env_file" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">env_file</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config/.env</span>
+
+<span class="nt">environment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_USER}</span>
+<span class="w">  </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_PASSWORD}</span>
 </code></pre></div>
-<h2 id="2-imagens">2. Imagens<a class="headerlink" href="#2-imagens" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu<span class="w">                  </span><span class="c1"># Baixa uma imagem do Docker Hub</span>
-docker<span class="w"> </span>images<span class="w">                       </span><span class="c1"># Lista imagens locais</span>
-docker<span class="w"> </span>rmi<span class="w"> </span>&lt;image_id&gt;<span class="w">               </span><span class="c1"># Remove uma imagem</span>
-docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>nome_imagem<span class="w"> </span>.<span class="w">      </span><span class="c1"># Cria uma imagem a partir de um Dockerfile</span>
+<p>Nesse exemplo, <code>${POSTGRES_USER}</code> <strong>não será resolvido a partir do <code>config/.env</code></strong>. O Docker Compose <strong>tenta buscar essas variáveis do ambiente do seu sistema operacional (host)</strong>, e <strong>não do <code>env_file:</code></strong>.</p>
+<hr />
+<h2 id="solucoes-possiveis">✅ Soluções possíveis<a class="headerlink" href="#solucoes-possiveis" title="Permanent link">&para;</a></h2>
+<h3 id="opcao-1-usar-somente-env_file-mais-simples-e-recomendado">✅ Opção 1: Usar somente <code>env_file:</code> (mais simples e recomendado)<a class="headerlink" href="#opcao-1-usar-somente-env_file-mais-simples-e-recomendado" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:14</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container_postgres_financeiro</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">config/.env</span>
 </code></pre></div>
-<h2 id="3-dockerfile">3. Dockerfile<a class="headerlink" href="#3-dockerfile" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">RUN</span><span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">]</span>
+<blockquote>
+<p>📌 <strong>Não use <code>${VAR}</code> dentro de <code>environment:</code> nesse caso.</strong></p>
+</blockquote>
+<hr />
+<h3 id="opcao-2-mover-o-env-para-a-raiz-do-projeto">✅ Opção 2: Mover o <code>.env</code> para a raiz do projeto<a class="headerlink" href="#opcao-2-mover-o-env-para-a-raiz-do-projeto" title="Permanent link">&para;</a></h3>
+<p>Estrutura:</p>
+<div class="highlight"><pre><span></span><code>.
+├── .env
+├── docker-compose.yml
 </code></pre></div>
-<h2 id="4-volumes">4. Volumes<a class="headerlink" href="#4-volumes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>nome_volume<span class="w">           </span><span class="c1"># Cria um volume</span>
-docker<span class="w"> </span>volume<span class="w"> </span>ls<span class="w">                           </span><span class="c1"># Lista volumes</span>
-docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>nome_volume:/caminho<span class="w"> </span>ubuntu<span class="w">  </span><span class="c1"># Monta volume em container</span>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:14</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container_postgres_financeiro</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_USER}</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_PASSWORD}</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_DB}</span>
 </code></pre></div>
-<h2 id="5-redes">5. Redes<a class="headerlink" href="#5-redes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>network<span class="w"> </span>ls<span class="w">                          </span><span class="c1"># Lista redes</span>
-docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>nome_rede<span class="w">            </span><span class="c1"># Cria rede</span>
-docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>nome_rede<span class="w"> </span>container<span class="w"> </span><span class="c1"># Conecta container a uma rede</span>
+<blockquote>
+<p>✅ O Docker Compose <strong>carrega automaticamente <code>.env</code> da raiz do projeto</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="opcao-3-usar-flag-env-file-no-comando">✅ Opção 3: Usar flag <code>--env-file</code> no comando<a class="headerlink" href="#opcao-3-usar-flag-env-file-no-comando" title="Permanent link">&para;</a></h3>
+<p>Mantém o <code>.env</code> na pasta <code>config/</code>, e executa com:</p>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>--env-file<span class="w"> </span>config/.env<span class="w"> </span>up<span class="w"> </span>--build
 </code></pre></div>
-<h2 id="6-docker-compose">6. Docker Compose<a class="headerlink" href="#6-docker-compose" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w">                         </span><span class="c1"># Sobe os serviços definidos no docker-compose.yml</span>
-docker-compose<span class="w"> </span>down<span class="w">                       </span><span class="c1"># Para e remove os containers, redes e volumes</span>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:14</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container_postgres_financeiro</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_USER}</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_PASSWORD}</span>
+<span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_DB}</span>
 </code></pre></div>
+<blockquote>
+<p>✅ O Compose carrega as variáveis do <code>.env</code> como se estivessem no ambiente do host.</p>
+</blockquote>
+<hr />
+<h2 id="comparativo-final">🧠 Comparativo final<a class="headerlink" href="#comparativo-final" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th><code>${VAR}</code> funciona?</th>
+<th><code>env_file:</code> necessário?</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.env</code> na raiz do projeto</td>
+<td>✅</td>
+<td>❌</td>
+<td>Auto-carregado pelo Compose</td>
+</tr>
+<tr>
+<td><code>env_file:</code> com <code>.env</code> em subpasta</td>
+<td>❌</td>
+<td>✅</td>
+<td>Só passa para o container</td>
+</tr>
+<tr>
+<td>Usando <code>--env-file</code> na linha de comando</td>
+<td>✅</td>
+<td>❌</td>
+<td>Precisa especificar manualmente no comando</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recomendado-para-seu-caso">✅ Recomendado para seu caso<a class="headerlink" href="#recomendado-para-seu-caso" title="Permanent link">&para;</a></h2>
+<p>Se você quer manter <code>.env</code> dentro da pasta <code>config/</code>, use:</p>
+<ul>
+<li>Apenas <code>env_file:</code> no <code>docker-compose.yml</code></li>
+<li>Ou <code>--env-file config/.env</code> no comando</li>
+</ul>
+<hr />
+<p>Feito com 💙 por ChatGPT</p>
 
 
 

@@ -12,7 +12,7 @@
         <meta name="author" content="Espedito Alves">
       
       
-        <link rel="canonical" href="https://seu-site.netlify.app/futuro/docker_comandos/">
+        <link rel="canonical" href="https://seu-site.netlify.app/futuro/docker_comandos_/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Comandos Principais do Docker - Data Science Doc</title>
+        <title>Docker comandos - Data Science Doc</title>
       
     
     
@@ -84,11 +84,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#comandos-principais-do-docker" class="md-skip">
-          Pular para conteúdo
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos Principais do Docker
+              Docker comandos 
             
           </span>
         </div>
@@ -1325,40 +1320,10 @@
 
 
 
-<h1 id="comandos-principais-do-docker">Comandos Principais do Docker<a class="headerlink" href="#comandos-principais-do-docker" title="Permanent link">&para;</a></h1>
-<h2 id="1-gerenciamento-de-containers">1. Gerenciamento de Containers<a class="headerlink" href="#1-gerenciamento-de-containers" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu<span class="w"> </span>bash<span class="w">          </span><span class="c1"># Inicia um container interativo com a imagem Ubuntu</span>
-docker<span class="w"> </span>ps<span class="w">                           </span><span class="c1"># Lista containers em execução</span>
-docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">                        </span><span class="c1"># Lista todos os containers (ativos e inativos)</span>
-docker<span class="w"> </span>start<span class="w"> </span>&lt;container_id&gt;<span class="w">        </span><span class="c1"># Inicia um container parado</span>
-docker<span class="w"> </span>stop<span class="w"> </span>&lt;container_id&gt;<span class="w">         </span><span class="c1"># Para um container</span>
-docker<span class="w"> </span>rm<span class="w"> </span>&lt;container_id&gt;<span class="w">           </span><span class="c1"># Remove um container</span>
-</code></pre></div>
-<h2 id="2-imagens">2. Imagens<a class="headerlink" href="#2-imagens" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu<span class="w">                  </span><span class="c1"># Baixa uma imagem do Docker Hub</span>
-docker<span class="w"> </span>images<span class="w">                       </span><span class="c1"># Lista imagens locais</span>
-docker<span class="w"> </span>rmi<span class="w"> </span>&lt;image_id&gt;<span class="w">               </span><span class="c1"># Remove uma imagem</span>
-docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>nome_imagem<span class="w"> </span>.<span class="w">      </span><span class="c1"># Cria uma imagem a partir de um Dockerfile</span>
-</code></pre></div>
-<h2 id="3-dockerfile">3. Dockerfile<a class="headerlink" href="#3-dockerfile" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">RUN</span><span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">]</span>
-</code></pre></div>
-<h2 id="4-volumes">4. Volumes<a class="headerlink" href="#4-volumes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>nome_volume<span class="w">           </span><span class="c1"># Cria um volume</span>
-docker<span class="w"> </span>volume<span class="w"> </span>ls<span class="w">                           </span><span class="c1"># Lista volumes</span>
-docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>nome_volume:/caminho<span class="w"> </span>ubuntu<span class="w">  </span><span class="c1"># Monta volume em container</span>
-</code></pre></div>
-<h2 id="5-redes">5. Redes<a class="headerlink" href="#5-redes" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>network<span class="w"> </span>ls<span class="w">                          </span><span class="c1"># Lista redes</span>
-docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>nome_rede<span class="w">            </span><span class="c1"># Cria rede</span>
-docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>nome_rede<span class="w"> </span>container<span class="w"> </span><span class="c1"># Conecta container a uma rede</span>
-</code></pre></div>
-<h2 id="6-docker-compose">6. Docker Compose<a class="headerlink" href="#6-docker-compose" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w">                         </span><span class="c1"># Sobe os serviços definidos no docker-compose.yml</span>
-docker-compose<span class="w"> </span>down<span class="w">                       </span><span class="c1"># Para e remove os containers, redes e volumes</span>
-</code></pre></div>
+  <h1>Docker comandos </h1>
+
+<p>docker-compose down -v  # remove tudo, inclusive volumes
+docker-compose up -d</p>
 
 
 
