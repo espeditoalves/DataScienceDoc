@@ -1,65 +1,107 @@
-site_name: Data Science
+site_name: Data Science Doc
+site_url: https://seu-site.netlify.app
+site_author: Espedito Alves
+site_description: Documentação em Ciência de Dados
+
 nav:
   - Início: index.md
-  - 1.Estatistica:
-    - Introdução: 1_estatistica/Introducao_estatistica.md
-    - 1.1_testes_de_hipotese:
-      - 1.1.1. Teste_Hipotese: 1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses.md
-      - 1.1.2. O_que_sao_testes_de_hipotese: 1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts.md
-      - 1.1.3. Aplicacoes_testes_de_hipotese: 1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_de_hipotese.ipynb
-      - 1.1.4. Aplicacoes_intervalos_de_confianca: 1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca.ipynb
-      - 1.1.5. O_que_e_p_valor: 1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor.md
-      - 1.1.6. Aplicacao_Permutacional_Test: 1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test.ipynb
-      
-  - 2.Machine Learning:
+  - 1. Estatística:
+      - Introdução: 1_estatistica/Introducao_estatistica.md
+      - 1.1 Testes de Hipóteses:
+          - 1.1.1 Teste de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses.md
+          - 1.1.2 O que são os Ts: 1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts.md
+          - 1.1.3 Aplicação - Testes de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_hipotese.ipynb
+          - 1.1.4 Aplicação - Intervalo de Confiança: 1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca.ipynb
+          - 1.1.5 O que é p-valor: 1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor.md
+          - 1.1.6 Aplicação Permutacional Test: 1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test.ipynb
+  - 2. Machine Learning:
       - Introdução: 2_machine_learning/Introducao_machine_learning.md
-      - 2.1_Crisp-DM:
-        - 2.1.1 Crisp-DM: 2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM.md
-        - 2.1.2 Pre_treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento.md
-        - 2.1.3_Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento.md
-        - 2.1.4_Pos_treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento.md
-
-  - 3.Machine Learning Engineer:
+      - 2.1 CRISP-DM:
+          - 2.1.1 CRISP-DM: 2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM.md
+          - 2.1.2 Pré-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento.md
+          - 2.1.3 Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento.md
+          - 2.1.4 Pós-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento.md
+  - 3. Machine Learning Engineer:
       - Introdução: 3_machine_learning_engineer/Introducao_machine_learning_engineer.md
-
-  - 4.Analise de dados:
+  - 4. Análise de Dados:
       - Introdução: 4_analise_dados/Introducao_analise_dados.md
-
-  - 5.Ferramentas:
+  - 5. Ferramentas:
       - Introdução: 5_Ferramentas/Introducao_Ferramentas.md
-      - 5.1 Banco de dados:
-        - 5.1.1 MongoDB: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.1_MongoDB.md
-        - 5.1.2 MongoDB Crud: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.2_MongoDB_crud.md
-        - 5.1.3 MongoDB Operadores: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores.md
-      - 5.2 git: 5.2_Git.md
-      - 5.4 Docker: 5_Ferramentas/5.3_Docker.md
-      - 5.5 Cookiecutter: 5_Ferramentas/5.5_Cookiecutter.md
-      - 5.6 Streamlit: 5_Ferramentas/5.6_Streamlit_Dashboard.md
-      - 5.7 Minha_Estrutura: 5_Ferramentas/5.7_Minha_Estrutura.md
-      - 5.8 Terminal: 5_Ferramentas/5.8_Terminal.md
-      - 5.9 mkdocs: 5_Ferramentas/5.9_mkdocs.md
+      - 5.1 Banco de Dados:
+          - MongoDB: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.1_MongoDB.md
+          - MongoDB CRUD: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.2_MongoDB_crud.md
+          - MongoDB Operadores: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores.md
+      - Git: 5.2_Git.md
+      - Docker: 5_Ferramentas/5.3_Docker.md
+      - Cookiecutter: 5_Ferramentas/5.5_Cookiecutter.md
+      - Streamlit: 5_Ferramentas/5.6_Streamlit_Dashboard.md
+      - Estrutura do Projeto: 5_Ferramentas/5.7_Minha_Estrutura.md
+      - Terminal: 5_Ferramentas/5.8_Terminal.md
+      - MkDocs: 5_Ferramentas/5.9_mkdocs.md
 
 theme:
-  name: material 
-  custom_dir: 'cinder'
-  colorscheme: dracula
-  hljs_languages:
-    - python
+  name: material
+  language: pt-BR
+  logo: image/logo.png
+  favicon: image/favicon.ico
+  palette:
+    - scheme: default          # ⚪ fundo claro
+      primary: Blue Night      #  cor principal (barra, botões)
+      accent: black              #  cor de destaque (links, botões ativos)
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate            # ⚫ fundo escuro (opcional, via toggle)
+      primary: deep purple
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  font:
+    text: Roboto
+    code: Fira Code
   features:
+    - navigation.instant
     - navigation.tabs
-    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+
 plugins:
   - search
-  - mkdocs-jupyter  # Movido para o final
+  - mkdocs-jupyter
+  - git-revision-date
+  - tags
+  - glightbox
+
 markdown_extensions:
   - admonition
+  - toc:
+      permalink: true
   - tables
   - fenced_code
   - codehilite
-  - pymdownx.arithmatex:
-      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/espeditoalves
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/espedito-ferreira-alves
+
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 extra_css:
-  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css  # Opcional (se quiser usar KaTeX)
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
