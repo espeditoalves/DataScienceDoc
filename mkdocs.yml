@@ -8,36 +8,40 @@ nav:
   - 1. Estatística:
       - Introdução: 1_estatistica/Introducao_estatistica.md
       - 1.1 Testes de Hipóteses:
-          - 1.1.1 Teste de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses.md
-          - 1.1.2 O que são os Ts: 1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts.md
-          - 1.1.3 Aplicação - Testes de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_hipotese.ipynb
-          - 1.1.4 Aplicação - Intervalo de Confiança: 1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca.ipynb
-          - 1.1.5 O que é p-valor: 1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor.md
-          - 1.1.6 Aplicação Permutacional Test: 1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test.ipynb
+        - 1.1.1 Teste de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses.md
+        - 1.1.2 O que são os Ts: 1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts.md
+        - 1.1.3 Aplicação - Testes de Hipótese: 1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_hipotese.ipynb
+        - 1.1.4 Aplicação - Intervalo de Confiança: 1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca.ipynb
+        - 1.1.5 O que é p-valor: 1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor.md
+        - 1.1.6 Aplicação Permutacional Test: 1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test.ipynb
   - 2. Machine Learning:
-      - Introdução: 2_machine_learning/Introducao_machine_learning.md
-      - 2.1 CRISP-DM:
-          - 2.1.1 CRISP-DM: 2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM.md
-          - 2.1.2 Pré-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento.md
-          - 2.1.3 Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento.md
-          - 2.1.4 Pós-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento.md
-  - 3. Machine Learning Engineer:
-      - Introdução: 3_machine_learning_engineer/Introducao_machine_learning_engineer.md
-  - 4. Análise de Dados:
-      - Introdução: 4_analise_dados/Introducao_analise_dados.md
+    - Introdução: 2_machine_learning/Introducao_machine_learning.md
+    - 2.1 CRISP-DM:
+        - 2.1.1 CRISP-DM: 2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM.md
+        - 2.1.2 Pré-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento.md
+        - 2.1.3 Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento.md
+        - 2.1.4 Pós-Treinamento: 2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento.md
+  # - 3. Machine Learning Engineer:
+    # - Introdução: 3_machine_learning_engineer/Introducao_machine_learning_engineer.md
+  # - 4. Análise de Dados:
+    # - Introdução: 4_analise_dados/Introducao_analise_dados.md
   - 5. Ferramentas:
-      - Introdução: 5_Ferramentas/Introducao_Ferramentas.md
-      - 5.1 Banco de Dados:
-          - MongoDB: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.1_MongoDB.md
-          - MongoDB CRUD: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.2_MongoDB_crud.md
-          - MongoDB Operadores: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores.md
-      - Git: 5.2_Git.md
-      - Docker: 5_Ferramentas/5.3_Docker.md
-      - Cookiecutter: 5_Ferramentas/5.5_Cookiecutter.md
-      - Streamlit: 5_Ferramentas/5.6_Streamlit_Dashboard.md
-      - Estrutura do Projeto: 5_Ferramentas/5.7_Minha_Estrutura.md
-      - Terminal: 5_Ferramentas/5.8_Terminal.md
-      - MkDocs: 5_Ferramentas/5.9_mkdocs.md
+    - Introdução: 5_Ferramentas/Introducao_Ferramentas.md
+    - 5.1 Banco de Dados:
+      - 5.1.1 MongoDB: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.1_MongoDB.md
+      - 5.1.2 MongoDB CRUD: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.2_MongoDB_crud.md
+      - 5.1.3 MongoDB Operadores: 5_Ferramentas/5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores.md
+    - 5.2 Git: 5_Ferramentas/5.2_Git.md
+    - 5.3 Poetry: 5_Ferramentas/5.3_Poetry.md
+    - 5.4 Docker: 
+      - 5.4.1: 5_Ferramentas/5.4_Docker/5.4.1_Docker.md
+      - 5.4.2: 5_Ferramentas/5.4_Docker/5.4.2_Docker_env_guide.md
+    - 5.5 Cookiecutter: 5_Ferramentas/5.5_Cookiecutter.md
+    - 5.6 Streamlit: 5_Ferramentas/5.6_Streamlit_Dashboard.md
+    - 5.7 Estrutura de Projeto: 5_Ferramentas/5.7_Minha_Estrutura.md
+    - 5.8 Terminal: 5_Ferramentas/5.8_Terminal.md
+    - 5.9 MkDocs: 5_Ferramentas/5.9_mkdocs.md
+    - 5.10 Latex: 5_Ferramentas/5.10_latex.md
 
 theme:
   name: material
