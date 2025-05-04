@@ -28,7 +28,11 @@ A Ciência de Dados é uma área multidisciplinar que exige não apenas conhecim
 ### 1.1.7. 📚 Documentação de Projetos
 - [**MkDocs**](5.9_mkdocs.md): ferramenta para gerar sites estáticos a partir de arquivos Markdown. O tema Material for MkDocs é amplamente adotado por seu visual moderno e recursos avançados como busca embutida e navegação estruturada.
 
-### 1.1.8. 🧠 Outras Ferramentas Relevantes
+### 1.1.8. LaTeX
+
+O [**LaTeX**](5.10_latex.md) é uma linguagem de marcação amplamente utilizada para escrever equações matemáticas com alta qualidade tipográfica. Ele pode ser integrado tanto em Markdown quanto em Jupyter Notebooks com suporte ao MathJax.
+
+### 1.1.9. 🧠 Outras Ferramentas Relevantes
 - **Jupyter Notebooks**: embora amplamente usados para prototipagem e exploração de dados, são ainda mais úteis quando integrados com ferramentas de versionamento e documentação.
 - **Visual Studio Code (VSCode)**: editor leve e extensível, com suporte a Python, Git, terminal integrado, Jupyter, e plugins que complementam todo o ecossistema.
 
