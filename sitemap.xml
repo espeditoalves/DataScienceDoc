@@ -41,6 +41,10 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
+         <loc>https://seu-site.netlify.app/2_machine_learning/resumo_site/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
          <loc>https://seu-site.netlify.app/2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
@@ -81,15 +85,15 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
+         <loc>https://seu-site.netlify.app/5_Ferramentas/5.10_latex/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
          <loc>https://seu-site.netlify.app/5_Ferramentas/5.2_Git/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
          <loc>https://seu-site.netlify.app/5_Ferramentas/5.3_Poetry/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/5_Ferramentas/5.4_Docker/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
@@ -129,39 +133,15 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://seu-site.netlify.app/6_Projeto_Cursos/Aula%2B04%2B-%2BPython%2Bpara%2BData%2BScience/</loc>
+         <loc>https://seu-site.netlify.app/5_Ferramentas/5.4_Docker/5.4.1_Docker/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://seu-site.netlify.app/exemplos/01_Funcion_Built-in/</loc>
+         <loc>https://seu-site.netlify.app/5_Ferramentas/5.4_Docker/5.4.2_Docker_env_guide/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://seu-site.netlify.app/exemplos/01_Funcion_Built-in/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/02_Loc_Iloc/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/Learning_curve_1/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/Teste/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/codigo/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/datas_spark/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/exemplos/markdown/</loc>
+         <loc>https://seu-site.netlify.app/5_Ferramentas/5.4_Docker/5.4_Docker_ob/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
@@ -181,18 +161,6 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://seu-site.netlify.app/futuro/docker_comandos/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/futuro/docker_comandos_/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/futuro/docker_env_guide/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
          <loc>https://seu-site.netlify.app/futuro/format_titulos/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
@@ -201,15 +169,7 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://seu-site.netlify.app/futuro/latex/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/futuro/poetry_comandos/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://seu-site.netlify.app/futuro/resumo/</loc>
+         <loc>https://seu-site.netlify.app/futuro/6_Projeto_Cursos/Aula%2B04%2B-%2BPython%2Bpara%2BData%2BScience/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
@@ -238,6 +198,38 @@
     </url>
     <url>
          <loc>https://seu-site.netlify.app/futuro/Notebooks_referencia/graphing/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/01_Funcion_Built-in/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/01_Funcion_Built-in/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/02_Loc_Iloc/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/Learning_curve_1/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/Teste/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/codigo/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/datas_spark/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://seu-site.netlify.app/futuro/exemplos/markdown/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
 </urlset>

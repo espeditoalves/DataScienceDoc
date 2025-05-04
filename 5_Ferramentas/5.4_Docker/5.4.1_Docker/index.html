@@ -12,24 +12,28 @@
         <meta name="author" content="Espedito Alves">
       
       
-        <link rel="canonical" href="https://seu-site.netlify.app/futuro/poetry_comandos/">
+        <link rel="canonical" href="https://seu-site.netlify.app/5_Ferramentas/5.4_Docker/5.4.1_Docker/">
       
       
+        <link rel="prev" href="../../5.3_Poetry/">
       
       
-      <link rel="icon" href="../../image/favicon.ico">
+        <link rel="next" href="../5.4.2_Docker_env_guide/">
+      
+      
+      <link rel="icon" href="../../../image/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
-        <title>Poetry comandos - Data Science Doc</title>
+        <title>5.4.1 - Data Science Doc</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +54,14 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -84,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#guia-completo-do-docker" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -94,9 +103,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../.." title="Data Science Doc" class="md-header__button md-logo" aria-label="Data Science Doc" data-md-component="logo">
+    <a href="../../.." title="Data Science Doc" class="md-header__button md-logo" aria-label="Data Science Doc" data-md-component="logo">
       
-  <img src="../../image/logo.png" alt="logo">
+  <img src="../../../image/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Poetry comandos
+              5.4.1
             
           </span>
         </div>
@@ -210,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -229,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../1_estatistica/Introducao_estatistica/" class="md-tabs__link">
+        <a href="../../../1_estatistica/Introducao_estatistica/" class="md-tabs__link">
           
   
   1. Estatística
@@ -247,7 +256,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../2_machine_learning/Introducao_machine_learning/" class="md-tabs__link">
+        <a href="../../../2_machine_learning/Introducao_machine_learning/" class="md-tabs__link">
           
   
   2. Machine Learning
@@ -261,47 +270,13 @@
         
   
   
-  
     
-    
-      <li class="md-tabs__item">
-        <a href="../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md" class="md-tabs__link">
-          
-  
-  3. Machine Learning Engineer
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
   
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../4_analise_dados/Introducao_analise_dados.md" class="md-tabs__link">
-          
-  
-  4. Análise de Dados
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../5_Ferramentas/Introducao_Ferramentas/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Introducao_Ferramentas/" class="md-tabs__link">
           
   
   5. Ferramentas
@@ -336,9 +311,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Data Science Doc" class="md-nav__button md-logo" aria-label="Data Science Doc" data-md-component="logo">
+    <a href="../../.." title="Data Science Doc" class="md-nav__button md-logo" aria-label="Data Science Doc" data-md-component="logo">
       
-  <img src="../../image/logo.png" alt="logo">
+  <img src="../../../image/logo.png" alt="logo">
 
     </a>
     Data Science Doc
@@ -353,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/Introducao_estatistica/" class="md-nav__link">
+      <a href="../../../1_estatistica/Introducao_estatistica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.1_Teste_Hipoteses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.2_O_que_sao_os_ts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_hipotese/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.3_Aplicacao_teste_hipotese/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.4_Aplicacao_intervalos_de_confianca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.5_O_que_e_p_valor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/" class="md-nav__link">
+      <a href="../../../1_estatistica/1.1_testes_de_hipoteses/1.1.6_Aplicacao_Permutacion_test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_machine_learning/Introducao_machine_learning/" class="md-nav__link">
+      <a href="../../../2_machine_learning/Introducao_machine_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/" class="md-nav__link">
+      <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.1_CRISP-DM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/" class="md-nav__link">
+      <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.2_Pre_treinamento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/" class="md-nav__link">
+      <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.3_Treinamento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -795,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/" class="md-nav__link">
+      <a href="../../../2_machine_learning/2.1_CRISP-DM/2.1.4_Pos_treinamento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,165 +804,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    3. Machine Learning Engineer
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            3. Machine Learning Engineer
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../3_machine_learning_engineer/Introducao_machine_learning_engineer.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introdução
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    4. Análise de Dados
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            4. Análise de Dados
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../4_analise_dados/Introducao_analise_dados.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introdução
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -999,8 +839,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             5. Ferramentas
           </label>
@@ -1013,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/Introducao_Ferramentas/" class="md-nav__link">
+      <a href="../../Introducao_Ferramentas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,17 +880,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1062,8 +905,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             5.1 Banco de Dados
           </label>
@@ -1076,11 +919,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.1_Bancos_de_Dados/5.1.1_MongoDB/" class="md-nav__link">
+      <a href="../../5.1_Bancos_de_Dados/5.1.1_MongoDB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB
+    5.1.1 MongoDB
     
   </span>
   
@@ -1098,11 +941,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.1_Bancos_de_Dados/5.1.2_MongoDB_crud/" class="md-nav__link">
+      <a href="../../5.1_Bancos_de_Dados/5.1.2_MongoDB_crud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB CRUD
+    5.1.2 MongoDB CRUD
     
   </span>
   
@@ -1120,11 +963,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores/" class="md-nav__link">
+      <a href="../../5.1_Bancos_de_Dados/5.1.3_MongoDB_operadores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB Operadores
+    5.1.3 MongoDB Operadores
     
   </span>
   
@@ -1150,11 +993,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.2_Git.md" class="md-nav__link">
+      <a href="../../5.2_Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Git
+    5.2 Git
     
   </span>
   
@@ -1172,11 +1015,433 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.3_Docker.md" class="md-nav__link">
+      <a href="../../5.3_Poetry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Docker
+    5.3 Poetry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    5.4 Docker
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            5.4 Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5.4.1
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5.4.1
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-conceitos-fundamentais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Conceitos Fundamentais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1. Conceitos Fundamentais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-imagem-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1. Imagem Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-conteiner-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2. Contêiner Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3. Dockerfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.4. Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.5. Volumes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-comandos-essenciais" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Comandos Essenciais
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Comandos Essenciais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-gerenciamento-de-conteineres" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.1. Gerenciamento de Contêineres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-imagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.2. Imagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-dockerfile-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3. Dockerfile (Exemplo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4. Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.5. Redes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.6. Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-exemplos-praticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Exemplos Práticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Exemplos Práticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-montar-um-volume-com-jupyter-pyspark" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Montar um volume com Jupyter + PySpark
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Montar um volume com Jupyter + PySpark">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-integracao-docker-poetry-no-jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Integração Docker + Poetry no Jupyter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Integração Docker + Poetry no Jupyter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Passo a Passo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Passo a Passo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-verificar-kernels-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1. Verificar Kernels Disponíveis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-instalar-ipykernel-no-ambiente-do-poetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2. Instalar ipykernel no ambiente do Poetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-adicionar-kernel-ao-jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3. Adicionar Kernel ao Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-selecionar-kernel-no-jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Selecionar Kernel no Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Resumo Final
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.4.2_Docker_env_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.4.2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.5_Cookiecutter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.5 Cookiecutter
     
   </span>
   
@@ -1194,11 +1459,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.5_Cookiecutter/" class="md-nav__link">
+      <a href="../../5.6_Streamlit_Dashboard.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Cookiecutter
+    5.6 Streamlit
     
   </span>
   
@@ -1216,11 +1481,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.6_Streamlit_Dashboard.md" class="md-nav__link">
+      <a href="../../5.7_Minha_Estrutura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Streamlit
+    5.7 Estrutura de Projeto
     
   </span>
   
@@ -1238,11 +1503,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.7_Minha_Estrutura/" class="md-nav__link">
+      <a href="../../5.8_Terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Estrutura do Projeto
+    5.8 Terminal
     
   </span>
   
@@ -1260,11 +1525,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.8_Terminal/" class="md-nav__link">
+      <a href="../../5.9_mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Terminal
+    5.9 MkDocs
     
   </span>
   
@@ -1282,11 +1547,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5_Ferramentas/5.9_mkdocs/" class="md-nav__link">
+      <a href="../../5.10_latex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MkDocs
+    5.10 Latex
     
   </span>
   
@@ -1320,32 +1585,106 @@
 
 
 
-  <h1>Poetry comandos</h1>
-
-<p>DataScienceDoc&gt; poetry shell
-Parece que você está tentando usar um comando do Poetry que não está disponível.</p>
-<p>Desde a versão 2.0.0 do Poetry, o comando shell não é instalado por padrão. Você pode usar:</p>
+<h1 id="guia-completo-do-docker">🐳 Guia Completo do Docker<a class="headerlink" href="#guia-completo-do-docker" title="Permanent link">&para;</a></h1>
+<h2 id="1-introducao">1. Introdução<a class="headerlink" href="#1-introducao" title="Permanent link">&para;</a></h2>
+<p>Docker é uma plataforma que permite criar, empacotar e executar aplicações em contêineres — ambientes isolados e portáteis com todas as dependências da aplicação.</p>
+<hr />
+<h2 id="11-conceitos-fundamentais">1.1. Conceitos Fundamentais<a class="headerlink" href="#11-conceitos-fundamentais" title="Permanent link">&para;</a></h2>
+<h3 id="111-imagem-docker">1.1.1. Imagem Docker<a class="headerlink" href="#111-imagem-docker" title="Permanent link">&para;</a></h3>
+<p>Pacote leve e imutável com tudo o que a aplicação precisa para rodar: código, runtime, libs e configs.</p>
+<h3 id="112-conteiner-docker">1.1.2. Contêiner Docker<a class="headerlink" href="#112-conteiner-docker" title="Permanent link">&para;</a></h3>
+<p>Instância de uma imagem em execução. Isolado, mas compartilhando recursos com o host.</p>
+<h3 id="113-dockerfile">1.1.3. Dockerfile<a class="headerlink" href="#113-dockerfile" title="Permanent link">&para;</a></h3>
+<p>Script com instruções para gerar uma imagem.</p>
+<h3 id="114-docker-compose">1.1.4. Docker Compose<a class="headerlink" href="#114-docker-compose" title="Permanent link">&para;</a></h3>
+<p>Ferramenta para orquestrar múltiplos contêineres via arquivo YAML.</p>
+<h3 id="115-volumes">1.1.5. Volumes<a class="headerlink" href="#115-volumes" title="Permanent link">&para;</a></h3>
+<p>Permitem persistência de dados e compartilhamento entre contêiner e host.</p>
+<hr />
+<h2 id="12-comandos-essenciais">1.2. Comandos Essenciais<a class="headerlink" href="#12-comandos-essenciais" title="Permanent link">&para;</a></h2>
+<h3 id="121-gerenciamento-de-conteineres">1.2.1. Gerenciamento de Contêineres<a class="headerlink" href="#121-gerenciamento-de-conteineres" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu<span class="w"> </span>bash
+docker<span class="w"> </span>ps
+docker<span class="w"> </span>ps<span class="w"> </span>-a
+docker<span class="w"> </span>start<span class="w"> </span>&lt;container_id&gt;
+docker<span class="w"> </span>stop<span class="w"> </span>&lt;container_id&gt;
+docker<span class="w"> </span>rm<span class="w"> </span>&lt;container_id&gt;
+</code></pre></div>
+<hr />
+<h3 id="122-imagens">1.2.2. Imagens<a class="headerlink" href="#122-imagens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ubuntu
+docker<span class="w"> </span>images
+docker<span class="w"> </span>rmi<span class="w"> </span>&lt;image_id&gt;
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>nome_imagem<span class="w"> </span>.
+</code></pre></div>
+<hr />
+<h3 id="123-dockerfile-exemplo">1.2.3. Dockerfile (Exemplo)<a class="headerlink" href="#123-dockerfile-exemplo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
+<span class="k">RUN</span><span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">]</span>
+</code></pre></div>
+<hr />
+<h3 id="124-volumes">1.2.4. Volumes<a class="headerlink" href="#124-volumes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>nome_volume
+docker<span class="w"> </span>volume<span class="w"> </span>ls
+docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>nome_volume:/caminho<span class="w"> </span>ubuntu
+</code></pre></div>
+<hr />
+<h3 id="125-redes">1.2.5. Redes<a class="headerlink" href="#125-redes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>network<span class="w"> </span>ls
+docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>nome_rede
+docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>nome_rede<span class="w"> </span>container
+</code></pre></div>
+<hr />
+<h3 id="126-docker-compose">1.2.6. Docker Compose<a class="headerlink" href="#126-docker-compose" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w">               </span><span class="c1"># Inicia todos os serviços definidos no docker-compose.yml e mostra os logs no terminal</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w">            </span><span class="c1"># Inicia os serviços em segundo plano (modo *detached*)</span>
+docker-compose<span class="w"> </span>down<span class="w">             </span><span class="c1"># Para os serviços e remove containers, redes e configurações definidas no docker-compose.yml</span>
+docker-compose<span class="w"> </span>down<span class="w"> </span>-v<span class="w">          </span><span class="c1"># Mesmo que o anterior, mas também remove os volumes nomeados, apagando dados persistentes</span>
+</code></pre></div>
+<hr />
+<h2 id="2-exemplos-praticos">2. Exemplos Práticos<a class="headerlink" href="#2-exemplos-praticos" title="Permanent link">&para;</a></h2>
+<h3 id="21-montar-um-volume-com-jupyter-pyspark">2.1. Montar um volume com Jupyter + PySpark<a class="headerlink" href="#21-montar-um-volume-com-jupyter-pyspark" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:8888<span class="w"> </span>-v<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\e</span>sped<span class="se">\D</span>ocuments<span class="se">\R</span>espositorio_git<span class="se">\R</span>epositorio_projetos<span class="se">\i</span>mage_spark_project:/home/jovyan/work<span class="w"> </span>jupyter/pyspark-notebook:spark-3.3.2
+</code></pre></div>
+<h4 id="analise">Análise:<a class="headerlink" href="#analise" title="Permanent link">&para;</a></h4>
 <ul>
-<li>O novo comando env activate (recomendado); ou</li>
-<li>O plugin shell para instalar o comando shell</li>
+<li><code>-p 8888:8888</code>: mapeia porta do host para o contêiner.</li>
+<li><code>-v caminho_host:/home/jovyan/work</code>: monta volume persistente.</li>
+<li><code>jupyter/pyspark-notebook:spark-3.3.2</code>: imagem com suporte a PySpark e Jupyter.</li>
 </ul>
-<p>Documentação: https://python-poetry.org/docs/managing-environments/#activating-the-environment</p>
-<p>Note que o comando env activate não é um substituto direto para o comando shell.</p>
-<p>Solução Recomendada
-Para ativar o ambiente virtual (forma moderna):</p>
-<p><div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>env<span class="w"> </span>activate
+<hr />
+<h2 id="3-integracao-docker-poetry-no-jupyter">3. Integração Docker + Poetry no Jupyter<a class="headerlink" href="#3-integracao-docker-poetry-no-jupyter" title="Permanent link">&para;</a></h2>
+<h3 id="31-objetivo">3.1. Objetivo<a class="headerlink" href="#31-objetivo" title="Permanent link">&para;</a></h3>
+<p>Utilizar o ambiente virtual do Poetry como kernel do Jupyter Notebook.</p>
+<hr />
+<h3 id="32-passo-a-passo">3.2. Passo a Passo<a class="headerlink" href="#32-passo-a-passo" title="Permanent link">&para;</a></h3>
+<h4 id="321-verificar-kernels-disponiveis">3.2.1. Verificar Kernels Disponíveis<a class="headerlink" href="#321-verificar-kernels-disponiveis" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>jupyter<span class="w"> </span>kernelspec<span class="w"> </span>list
 </code></pre></div>
-Se realmente precisar do comando shell antigo, instale o plugin corretamente:</p>
-<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>self<span class="w"> </span>add<span class="w"> </span>poetry-plugin-shell
+<h4 id="322-instalar-ipykernel-no-ambiente-do-poetry">3.2.2. Instalar ipykernel no ambiente do Poetry<a class="headerlink" href="#322-instalar-ipykernel-no-ambiente-do-poetry" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>ipykernel
 </code></pre></div>
-<p>Alternativamente, você pode usar o comando run para executar scripts diretamente:</p>
-<p><div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>seu_script.py
+<h4 id="323-adicionar-kernel-ao-jupyter">3.2.3. Adicionar Kernel ao Jupyter<a class="headerlink" href="#323-adicionar-kernel-ao-jupyter" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="o">=</span>image-spark-project-py3.10<span class="w"> </span>--display-name<span class="w"> </span><span class="s2">&quot;Python (Poetry)&quot;</span>
 </code></pre></div>
-Explicação
-O Poetry mudou na versão 2.0.0, removendo o comando shell padrão</p>
-<p>A nova forma recomendada é usar env activate</p>
-<p>Se preferir o comportamento antigo, precisa instalar um plugin adicional</p>
-<p>O erro ocorreu porque o comando de instalação estava mal formulado (deveria ser poetry self add... para plugins)</p>
+<ul>
+<li><code>--name</code>: nome interno do kernel</li>
+<li><code>--display-name</code>: nome visível no Jupyter</li>
+</ul>
+<hr />
+<h3 id="33-selecionar-kernel-no-jupyter">3.3. Selecionar Kernel no Jupyter<a class="headerlink" href="#33-selecionar-kernel-no-jupyter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Vá em <strong>Kernel &gt; Change Kernel</strong></li>
+<li>Escolha <strong>Python (Poetry)</strong></li>
+</ul>
+<hr />
+<h2 id="4-resumo-final">4. Resumo Final<a class="headerlink" href="#4-resumo-final" title="Permanent link">&para;</a></h2>
+<p>✅ Docker cria ambientes isolados<br />
+✅ Docker Compose orquestra múltiplos contêineres<br />
+✅ Poetry pode ser integrado ao Jupyter via kernel dedicado<br />
+✅ Volumes permitem persistência de dados entre host e contêiner  </p>
+<hr />
 
 
 
@@ -1445,10 +1784,10 @@ O Poetry mudou na versão 2.0.0, removendo o comando shell padrão</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy", "content.action.edit", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.code.copy", "content.action.edit", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
