@@ -54,7 +54,43 @@ O Machine Learning é essencialmente **Estatística computacional em ação**. E
 
 ---
 
-# 2. Conteúdos disponíveis
+# 2. Tópicos de Machine Learning
+
+## 2.1. classificação versus regressão
+
+Existem duas categorias de problemas que podem ser bem resolvidos com a utilização de Machine Learning: os de classificação e os de regressão.
+
+### 2.1.1. Classificação
+Quando precisamos prever a qual categoria pertence uma determinada amostra, trata-se de um problema de classificação. Alguns exemplos que podemos citar são:
+
+Prever se um(a) determinado(a) paciente está com Covid.
+Se um(a) cliente está propenso(a) a desistir da compra.
+Se algum(a) usuário(a) web está propenso(a) a clicar em um anúncio.
+Nesses casos mencionados, a previsão se concentra em 0 ou 1 (Covid/não Covid, desistir/não desistir, clicar/não clicar) que é denominada de classificação binária, na qual existem somente duas classes. Há também casos em que a classificação se dá com mais duas classes, chamada de classificação multiclasse, como a filtragem dos e-mails em “principal”, “social”, “promoções”, “importantes” ou “fóruns”.
+
+Entre os algoritmos de classificação podemos citar:
+
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
+- Decision Tree Classifier
+- Random Forest Classifier
+
+### 2.1.2. Regressão
+Quando precisamos prever um valor numérico específico, isso indica que estamos lidando com um problema de regressão. Alguns exemplos desses problemas estão relacionados à previsão de:
+
+- preços/custos futuros;
+- estoque;
+- receita futura.
+
+Nessas situações, podemos utilizar algum modelo de regressão para realizar essas previsões e apresentar como resposta algum valor contínuo relacionado ao problema. Existem diferentes tipos de algoritmos de machine learning utilizados para resolver esse tipo de problema:
+
+- Linear Regression;
+- Random Forest Regressor;
+- Support Vector Regression (SVR).
+
+[Fonte](https://cursos.alura.com.br/course/machine-learning-classificacao-tras-panos/task/107923)
+
+# 3. Conteúdos disponíveis
 
 - [**2.1. Crisp-DM**](./2.1_CRISP-DM/2.1.1_CRISP-DM.md)
 - [**2.2. Pré Treinamento**](./2.1_CRISP-DM/2.1.2_Pre_treinamento.md)
