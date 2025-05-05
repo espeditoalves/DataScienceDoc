@@ -1044,6 +1044,34 @@ mkdocs = ">=1.0"
 pytz = ">=2025.1"
 
 [[package]]
+name = "mkdocs-git-revision-date-plugin"
+version = "0.3.2"
+description = "MkDocs plugin for setting revision date from git per markdown file."
+optional = false
+python-versions = ">=3.4"
+groups = ["main"]
+files = [
+    {file = "mkdocs_git_revision_date_plugin-0.3.2-py3-none-any.whl", hash = "sha256:2e67956cb01823dd2418e2833f3623dee8604cdf223bddd005fe36226a56f6ef"},
+]
+
+[package.dependencies]
+GitPython = "*"
+jinja2 = "*"
+mkdocs = ">=0.17"
+
+[[package]]
+name = "mkdocs-glightbox"
+version = "0.4.0"
+description = "MkDocs plugin supports image lightbox with GLightbox."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "mkdocs-glightbox-0.4.0.tar.gz", hash = "sha256:392b34207bf95991071a16d5f8916d1d2f2cd5d5bb59ae2997485ccd778c70d9"},
+    {file = "mkdocs_glightbox-0.4.0-py3-none-any.whl", hash = "sha256:e0107beee75d3eb7380ac06ea2d6eac94c999eaa49f8c3cbab0e7be2ac006ccf"},
+]
+
+[[package]]
 name = "mkdocs-ivory"
 version = "0.4.6"
 description = "Ivory theme for MkDocs"
@@ -2058,4 +2086,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11"
-content-hash = "18a762619c0b01141a12cb5519fbe0e2d2d89ba57bd499bc5366472fa8c24068"
+content-hash = "9c90d7f009d44e56a3b3388b349487c24ac9b21bb1d7b10cf4dcaf2a7a24829a"
