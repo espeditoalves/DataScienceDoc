@@ -1,14 +1,6 @@
-- [1. DataScienceDoc 📊](#1-datasciencedoc-)
-  - [1.1. ✨ Recursos](#11--recursos)
-  - [1.2. 🛠️ Tecnologias Utilizadas](#12-️-tecnologias-utilizadas)
-- [2. Problemas comuns relacionados com Jupyter Notebooks](#2-problemas-comuns-relacionados-com-jupyter-notebooks)
-  - [2.1. Comandos e Explicações](#21-comandos-e-explicações)
-    - [2.1.1. **Atualizar o `jupyter_core`**](#211-atualizar-o-jupyter_core)
-    - [2.1.2. Verificar o Plugin mkdocs-jupyter no mkdocs.yml](#212-verificar-o-plugin-mkdocs-jupyter-no-mkdocsyml)
-    - [2.1.3. Remover e Reinstalar Dependências](#213-remover-e-reinstalar-dependências)
-    - [2.1.4. Verificar se o Plugin mkdocs-jupyter Está Funcionando](#214-verificar-se-o-plugin-mkdocs-jupyter-está-funcionando)
-    - [2.1.5. Iniciar o Servidor MkDocs](#215-iniciar-o-servidor-mkdocs)
-    - [2.1.6. Resumo dos Passos](#216-resumo-dos-passos)
+# PROJETO DESCONTINUADO
+- O repositório será mantido para recordação de um processo de desenvolvimento que gerou muito aprendizado e reflexão sobre CIENCIA DE DADOS.
+- O novo projeto de documentação pode ser visto em https://www.notion.so/Data-Science-Doc-205c7dbdb99480bc8739e375525ca3bc
 
 # 1. DataScienceDoc 📊
 
